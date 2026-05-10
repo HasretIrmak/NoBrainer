@@ -1,0 +1,47 @@
+# ENV
+.env
+backend/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Datasetler
+raw_data/
+
+# Generated images
+frontend/public/images/sneakers/
+
+# Build / cache
+.cache/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Mac/Linux hidden
+*.swp
