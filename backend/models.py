@@ -58,3 +58,66 @@ class Product(BaseModel):
     gallery: list[str] = Field(default_factory=list)
 
     source_trace: SourceTrace | None = None
+
+from typing import Literal
+
+
+class ProductRequest(BaseModel):
+    product_id: str
+
+
+class PersonaRequest(BaseModel):
+    product_id: str
+    persona: Literal["style", "comfort", "budget"]
+
+
+class InsightItem(BaseModel):
+    type: str
+    title: str
+    message: str
+    severity: str
+
+
+class AnalysisOut(BaseModel):
+    product_id: str
+    title_score: int
+    description_score: int
+    visual_score: int
+    trust_score: int
+    review_score: int
+    return_risk_score: int
+    risk_level: str
+    overall_conversion_score: int
+    insights: list[InsightItem]
+
+
+class ReturnRiskOut(BaseModel):
+    product_id: str
+    risk_score: int
+    risk_level: str
+    detected_issues: list[str]
+    user_warning: str
+    seller_advice: str
+    reasons: list[str]
+
+
+class PersonaOut(BaseModel):
+    product_id: str
+    persona: Literal["style", "comfort", "budget"]
+    hero_title: str
+    description: str
+    features: list[str]
+    review_highlights: list[str]
+
+
+class FAQItem(BaseModel):
+    question: str
+    answer: str
+
+
+class OptimizeOut(BaseModel):
+    product_id: str
+    optimized_title: str
+    optimized_description: str
+    faq: list[FAQItem]
+    trust_messages: list[str]
