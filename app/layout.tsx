@@ -1,4 +1,10 @@
-// app/layout.tsx
+import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Adaptive Commerce AI",
+  description: "Yapay Zeka Destekli Satış Paneli",
+};
 
 export default function RootLayout({
   children,
@@ -7,9 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
-      <body style={{ margin: 0, padding: 0, fontFamily: 'sans-serif' }}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
