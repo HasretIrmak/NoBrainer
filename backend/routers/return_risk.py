@@ -13,6 +13,59 @@ router = APIRouter(
 )
 
 
+SIGNAL_TO_ISSUE = {
+    "runs_small": "runs_small",
+    "runs_large": "runs_large",
+    "narrow_fit": "narrow_fit",
+    "wide_feet_issue": "wide_feet_issue",
+    "comfort_negative": "comfort_negative",
+    "cheap_material": "cheap_material",
+    "low_durability": "low_durability",
+    "slippery_sole": "slippery_sole",
+    "color_mismatch": "color_mismatch",
+}
+
+
+def get_evidence_severity(signal: str, sentiment: str) -> str:
+    if sentiment == "negative":
+        return "high"
+
+    if signal in ["runs_small", "runs_large", "narrow_fit", "wide_feet_issue", "comfort_negative"]:
+        return "medium"
+
+    return "low"
+
+
+def build_return_risk_evidence(product, detected_issues: list[str]) -> list[dict]:
+    evidence = []
+    seen = set()
+
+    for review in product.reviews:
+        for signal in review.signals:
+            issue = SIGNAL_TO_ISSUE.get(signal)
+
+            if not issue or issue not in detected_issues:
+                continue
+
+            key = (issue, review.text[:80])
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            evidence.append({
+                "signal": issue,
+                "review_text": review.text[:260],
+                "sentiment": review.sentiment,
+                "severity": get_evidence_severity(issue, review.sentiment),
+            })
+
+            if len(evidence) >= 5:
+                return evidence
+
+    return evidence
+
+
 def build_fallback_reasons(known_issues: list[str]) -> list[str]:
     reason_map = {
         "runs_small": "Reviews indicate that the sneaker may run small.",
@@ -83,6 +136,7 @@ def analyze_return_risk(request: ProductRequest):
     risk_score = scores["return_risk_score"]
     risk_level = scores["risk_level"]
     detected_issues = product.known_issues
+    evidence = build_return_risk_evidence(product, detected_issues)
 
     fallback = {
         "reasons": build_fallback_reasons(detected_issues),
@@ -105,4 +159,5 @@ def analyze_return_risk(request: ProductRequest):
         "user_warning": ai_result.get("user_warning", fallback["user_warning"]),
         "seller_advice": ai_result.get("seller_advice", fallback["seller_advice"]),
         "reasons": ai_result.get("reasons", fallback["reasons"]),
+        "evidence": evidence,
     }

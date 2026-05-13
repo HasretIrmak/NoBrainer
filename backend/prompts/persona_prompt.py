@@ -64,9 +64,19 @@ Persona: {persona_type}
 
 {base_info}
 
-Return a concise product page section with:
-1. hero_title
-2. hero_description
-3. 3 feature bullets
-4. CTA text
+Return ONLY valid JSON.
+Do not use markdown.
+Do not wrap the response in code fences.
+
+JSON schema:
+{{
+  "hero_title": "short persona-specific headline",
+  "hero_description": "2 sentence product description for this persona",
+  "features": [
+    "feature 1",
+    "feature 2",
+    "feature 3"
+  ],
+  "cta": "short CTA text"
+}}
 """

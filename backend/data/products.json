@@ -1,0 +1,3539 @@
+[
+  {
+    "id": "shoe_001",
+    "title": "Reebok Men Reeflex Run White Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "White",
+    "usage": "Sports",
+    "price": 2799.0,
+    "currency": "TRY",
+    "rating": 4.8,
+    "review_count": 10,
+    "description": "Men Energen Lite Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit",
+      "runs_small",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 2,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 1,
+      "comfort_complaints": 1,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2834,
+      "clicks": 152,
+      "cart_adds": 53,
+      "sales": 10,
+      "return_rate": 0.22
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.57,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Great Fit, Great Shoe. Getting shoes offline has always been a gamble for me because I never know if they are going to fit like I want them to. Shoes fit me either too tight or too loose depending on the size and type of shoe. I was totally happy to get these though and see that they are a great fit. I know these says mens shoe, but I really loved the design of them and wanted a good pair of running/walking shoe because I am trying to do that more and needed something with a bit more support than what I had. These feel great on the feet and the shoe itself is thin, lightweight, and totally breathable. These are huge in the summer time because it will help keep my feet all nice and cool while trying to get my walk on. These are super comfy, look great, and is everything I want in a good shoe. Very happy with these shoes",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Tighten Laces for Proper Power-Walking Fit. Like any serious power-walking shoes, these NEW BALANCE WOMEN’S WALKING SHOES (669v1) require properly tightened laces to be comfortable.  They’re designed for sports—for providing good, stable support for your feet during exercise—rather than for everyday casual wear.  They’re different from leather walking shoes, and different from your usual inexpensive sneakers.<br /><br />The shoes are quite stiff when you first put them on, but they soon begin to relax, so the “breaking in” period is minimal.  I thought that mine were going to rub my ankles and cause blisters, until I adjusted the laces.  Now they’re fine.  They don’t have a lot of cushioning, so I wouldn’t recommend them for anyone who has to stand for long stretches.<br /><br />The shoes are two shades of gray, with a rose-gold “N” logo.  The logo only appears to be gold when the light hits it right, and it sometimes it appears to be silver.  The shoes are well-made, and the size 8B fits pretty much as expected.  The length is right for my size 8 foot; the toe box is a little wider than my other 8M shoes",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "dream pairs boys tennis shoes. Purchased for my 5 year old grandson... they are always running out the door to do something and these are easy on in a flash.  I am not sure how kids learn to tie their shoes anymore... but these are easy!  My daughter reports they fit as expected with a tiny bit of room that she was planning on when she gave me the size to order. The picture represents how they look well I think.  Will update if new info seems useful",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "VERY comfortable, and recommended by our podiatrist. My spouse is a fitness trainer and spends 50 hour a week on her narrow, high-arched feet.  THESE are the best shoes ever - recommended by our doctor a couple of years ago and they have proven their worth.  They are durable and very well made.  They come in a range of colors so you can match your style",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Good solid walking shoe. Shoes are replacing an older pair and design and fit are consistent",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "best running shoes. Very comfortable and offer great suport for running",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Fits my wide feet!!. I have a very wide foot and cannot buy shoes in any shoe store!! Prophet seems to be the only company that offers the width I need and several styles. These sneakers fit perfectly and are very comfortable! They are well made and at a very reasonable price. Will be ordering other styles",
+        "sentiment": "positive",
+        "signals": [
+          "wide_feet_issue",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "These look adorable in sneakers. Added these to my sneakers and shoes. They look great!",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Great quality sneakers!. Bought these for my son for gym class and they are just as expected... Perfect!! He says they are comfortable with great support. They stand out and are a great looking pair of sneakers!! Great job Nike!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Nice Sneakers. The sneakers fit well and are attractive. I enjoy them for walking and running",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_001.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 3742,
+      "fashion_image_id": "10097",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4326,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_002",
+    "title": "Rockport Men Espresso Brown Casual Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Brown",
+    "usage": "Casual",
+    "price": 649.0,
+    "currency": "TRY",
+    "rating": 4.57,
+    "review_count": 7,
+    "description": "Rockport Men Espresso Brown Casual Shoes is a Brown casual shoes designed for casual use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 1,
+      "comfort_complaints": 1,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2395,
+      "clicks": 468,
+      "cart_adds": 84,
+      "sales": 3,
+      "return_rate": 0.35
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.44,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "So cute. These sneakers are so cute. They look really nice. I like the way the colors are. They were comfortable. They felt well made. They go with many different things. They felt pretty decently cushioned. They were easy to put on. They looked nice on. I was happy with the quality and the durability. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great Style. Sizing is off. No comfort. I love Sketchers.  My normal shoe size is an 11.  In sketchers its always a 10.  Originally, I bought a size 10 in this shoe and its was too snug and no room for toes to move.  So, I came back and ordered an 11.  They fit right; however, they are not a comfy walking shoe which surprises me for Sketchers. Though the shoe fit, walking in them gives me the impression maybe a 12, which doesnt exist.  When walking, my toes still managed to slide forward and hit the top of the shoe.  I absolutely love the style of these shoes, but the sizing is off and comfort not so great",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 2.0,
+        "text": "THE most uncomfortable sneaker!’n. Save your feet! No support! Floppy fit although it was my correct size. The worst sneakers!!! Just an awful show! Stay away!!!!!",
+        "sentiment": "negative",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Very nice and comfortable. The shoes look great and are very easy to put on. They are comfortable with plenty of cushion. The size runs about a 1/2 size small. Over all very please with these sneakers, great for general sports or recreational activities",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable, Cushioned, and Shock Absorbtion…. [[VIDEOID:deb5030a7c88a455b3a9d33bc332f47d]] These are well made and great for everyday wear.  Perfect cross sneaker for indoor and outdoor use.  The bottom sole is slip proof for most surfaces.  The mesh is breathable.  I would not consider this a high intensity running shoe.  And the price does Not reflect that.  Nonetheless. This sneaker is for active use and everyday use.<br /><br />True to size too.<br /><br />Trust you found this review honest and helpful:-)",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "True fit for a Saucony running shoe.. Feels good, just like my other Saucony shoes.  No issues so far",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Best athletic shoes for all day wear. I really like these shoes.  I can wear them all day (15 hours) and they feel great.  I have two pairs and will probably purchase a third pair because I wear them most of the time.  They are slightly narrow so might not be as comfortable if you have a wide foot",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "wide_feet_issue",
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_002.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 7799,
+      "fashion_image_id": "10127",
+      "fashion_article_type": "Casual Shoes",
+      "myntra_row": 562399,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_003",
+    "title": "Rockport Men Drsp Wingtip Brown Formal Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "formal_shoe",
+    "gender": "Men",
+    "base_colour": "Brown",
+    "usage": "Formal",
+    "price": 3499,
+    "currency": "TRY",
+    "rating": 5.0,
+    "review_count": 7,
+    "description": "Rockport Men Drsp Wingtip Brown Formal Shoes is a Brown formal shoes designed for formal use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 1,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 3194,
+      "clicks": 370,
+      "cart_adds": 40,
+      "sales": 10,
+      "return_rate": 0.21
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 3499,
+      "competitor_rating_avg": 4.49,
+      "competitor_common_strengths": [
+        "premium material details",
+        "occasion-based styling",
+        "fit guidance"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "The Standard For Loafers. I love my Weejuns. Will be buying another pair soon. Only regret is not ordering them a bit wider. Mine are showing very slight wear from my toes being pressed closer against the leather. Even with them being a bit narrow there is absolutely no discomfort. Great variety of colors and styles from Bass",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Easy Walking. Every Women needs comfortable shoes for her everyday work schedule or even play time.  I found these Amazon Moc style loafers work for me.  I found them comfortable and easy to slip into.  I have a high arch and I find these moccasins type shoe were comfortable and did not tire out my feet after a full day of wearing them.  I do know this is not a true suede leather but they look good and feel like the real thing.  I am of the older generation but still keep a busy schedule so these Amazon Moc shoes work for me.<br /><br />I find after wearing these Amazon Moc shoes for a full day my feet feel great.  No pressure points anywhere to form blisters after a long walk or during my Yoga exercise.  Thanks Amazon Essentials for a comfortable shoe",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Really comfortable shoe. I had a friend suggest Clarks shoes, and found the Portland Oxford here on Amazon. I am hard to fit with shoes, so I don't usually order shoes online. I'm glad I did. These were true to size, and very comfortable right from the start. I've worn them several times since I bought them, and there are just great. The price was reasonable. I would highly recommend these shoes",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Get these!!. [[VIDEOID:a466db42dece49ad71448a22821ca07f]] I love marc joseph shoes. These run true to size. I'm a 7.5 and these fit like a glove.<br />Made of leather, they will conform to the shape of my feet.  The shoes have medium arch support. These are nice muted gold shoes but the buckle on top makes it blingy. If you love metallic shoes, then these loafers are a must. They would make any outfit look put together",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Fixed my shoes. The insoles of my loafers kept popping out but after applying shoe goo as instructed they have been solidly in place",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Five Stars. Great fit, comfortable, and smart look. I ordered another pair! Best set of loafers I own, and I’ve owned a lot!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Very comfortable loafer!. The memory foam insole makes the shoes perfect for work and leisure activities",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_003.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 6531,
+      "fashion_image_id": "10145",
+      "fashion_article_type": "Formal Shoes",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_004",
+    "title": "Reebok Women Reeflex Run Blue Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Women",
+    "base_colour": "Blue",
+    "usage": "Sports",
+    "price": 1999.0,
+    "currency": "TRY",
+    "rating": 4.83,
+    "review_count": 6,
+    "description": "Women Flyknit Sports Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 1,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2439,
+      "clicks": 366,
+      "cart_adds": 71,
+      "sales": 20,
+      "return_rate": 0.18
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.37,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Surprisingly comfortable. I am wearing them now!  At first I thought the insoles might be a little hard but the shoe is quite comfortable.  I have to watch what I wear and can not wear narrow sneakers.  These shoes have enough room so do not pinch across the top.  They work well for me and are true to size",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great hiking sneakers and looks great. Very comfortable and has good arch support",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Only wear New Balance for walking.. Good fit, comfortable and durable. Great walking shoe",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Good Slip Ons That Are Comfortable!. Thanks to high arches and huge bunions, my feet have been causing me a lot of pain recently.  As soon as I saw the GOUPSKY slip on sneakers for women, I immediately ordered a pair.  They looked incredibly comfortable.  and I was right. They ARE comfortable. GOUPSKY slip on sneakers are soft and flexible, yet offer a good amount of support.  They're breathable as well, which I really like.  As I mentioned, I have rather large bunions.  Rather than rubbing against my bunions,  GOUPSKY slip on sneakers cushion/fit around  my bunions without stretching the material and provide comfort instead of pain.  I've been wearing the GOUPSKY's for 2 straight days now and my feet feel good!  These are definitely good walking sneakers that fit well and are comfortable.  SO glad I ordered them.  I ordered pink-they don't seem quite as pink as the photo on the Amazon page,  more of a pink-mauve color, IMO",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great fitting and looking sneaker for the money.. Sneakers were just as expected.  Great fit.  Great looking.  Great price",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Step into Life.... [[VIDEOID:7970fa8efb7027e872c16428ea2a2334]] These sneakers have safety reflective strip in the front and back of the shoe.  They really help to put the bounce back into life.  I find them to be supportive in the heals with reinforce material and ankles with their lacing design.  They are lightweight with real rubber soles to prevent slipping and provide better durability.  I really like these sneakers and their style.  The fit is true to size.<br /><br />Trust you found this review to be honest and helpful:-)",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_004.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 520,
+      "fashion_image_id": "10096",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 2198,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_005",
+    "title": "Reebok Men Premier Zigfly Silver Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Silver",
+    "usage": "Sports",
+    "price": 2279.0,
+    "currency": "TRY",
+    "rating": 4.92,
+    "review_count": 12,
+    "description": "Men Beat Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "sporty"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "small",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "sporty"
+    ],
+    "known_issues": [
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 3,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2072,
+      "clicks": 334,
+      "cart_adds": 86,
+      "sales": 8,
+      "return_rate": 0.07
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.43,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 4.0,
+        "text": "Decent sneakers. So far they seem fine. I'm about an 11.5 in shoes but like to size up to a 12 if possible, which I did here. I'm glad I did size up because they fit perfectly, so I would say that they seem to run about a half size short.<br /><br />I got these on sale for around $15 I believe. I wouldn't pay much more than $15-20 for them really though. They are good for the price so far",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable.. my son loves these sneakers! They are easy to put on and he says they are very comfortable",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Retro, love them!. Still fab tennis shoe since they were all the rage in the 80's! Super cute and comfortable, great support!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable, lightweight, and fit perfectly.. The sneakers are great for the price! They are lightweight, comfortable, and fit perfectly. If you are looking for a great budget sneaker, these are it",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Sparkles. It's cute how these sparkle so much. These sneakers were good. She could run in them without a problem.<br />These shoes are very nice. They were cute for my child. They thought they were comfortable. The fit was fine. They were able to use it for different situations. They were easy to put on and off. The quality seemed fine. They looked good on her. She liked them. The deal was fine. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Love these shoes. Very light weight and breathable. My favorite running shoes, I own several pair",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfy feet. Hands down my favorite pair of sneakers I've owned. I have to wear boys shoes for my hobit feet and they tend to be not as durable as adult shoes, but these are great! Plenty of room (a bit bigger than I expected but still fit great), great to run in, comfy to wear around. Awesome shoes 👍",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Adidas hits a homerun again.. These shoes are a steal for the money, used them in the gym day they arrived was like I was floating on air. So light at times I almost kicked stuff just cause I’m used to steel toe Carolinas 10hrs a day.<br /><br />The fitment was great, size was spot on, laces don’t bother me as some reviews said I tied them tight enough not to be loose but didn’t strangle my feet. Overall I’d buy them again in another color or this one again no questions asked.<br /><br />My only dislike, is that amazon tends to always ship shoes in bags since there in a box. But yet if I buy a compressor they put the factory box in a box.. if you collect sneakers though I wouldn’t consider these for collecting I must warn your box will arrive smashed most like 4/4 for me.<br /><br />Side note they arrived in an adidas box with tags",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable. Love these sneakers.  Wish sketchers would make a chunky womens high top sneaker.  But these are good looking and very comfortable",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Running sneakers. These sneakers are very comfortable and a great value for the money",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "So Comfortable & Like Healing for Feet. [[VIDEOID:4b38260b341e7894a3daf193a7c42edd]] First, these are so comfortable.<br />Second, I don’t know how, but they don’t make your feet sweaty<br />Third, I really like the rubber bottom.  Very slip resistant real rubber.<br />Forth; made to last<br />Fifth, easy to slip you foot into without slipping off when you walk.<br /><br />Keep in mind these run small.  Better fit will be a half size beyond your largest sneaker size.<br />Overall, these are super nice, comfortable, and well made.<br /><br />Trust you found this review honest and helpful:-)",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "exactly as described. A comfy fit, a great walking shoe, plus I love the Boho look",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_005.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 10917,
+      "fashion_image_id": "10117",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4323,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_006",
+    "title": "Reebok Unisex Twist Black Sandals",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sandal",
+    "gender": "Unisex",
+    "base_colour": "Black",
+    "usage": "Casual",
+    "price": 989.0,
+    "currency": "TRY",
+    "rating": 3.88,
+    "review_count": 8,
+    "description": "Open Toe Caual Flats",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit",
+      "runs_small",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 2,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 2,
+      "comfort_complaints": 2,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 1281,
+      "clicks": 225,
+      "cart_adds": 15,
+      "sales": 3,
+      "return_rate": 0.38
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 1499,
+      "competitor_rating_avg": 4.58,
+      "competitor_common_strengths": [
+        "strap comfort details",
+        "sole flexibility info",
+        "summer lifestyle images"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "This sandal is just wonderful and I've tried so many. This sandal is just wonderful and I've tried so many. The fit is an exact match. I LOVE it and got several pairs",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Super soft. These slide sandals were great. They were so soft. I think they were the most cushioned sandals I ever got. They were veyr easy to wear. They felt good when you were walking. We have many products from Under Armour and have been happy. They feel very well made. They look fine. They seem durable. We were very pleased and would definitely recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 2.0,
+        "text": "Run long and WIDE.. I live on a river and thought these will be the perfect sandals for me!<br />These sandals seem sturdy and pretty well made.<br />If you have a wide foot these shoes are for you., but if you want to make the straps across the toes<br />Tighter, you cannot. There only for getting your foot in if you have wide feet.<br />I measured my foot from the chart, and ordered the 6 /12, these sandals run BIG, long for me, and are useless.<br />I usually wear between a 6 1/2 and a 7.  I do have a narrow foot. Although can wear Regular width.<br />Also I asked before ordering if these run wide? The seller etc. never answered, now I know why!<br /><br />These shoes are worthless to me, and will be giving them to the animal thrift store",
+        "sentiment": "negative",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "wide_feet_issue"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Comfortable.. I tend to dislike wearing regular shoes, so I like having a pair of flip-flops around for when I only have to go a short distance and don't need a ton of ankle support.  These flip-flops were to replace an older pair of sandals that was starting to show their age.  These new ones are comfortable and for me, that's all i'm asking for",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Nice House Sandals. This is a nice pair of comfortable sandals. My daughter uses them as her house shoes during the summer, but they would also be appropriate for the beach, as shower shoes, or a variety of other uses. They are comfortable and fit true to size. They are lightweight, durable, and feature a non-slip tread. This is a practical pair of attractive sandals",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Amazingly Comfortable. I live in Florida and I wear sandals all year 'round. These are the most comfortable sandals I've ever worn. The insole has enough give to absorb the shock of walking on any terrain but is stiff enough that you don't feel like you're walking on balloons. The strapping system is widely and easily adjustable. The leather, I purchased the Dark Brown, is well dyed, the color is rich and even. The uppers are thick enough to be durable but not so thick that they don't flex. The tread has good traction on wet or dry. I love these sandals. Highly recommended!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 1.0,
+        "text": "Terrible fit, very uncomfortable. I normally wear a woman's 7.5 and have never had to size up to an 8 in sandals, especially if they are open toe.<br /><br />These sandals have such a bad fit it's kind of impressive. They both fit very small and loose at the same time. The space between the back strap and the toe bit is at least a full size smaller than it should be. The bit that goes between the toes is very stiff and painful. I only tried them on and didn't need to walk around in them to know they were way too small in this area. The skin between my toes was instantly uncomfortable. The toe area will definitely cause blistering.<br /><br />The straps that go above the foot have too much space and float awkwardly above my foot. You would need to order 2 sizes down and have quite full/wide feet to fill these out.<br /><br />Besides the poor construction and placement of the straps, the sole is stiff and would not provide much support. I cannot see these being comfortable for any amount of time.<br /><br />The sandals are very cute though, I really wish they had fit. I would not recommend these at all. Especially considering the price, I wouldn't think these would be as bad as they are.<br /><br />I hope this review is helpful",
+        "sentiment": "negative",
+        "signals": [
+          "runs_small",
+          "wide_feet_issue",
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "great summer sandals. I'm not the biggest fan of sandals, usually because they're thin and not very comfortable. These sandals have a thicker sole than I usually find, and a bit of arch support. The material also has a little 'give' to it, so they feel good when I wear them. The straps are colorful and while thin, don't rub uncomfortably against the skin. All in all, they look and feel great",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_006.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 18367,
+      "fashion_image_id": "10079",
+      "fashion_article_type": "Sandals",
+      "myntra_row": 213510,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_007",
+    "title": "Reebok Men Premier ultra 8 U-form Silver Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Silver",
+    "usage": "Sports",
+    "price": 2279.0,
+    "currency": "TRY",
+    "rating": 4.62,
+    "review_count": 8,
+    "description": "Men Beat Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2363,
+      "clicks": 114,
+      "cart_adds": 10,
+      "sales": 3,
+      "return_rate": 0.09
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.32,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Great look Great fit. Not an athletic shoe but for stepping out and lookin' goooood! The wedge positions the feet at a slight angle which lends great support. I cruised around in these babies for over 3 hours the day after purchase and my pups were no worse for wear. Bought size 8 which fit perfectly",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Great Replacement for Shoe Strings!. OMG I love these!!!  I tested them out on my tennis shoes and they're so awesome.  I am so thrilled to never have to tie my tennis shoes again because they would always come untied while I was walking.  I am going to buy my husband a pair of these for his sneakers, too!  In Love with the Hickies!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "best laces for athletic shoes. Great shoelaces.  They are easy to thread, and don't roll or twist.  They also have enough stretch to double-tie.  Husband loves these!",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Beautiful Shoes, Striking but a little Pricey. I got the Blue and White version for my son and we both love the looks as well as the comfort. The blue striping is striking and bright, and he said they were like walking on clouds.  We will mostly be using them just for walking and general day to day shoes, but he is rather particular and will reject shoes for any sense of discomfort.  He reports no discomfort with these.<br /><br />There is a bit of stick shock for these, but I can see that they would be good and comfortable running shoes. The materials seem good although light. They are breathable and I'm guessing the light materials are aimed at their running emphasis.  I can't say enough that my son like such a nice looking pair of shoes",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Not worth the extra money. The Go 3 Walking shoe is true to size and comfortable for all day wear.  However, I don't see a great improvement over the Go Walk 2.  Having worn both the 2 and 3, I would not spend the extra cash to purchase the 3.  The '2' costs less and performs the same",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Kinda ok!. The photo made the sneaker way more attractive than they are in real life. They look like over grown Barbie doll plastic shoes. A bit disappointed but I guess the material is what it is to keep the shoes light. So overall, the color is nice, it's very light but the style /material isn't much to be desired",
+        "sentiment": "neutral",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "So classy. [[VIDEOID:e8750e804c9126ead2e20367e7b24c0f]] These sneakers are very classy! I love the red color and they are super comfortable to wear! They are perfect for running or gym time!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great sneakers - Unsure anout sizing. Third pair of Propet sneakers  I have bought, and probably will be buying more.  I am diabetic and appreciate comfort in footwear and these are very comfortable.  I think these are a little snugger than usual, not uncomfortably so in my case.  These particular sneakers claim to be waterproof, but haven’t needed to test them yet.  Great pair of sneakers, but disappointed they seem narrower than my other X-Wide pairs",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_007.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 4590,
+      "fashion_image_id": "10037",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4323,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_008",
+    "title": "Reebok Unisex Adventure Sports Grey Sandals",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sandal",
+    "gender": "Unisex",
+    "base_colour": "Grey",
+    "usage": "Casual",
+    "price": 2999.0,
+    "currency": "TRY",
+    "rating": 4.67,
+    "review_count": 9,
+    "description": "ARCH FIT F-D Sports Sandals",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit",
+      "runs_small",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 2,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 1,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2496,
+      "clicks": 455,
+      "cart_adds": 138,
+      "sales": 6,
+      "return_rate": 0.28
+    },
+    "visual_signals": {
+      "image_quality": "high",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 1499,
+      "competitor_rating_avg": 4.34,
+      "competitor_common_strengths": [
+        "strap comfort details",
+        "sole flexibility info",
+        "summer lifestyle images"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "LEATHER LINING & UPPERS-Perfect Summer Sandals These Are WINNERS!. Our daughter has been used to buying Borne or Sofft shoes.  She needed a new pair of sandals, so we got her these.  Let's see how they measure up.<br /><br />WHAT ARE THESE LIKE?<br />First of all, these shoes are one of the few shoes left that has LEATHER LINED LEATHER UPPERS.  That is important for people like me and my daughter who have problems with faux leather tearing up our feet in the summer time, leaving rough raw skin.  The sole where the foot rests is also leather so there is not any sliding when the feet sweat.<br /><br />The closure is velcro, and they close at the ankle.  There is a buckle at the ankle to control  the tightness somewhat.  The front strap and the center strap are a very dark brown.  The rest of the straps are a gorgeous dark hematite color.  The buckles reflect the dark brown but they are metallic and look very classy.  The sole is EXTREMELY grippy.<br /><br />These shoes come in a nice box with each shoe in its own bag which is a nice classy touch.<br /><br />HOW DO THESE SANDALS PERFORM?<br />I have to say that our daughter has a tough time with shoes.  These fit her perfectly and she LOVES them.  She wears them all of the time and marvels at how they do not slip and she can walk just about anywhere without issue.  The fit is very roomy and her feet tend toward the wide direction.  Her ankles are also rather thick, and these fit perfectly as well.<br /><br />TRUE TO SIZE?<br />These run very true to size- if you tend toward wider feet, there should not be any problem.  VERY narrow feet might not like these.<br /><br />THE BOTTOM LINE<br />With true to size fit and excellent leather linings and outer shell, these sandals are a hit with our daughter.  She loves them, enjoys how grippy they are on the sole, and the color is very unique and goes with a lot.<br /><br />MY RATING<br />FIVE STARS!  These are a winner.  I would definitely be open to buying a pair of these for myself",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Decent sandals. These sandals are fine. They fit on okay. The look is fine. They feel thick and well made. They were not too hard to put on.  They are good casual wear. They stretch to fit you. They were okay to walk in. They were as described",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Surprisingly comfortable. Fits is different from the leather version. I needed to move down a size. Plenty of support. Surprisingly comfortable for an EVA sandal",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "You can't go wrong with Keens!. Keens have been our go to summer sandal for years now. These shoes are very well made. The soles are very thick and durable and they fit wider feet amazingly well. I love that these are washable too, since my daughter is prone to stinky summer feet. They're easy to get on and off and my daughter said they are comfortable. This pink pair is every bit as impressive as the pairs we've owned in the past. Highly recommended these shoes!!!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Sandal is very comfortable and color red very stylish!. For everyday errands it fits wonderful and goes with any type of clothing",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "I'm a big fan of reef flipflops. I've worn some kind of flipflop since I was quite young, and since I discovered Reef more than 20 years ago I've become a big fan.  This classic style is what I prefer: they're very comfortable and long lasting.  I've tried Teva, who makes great sandals, but find that their flipflops just don't seem quite as comfortable",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Ok Slide Sandals. The slide sandals were too narrow for me and didn't fit properly.  I could wear them but the arch wasn't in the right place.  I was disappointed in them.  Others with more narrow feet might not have the same problem",
+        "sentiment": "neutral",
+        "signals": [
+          "narrow_fit",
+          "wide_feet_issue"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Appear to be very sturdy and well made. These haven't been worn for a long day yet but the person I bought them for loves them.  They fit very well with the size being exactly as expected.  The sandals look to be very well made, and a good value for the price",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "order 1/2 size larger than you need, well made shoe. I have another pair of Keens that are similar to these and they run true to size.  This pair seems to run about 1/2 size too small.<br /><br />These, like my other ones, are built well and are comfortable to wear.  I like the color of these.  They go with several things I wear often.  They are easy to put on and take off.  You can't just slide your foot in which is a plus for me with narrow feet.  The arch support is pretty fair, not bad for sandals.  The sole is a high traction, non-slip rubber.<br /><br />The more I wear these, the more I like them",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_008.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 28176,
+      "fashion_image_id": "10115",
+      "fashion_article_type": "Sandals",
+      "myntra_row": 24749,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_009",
+    "title": "Reebok Men Hanavi II Green Flip Flops",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "slipper",
+    "gender": "Men",
+    "base_colour": "Green",
+    "usage": "Casual",
+    "price": 999,
+    "currency": "TRY",
+    "rating": 4.62,
+    "review_count": 8,
+    "description": "Reebok Men Hanavi II Green Flip Flops is a Green flip flops designed for casual use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort"
+    ],
+    "fit_type": "large",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily"
+    ],
+    "known_issues": [
+      "runs_large",
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 3,
+      "runs_large_mentions": 1,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2303,
+      "clicks": 103,
+      "cart_adds": 13,
+      "sales": 3,
+      "return_rate": 0.17
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 999,
+      "competitor_rating_avg": 4.33,
+      "competitor_common_strengths": [
+        "softness details",
+        "grip information",
+        "home comfort positioning"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Can't use. Doesn't fit my foot.  A recent ailment left my foot swollen and I thought the slippers with velcro would adjust, NOPE. Not vendors fault.  Velcro is just not expandable enough",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 2.0,
+        "text": "Lightweight but not supportive. Too small - if reordering I would get a larger size.  Very lightweight, which was nice, but therefore no support.  If they had fit, I would have kept them to use as house slippers",
+        "sentiment": "negative",
+        "signals": [
+          "runs_small",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "So Comfy!!. I love a plush slipper. This one is that and more. There's a hard rubber sole that can be worn inside or out. The interior is lined in cozy faux fur that doesn't make your feet sweat. The exterior is a microsuede-like texture. I love the crest detail. It makes the slippers look like they were \"borrowed\" from a boutique hotel. I found the sizing to be a little small. I wear an 8. My toes are right up at the edge of the slipper. I would definitely size up if you prefer a looser fit.<br /><br />Update: The slippers stretch after about a week of wear, so you may be okay with your regular size.<br /><br />Thanks so much for reading this review. I hope the information that I've provided makes your decision a little easier",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Right fit for the right price. I love these slippers. They wear very well and are just the right weight. I have ordered some for my sister also",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Great Flip Flops. I bought a pair of these for each of my kids. They are well made and Reef is a great company that backs their products. (I have had to have Reef replace a pair of flip flops I purchased and they did so without any issues.) I purchased these for boys and girls.<br />The toddler sizes run big. My youngest sized to a 7, so I purchased the 7/8 and they were way too big. If your toddler sizes to the smaller of the two sizes, order down.<br />The kid sizes run small. My 5 year old sized to a 12, but actually fits a 13/1. So, on kid sizes, order up if they fall into the larger size and order on size if they fall into the smaller size. (So, if they measure a 1, go with a 2/3 but if they measure a 13, go with the 13/1.)<br />They have back elastic straps through the 9/10 toddler size. Above that, they do not have back straps.<br />The bottom is dense and durable. No worries about kids biting through them (I had shockingly had this happen multiple times with other flip flops) or them tearing up quickly. If you do have a problem, contact Reef and they will help you out. They want you to be happy with their shoes. These do have flat bottoms. Some of the other Reef flip flops have a kind of lip around the bottom of the shoe to kind of cup the foot- these do not",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "runs_large"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "fun to wear and warm!. love these little slippers - keep my feet nice and toasty!! fit as expected",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Thank goodness for Amazon reviews!. I normally wear an 8-1/2 wide shoe.  I read the Amazon reviews indicating these run a bit small, so ordered a size 9W, which fit perfectly.  Lightweight, comfortable, and great Rockport quality.  These will likely be my around the house shoes, since I prefer not to wear street shoes in my house, and these are as comfortable as house slippers",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Almost too cute to wear.. Havaiana flip flops are so cute. It’s a shame no one see the designs. They are comfortable",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_009.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 18902,
+      "fashion_image_id": "10083",
+      "fashion_article_type": "Flip Flops",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_010",
+    "title": "Reebok Men Raceon White Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "White",
+    "usage": "Sports",
+    "price": 2799.0,
+    "currency": "TRY",
+    "rating": 4.29,
+    "review_count": 7,
+    "description": "Men Energen Lite Running Shoes",
+    "features": [],
+    "tags": [
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 2,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2734,
+      "clicks": 307,
+      "cart_adds": 54,
+      "sales": 17,
+      "return_rate": 0.13
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.26,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 2.0,
+        "text": "Not worth buying. These were comfortable at first but then you realize they’re not very well-made and they’re not good for your feet or knees it’s worth the money to spend more money and running and walking shoes I already am not wearing these anymore after two weeks",
+        "sentiment": "negative",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Good fitting sketcher sprt energy sneakers. Finally a pair of sketchers that fit my feet and don't hurt them, I was able to wear them as soon as I got them.  I have them on now and put them on this morning.  Very happy",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "perfect fit. Bought these for my daughter as her sneakers were so bad... she doesn't even have to wear an arch support in these... she loves them !!  Makes a mother very happy!",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Nice style. These sneakers' style is so great! I love the black and red combo. They are fashionable and also very comfortable to wear. They are perfect for gym and jogging. I cannot wait to wear them every day!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Some much needed tennis shoes. 4.5. I have been taking tennis lessons lately (yes, middle aged women enjoy hobbies….between tennis lessons and paint by number projects….this pandemic has opened up my eyes to new things) and a great pair of running shoes is appreciated. These Mizuno (Wave Horizon 5) running shoes were needed. The design is attractive. The colors are subtle – purple and black with accents of red and white. They are comfortable and fit true to size. I have narrow feet and high arches but have had no issues with these. They are flexible and have a lot of cushion. I wore them for several hours and didn’t experience any discomfort. My teen sons usually pick out my tennis shoes, saying that I have no shoe game (I normally wear Saucony or Nike Air), but they said these are an improvement of some of the ones that I have picked out myself. I’d recommend these",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great on Any Surface. These sneakers are awesome. They're light and extremely comfortable while still feeling sufficiently tough and supportive. The tops are light and allow air to flow in and out. The soles are rugged, with outstanding traction. They hit all the right points for me",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Meh. Not very cute and not very comfortable.. I have been searching for a pair of sneakers that have both a nice amount of cushion and support. I wasn't too thrilled with the aesthetic of these, but I know a lot of people love New Balance walkers, so I ordered them in black.<br /><br />The look of these is kind of blah (to me), but good enough as I was just using them for exercise. I found these fit a bit different than other New Balance shoes I ordered. They were a bit too short and didn't have enough cushion or support. I didn't find them all that comfortable. They are pretty lightweight and seem sturdy, but not nearly as comfortable as some of the other shoes I tried",
+        "sentiment": "neutral",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_010.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 5482,
+      "fashion_image_id": "10039",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4326,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_011",
+    "title": "Reebok Men Speed Mode White Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "White",
+    "usage": "Sports",
+    "price": 2799.0,
+    "currency": "TRY",
+    "rating": 4.25,
+    "review_count": 8,
+    "description": "Men Energen Lite Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "regular",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "cheap_material"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 1,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 783,
+      "clicks": 150,
+      "cart_adds": 17,
+      "sales": 2,
+      "return_rate": 0.24
+    },
+    "visual_signals": {
+      "image_quality": "high",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.44,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Good fit. I am a true size 6 in women’s shoes. I wear a 5.5 in tennis shoes. I ordered a 4.5-5 women size and it fits just right!",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable. Great walking shoe for my husband",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Nice sneakers. [[VIDEOID:1e9ae548e39bed2415e9874b6d8f96c2]] The sneakers are super nice and fashionable. I love the color combo and the black color is super cool! They are very comfortable to wear and very good for daily running time",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Slip On’s and true to sneaker size. [[VIDEOID:2e939e5664a624cb0d73a2f9bf00898a]] The are made of 90% leather, but need a little break in time.  Don’t get these and go 8 hours in your first day!  The do become more supple in time.  In fact, at first I wasn’t sure if they were real leather.  In time, I discovered these are an extremely light and comfortable shoe.  The bottom has a nice traction.  When they are wet on the bottom tread they don’t slip on tile.  Overall, these are a really nice casual shoe.<br /><br />Trust you found the review honest and helpful:-)",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Good walking shoe. Bought for a trip to England, lots of walking and these were most comfortable.also good mowing the lawn",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Comfortable easy on sneakers. These sneakers are comfortable and easy on.  They look stylish",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable, lightweight, and breathable!. These sneakers are made with integrity and are excellent quality! They are so comfortable and fit true to size. Very breathable, lightweight, and flexible. They break in very fast. Look very nice too!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 2.0,
+        "text": "very lightweight sneakers. i purchased this sneaker. Does not come in a box instead in a clear sip plastic bag. The sneakers feels a bit cheap and it very light. Breathable yes because it's mesh. The sole feels cheap  and insoles are not shock absorbent. It say Running sneakers I think not. I will try them out indoors. I'm afraid it may get damage from walking outside everyday. I will not recommend this to anyone",
+        "sentiment": "negative",
+        "signals": [
+          "comfort_positive",
+          "cheap_material"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_011.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 22095,
+      "fashion_image_id": "10078",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4326,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_012",
+    "title": "Reebok Men Premier road supreme 2 Silver Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Silver",
+    "usage": "Sports",
+    "price": 2279.0,
+    "currency": "TRY",
+    "rating": 4.71,
+    "review_count": 7,
+    "description": "Men Beat Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "color_mismatch",
+      "comfort_negative",
+      "narrow_fit",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 1,
+      "comfort_complaints": 2,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 1
+    },
+    "sales_signals": {
+      "views": 1599,
+      "clicks": 149,
+      "cart_adds": 45,
+      "sales": 3,
+      "return_rate": 0.27
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.58,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Once you've had a pair, you'll never be without them!. I have worn these for years. They actually give me more support and comfort than my expensive tennis shoes!! I love them. I can wash them in the washer and dry them in the dryer. They come out just perfect. I would recommend these to women every where. Once you've had a pair, you want ever be without one.<br />Susan Mejia",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 4.0,
+        "text": "Solid run around town- active shoe!. Purchased these for a fun trendy shoe to transition out of winter and into spring... love the color combo- mostly monochromatic gray they will match plenty… The mint green is so subtle yet, fun!  I like the idea of easy on/off- although, these have laces… If tied loose, one can slide foot in and out easy enough without untying each time!<br /><br />Fit was solid in the length but, a bit wider through the top toe section.. giving me an extra bend and crease in material- not my favorite as, I feel like I have clown feet but, husband promises they look completely normal?! Not enough to be a dealbreaker but, something to keep in mind if you have a narrow foot.<br /><br />These are very light weight and by light, I mean it feel like almost nothing on the foot!! As a dancer for 20 years I have flat feet! So, a high arch support something I’m not used too.. I can only wear for a few hours at a time. Hoping this gets better as my foot adapts... for those who don’t appreciate arch support- keep this in mind.<br /><br />Lastly, the tongue Is stitched in such a way.. that these don’t have a lot of movement for repositioning. Most the structure comes from tying the lace- another caveat a lot of running shoes are going to but, it may take a bit getting used to.<br /><br />Overall, for the price point of $36… They are solid shoe. Not something that would be used for a rigorous workouts but, more conducive to being active and run around town shoes! I hope this info can help your decision… Feel free to let me know!",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "took a bit to break them in. great sneaker!...just a bit small...but I made it work.<br />A good walking shoe, maybe not 'stylish' but functional!<br />will buy again if they still make them when I need them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Cute. These are cute and my 11 yr old likes them a lot. She has been wanting a pair of platform sneakers. She says they are comfortable. They are a good dupe for real converse",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "true to size, fits my wide feet with high arches, comfortable, slimming looking. Please dont boost the price, as much of the appeal has to do with the budget friendly pricing of being no more than $22. These are cute shoes. I have the black with the pink/purple design. I usually go with safe colors (goes with everything) as I dont want to spend money on all sorts of different colors. With these, I am very likely to buy all the colors.<br /><br />The shoes do not look cheap to me. They have a neat upper solid mesh texture, have a solid bottom with grip, the interior has a padded insole. And shocker of shock, they FIT. I have the size 11. I have size 10/10.5 feet. I have WIDE feet (hereditary bunions on both feet, both sides), and when I can't find wide width, I can sometimes get away with a larger length because the width is just enough to accommodate. Usually this only works with sneakers. I really had no idea how it would be with a pair of casual shoes. Vine stuff isn't free exactly, so I was truly taking a chance on these. I think someone in a review mentioned fitting wide, and that is what pushed me over the edge wanting to try these-- and be able to report back my findings.<br /><br />They fit. They fit!! Funny, they do not look like they would. They are slim looking. But they slid right on, and didn't strangle my feet. They have a little flexibility. Like, they are structured but have some give. And yet my feet dont look like they are over flowing. My feet look slender in these. SO crazy.<br /><br />So.. as for true to size. I think they are. Like I said, I wear a size 10.5, so often go with an 11. These 11's do not feel too long. The width is perfect for my wide feet, but I think that has more to do with the slight give more than a wide design. The other aspect to a shoe fit in the spacing between top and bottom. They fit well here too-- my feet arent bulging out the top. Perhaps those with very narrow, petite in all directions may find these loose. I do not know. Shoes are often geared toward more petite feet, so my enthusiasm is that they fit my larger, wider, thicker feet at the size I normally get. I really do hope this paragraph helps explain them to you.<br /><br />I would say if anything, since they are a flat, low profile, slim, thin, ballet style shoe, that if you have super high arches like I do, then you will feel /see a little bit of your arch. But the shoe stays on.. so no complaints. I would love to seem more colors and designs. This is the first time I want to buy cute shoes. Keep it at the $20 price point, and I think those who buy one pair and like them will also come back for more",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "wide_feet_issue",
+          "comfort_positive",
+          "color_mismatch"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "5 stars because.... I have severe condromalacia patella, and my knees are always bothering me. Shockingly, since Ive been walking/running in these sneakers, my knee pain is non-existent. I am now a Brooks believer! Also I get complimented on them CONSTANTLY, so there's that LOL",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Perfect for Spinning or Road Riding. This is a good set that includes both pedals and shoes. The shoes have three Velcro straps and are well ventilated. I am usually a size 10.5, but I ordered a size 11 and they fit perfectly. Cycling shoes almost always run a half size smaller than walking shoes.<br /><br />The pedals are good quality. They have an SPD style pedal on one side and a platform pedal on the other side. The cleats are also included. These pedals allow you to ride with your shoes clipped in, or you can ride on the flat side like a regular bicycle.<br /><br />These are nice pedals for an exercise bicycle that has multiple users. Riders without SPD cleats can use the flat side of the pedal. You can adjust the tension on the pedals with an included Allen wrench.<br /><br />The shoes are comfortable with a stiff sole. These are attractive, practical, and durable shoes that will allow you to get more out of your cycling workouts",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_012.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 7410,
+      "fashion_image_id": "10111",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4323,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_013",
+    "title": "Reebok Men Premier Verona Supreme 2 Black Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Black",
+    "usage": "Sports",
+    "price": 2799.0,
+    "currency": "TRY",
+    "rating": 4.43,
+    "review_count": 7,
+    "description": "Men Energen Lite Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "small",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "low_durability",
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 1,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 1,
+      "quality_complaints": 0,
+      "durability_complaints": 1,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2259,
+      "clicks": 382,
+      "cart_adds": 33,
+      "sales": 2,
+      "return_rate": 0.32
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.3,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Fit great and they are very comfortable. These Women's Slip-on Walking Shoes are nice. I was skeptical at first, but I love them. I have a swollen leg and foot due to cancer and I have trouble with some shoes. These worked perfectly for me.<br /><br />The pack comes with the shoes. They have good arch support and the fit is good. There are shoelaces in the shoe for show.<br /><br />I have already recommended these Women's Slip-on Walking Shoes to family and friends",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great Style and Comfort. I have been working to expand my shoe options over the past few years. There was a time when I purchased one or two pairs of white sneakers and that was all I had. I wore them until they wore out and then replaced them. Today, I have more pairs of shoes and more colors and one of the better shoes I have added to my collection is these Duoro Men’s Running Shoes.<br /><br />These shoes feature an attractive pattern of small, white lines contrasting against the black background. The bottom of the shoes is rubberized and grips well. The black laces are already in place and ready to tie, straight from the package. The back of the shoes are low enough that they don’t rub against the back of your foot when you walk or do exercise.<br /><br />I normally wear a size 11 when I purchase shoes, but I decided to go with 11.5 with these shoes and I am glad I did! That extra half- size makes all the difference. The shoes are quite comfortable for an extended walk because there is enough room that I don’t ever feel the sensation of tightness, even after walking for several hours. And with the grip from the soles, I can feel confident that I won’t slip.<br /><br />I like having more shoe options to fit different occasions. These black running shoes from Duoro are one of the best I have purchased thus far. They look great, feel great, and will satisfy many of my walking and fitness needs in the coming years",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "comfort_positive",
+          "low_durability"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Nice Casual Sneakers…very comfortable…. [[VIDEOID:35c602c1789cd1a1c9fccef438a8e270]] These sneakers are comfortable for walking and casual stuff.  They are not true running sneakers that’s why I took 1 star away.  They do have a rubber bottom and good traction.  The support is good for daily use.  True running sneakers have different grade rubber on the bottom and stronger support.  Nonetheless, these look great and are comfortable everyday sneakers.<br /><br />True to size too.<br /><br />Trust you found this review honest and helpful:-)",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Hard to get in but worth the effort. Hard to get fitted inside some shoes but it's worth the effort. I was wearing a hole in my sneaker and now feel much more protected",
+        "sentiment": "neutral",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Lightweight and Comfortable. I purchased these for my husband, they fit perfectly and he LOVES them, they are very lightweight, as light as a tennis shoe and the memory foam insole is comfortable yet doesn't trap heat so his feet feel comfy all day. I recommend this product",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Obsessed!. These are amazing! I am ordering a second pair for when these ones wear out as I am living in them at the moment. They are the most comfortable sneakers I have ever owned. I can walk miles in them without sore balls of my feet and no blisters. They are breathable enough to wear in the summer and are so lightweight that there is minimal sweating and therefore no blisters. Great arch support built in and so ideal for anyone that would normally have to add inserts to get that extra support. They look classy enough for the office as well as being worn casually at home and for the price they are an absolute bargain.<br /><br />True to size. I am a Euro 38 and this is the size I ordered and they are a perfect fit. I wear wide fit most of the time (just so my toes can spread as I am on my feet almost all day) and even though these are not a wide fit there is plenty of room in the toe which is a must for me. Cannot recommend these enough. Five stars!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Bag is pretty and holds enough for a gym trip. It's a nice bag.  It has enough room for your gym clothes and a place for your tennis shoes to go at the bottom if you don't have big feet",
+        "sentiment": "positive",
+        "signals": []
+      }
+    ],
+    "image": "/images/products/shoe_013.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 14098,
+      "fashion_image_id": "10102",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4326,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_014",
+    "title": "Rockport Men Drsp Wingtip Black Formal Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "formal_shoe",
+    "gender": "Men",
+    "base_colour": "Black",
+    "usage": "Formal",
+    "price": 3499,
+    "currency": "TRY",
+    "rating": 4.18,
+    "review_count": 11,
+    "description": "Rockport Men Drsp Wingtip Black Formal Shoes is a Black formal shoes designed for formal use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit",
+      "runs_small",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 3,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 2,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 3115,
+      "clicks": 262,
+      "cart_adds": 67,
+      "sales": 11,
+      "return_rate": 0.29
+    },
+    "visual_signals": {
+      "image_quality": "high",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 3499,
+      "competitor_rating_avg": 4.45,
+      "competitor_common_strengths": [
+        "premium material details",
+        "occasion-based styling",
+        "fit guidance"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 4.0,
+        "text": "Skechers USA men's Oxford Khaki. Thank you fits as expected",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 2.0,
+        "text": "For Narrow Feet Only. The Driver Club USA Kids' Leather Boys/Girls Casual Comfort Slip on Moccasin Penny Loafer Driving Style are extremely narrow!  They also run a bit short.  My son's toe was way at the top of the shoe.  We received a size 3.  He's a 2.5 on one foot and a 2 on the other.  There should be no reason why a 3 is too short!  In addition, how narrow this shoe was is amazing.  I recognize that my son has somewhat wide feet.  It's always been an issue.  He gets it from his dad. But most mediums do not present a problem.  However, upon immediately looking at this from the box, I exclaimed, \"wow these are narrow!\"  Because I could tell immediately that these were a narrow shoe.  When my son tried them on in addition to them being too short, he exclaimed they were too tight on the sides, which told me again too narrow for his feet.<br /><br />These appear to be well made.  Nice stitching and the soles have a tread that look good for non-slippage.  However, these are extremely narrow and short.  If you wear a size 3 order a 3.5 and if you have wide or medium foot, you might want to pass these up.  Narrow feet only!",
+        "sentiment": "negative",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "wide_feet_issue"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Love Clarks Everlay Elma Oxford!. (For my wife)  I usually take a size 8 but had to size up to 8W.<br />This style runs narrow so altho' I never take a wide it works better for me in this.<br />This shoe is very classy and so comfy!<br />Would recommend",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable and Waterproof. I was pleasantly surprised that these rain shoes slipped on easily and were very comfortable.<br />I have a pair of Clarks Loafers that leak water, and you can feel every rock you step on; these Sloggers have a firm sole but are comfortable and waterproof",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Not low enough for boat shoes/loafers. Just bought these and haven't worn then yet, however I bought them specifically for inside my loafers.  These stick out the top of the shoe, not as advertised",
+        "sentiment": "neutral",
+        "signals": []
+      },
+      {
+        "rating": 4.0,
+        "text": "I like Clark shoes. I like Clark shoes!  I was a little disappointed that there is no place to put the penny in my penny loafers",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Best Business Shoes. Love these shoes!!! So comfy and fit as expected. I have most of the colors and I receive many compliments",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Meeshine loafers. These are great loafers and fit well",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Awesome shoes. i wish i would have bought some sooner. Most true to size shoe ive ever owned. The material is ridgid enough to slip on without using my hands but firm enough to where my feet dont move or slip out while walking. I also appreciate the wonderful insoles in them. I hiked 3 miles in these comfortably. I initially bought these as house loafers but bought another outdoor pair cuz i liked them so much",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Cute shoes but they run small. (Reviewed by my wife): I love the look of these loafers.  The color is a rich, light gingerbread brown.  The white stitching really \"pops\" and is eye-catching.  Although these shoes are fairly flat, there is some arch support inside the shoe.  The bottom of these shoes is not smooth like some shoes are; it has good grip to keep you from slipping.<br /><br />My only criticism of these shoes is that they are way too narrow and short.  I usually wear a 7.5 and these are tight.  I would recommend going up at least a half a size from what you normally wear",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "wide_feet_issue"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Real Leather/Great Value. A genuine leather \"boating shoe\"/loafer for under $20 ??? Color is even throughout, and it fits perfectly, very comfortable. An excellent shoe buy!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_014.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 11034,
+      "fashion_image_id": "10128",
+      "fashion_article_type": "Formal Shoes",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_015",
+    "title": "Reebok Men Runtone Action White Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "White",
+    "usage": "Sports",
+    "price": 2799.0,
+    "currency": "TRY",
+    "rating": 4.86,
+    "review_count": 7,
+    "description": "Men Energen Lite Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit",
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 1,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 1740,
+      "clicks": 92,
+      "cart_adds": 28,
+      "sales": 3,
+      "return_rate": 0.23
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.28,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Cute. These sneakers were good. She could run in them without a problem.<br />These shoes are very nice. They were cute for my child. They thought they were comfortable. The fit was fine. They were able to use it for different situations. They were easy to put on and off. The quality seemed fine. They looked good on her. She liked them. The deal was fine. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Stylish zero drop shoes. Grip well if on ice. Overall great shoe! Super narrow even for me!<br /><br />Pros:<br />Grip very well- love the grip they have, actually helps when on ice! Suede option I love. Durable. Light. Stylish!!!<br /><br />Cons:<br />Toe box is awkward- toes able to spread out but there is room in front of my toes. Buying size smaller was too small. Think it’s just the rubber making it feel like there is more room. Rubber comes up ontop of shoe, makes walking off. But guess it helps if you stub your toe.<br />Arch support- there is minimal support. You will need to walk correctly, takes more conscious effort.<br />Width- I have narrow feet but these are extremely narrow shoes! Probably why the arch appears low.<br /><br />I do like these. They are more casual and do not look like an athletic shoe. Wish they would make a suede newer version!",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great for people with foot problems. I have foot problems with several foot surgeries and several neromas. I've tried many different sneakers and these are the best I've found.  They have plenty of room in the toe, offer arch support, and are comfortable.  Will buy again when these wear out!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great support.. [[VIDEOID:93658b5c133c2c506745a9ea7ba9041f]] I’ve been running in these for about 2 and a half weeks now, coming off of a pretty bad shin splints injury from wearing Nike Frees for way too long haha. These shoes are extremely comfortable. By far the nicest running shoes I’ve ever run in. I will say it has been adjustment in terms of getting used to the support these shoes offer. I’ve always been a fan of how light Nike Frees are but they don’t offer the support I need for how often I run now. The shoes feel a little heavy at first but I am now getting used to them and LOVE how nice and supportive they feel",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Lightweight and Comfortable. These sneakers are incredibly comfortable. They're really lightweight, but also provide solid support. The soles are wide, which I like, as they provide good stability for athletic activity. I'd say they're well worth the price",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great  Shoe. This is a very comfortable, attractive and easy to wear sneaker.  I really enjoy wearing these and find them a pleasure",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Super comfortable!. As a senior, comfort and support  are a big thing.  I’ve been wearing Puma sneakers for years - have them in grey and black and love the ones that are mostly mesh.  The mesh gives - it’s not rigid, so they are comfortable the first time you put them on - no need to “break them in”.  They hold up really well, are easy to clean and go with almost everything.  Very pleased with these Pumas!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_015.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 10139,
+      "fashion_image_id": "10126",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4326,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_016",
+    "title": "Rockport Men Moc Front Brown Formal Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "formal_shoe",
+    "gender": "Men",
+    "base_colour": "Brown",
+    "usage": "Formal",
+    "price": 3499,
+    "currency": "TRY",
+    "rating": 3.43,
+    "review_count": 7,
+    "description": "Rockport Men Moc Front Brown Formal Shoes is a Brown formal shoes designed for formal use.",
+    "features": [],
+    "tags": [
+      "comfort",
+      "style"
+    ],
+    "target_personas": [
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "comfort",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit",
+      "runs_large",
+      "runs_small",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 2,
+      "runs_large_mentions": 1,
+      "wide_feet_mentions": 2,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2474,
+      "clicks": 118,
+      "cart_adds": 26,
+      "sales": 4,
+      "return_rate": 0.3
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 3499,
+      "competitor_rating_avg": 4.4,
+      "competitor_common_strengths": [
+        "premium material details",
+        "occasion-based styling",
+        "fit guidance"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Comfy and stylish. I absolutely love these loafers. They fit true to size. I love that slightly chunky look that doesn’t make my foot look huge. They also are comfy to walk or stand in for long periods of time.  Would buy again!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 1.0,
+        "text": "TOO NARROW FOR ME. I tried to stretch these out as they are too tight in the little toes area.  Now it's too late to return them.  I lost money on this purchase.  I will know for next time NOT to order Anne Klein loafers",
+        "sentiment": "negative",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "wide_feet_issue"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "men's slip on loafers. Good fit. Well made and true to size",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Better than expected. These shoes fit nicely, arrived on time, fairly comfortable.  I have only worn them a couple of times.  I expect them to last quite a while as I don't wear shiny white loafers very often, LOL",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 2.0,
+        "text": "Order next size. These run small.  Should order next size.  These are a very stylish  loafer. And the. Color is beautiful,  Wish I could have worn these shoes",
+        "sentiment": "negative",
+        "signals": [
+          "runs_small"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Handsome shoe. Fits my wide feet nicely, but is hard to stand on for extended periods.  Very comfortable while driving.  Not crazy about the square toed design on a penny loafer",
+        "sentiment": "positive",
+        "signals": [
+          "wide_feet_issue",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 2.0,
+        "text": "I like the material and the construction but I think these .... These cover too much of my foot so that they show when I am wearing ballet flats and most shoes I own. Loafers seem to be ok. I like the material and the construction but I think these are too big for me. I wear size 9-10",
+        "sentiment": "negative",
+        "signals": [
+          "runs_large"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_016.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 8650,
+      "fashion_image_id": "10143",
+      "fashion_article_type": "Formal Shoes",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_017",
+    "title": "Rockport Men Ed Plaintoe Black Formal Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "formal_shoe",
+    "gender": "Men",
+    "base_colour": "Black",
+    "usage": "Formal",
+    "price": 3499,
+    "currency": "TRY",
+    "rating": 4.1,
+    "review_count": 10,
+    "description": "Rockport Men Ed Plaintoe Black Formal Shoes is a Black formal shoes designed for formal use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit",
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 2,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2207,
+      "clicks": 360,
+      "cart_adds": 24,
+      "sales": 7,
+      "return_rate": 0.17
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 3499,
+      "competitor_rating_avg": 4.41,
+      "competitor_common_strengths": [
+        "premium material details",
+        "occasion-based styling",
+        "fit guidance"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 2.0,
+        "text": "Crazy Expensive for Made in China. I have the “Black/Multi” color.  These loafers are Made in China.  The embroidery on top is much more “subdued” in person.  The sole is not non-skid, and very slick.  The sole is also very thin; perhaps an eighth of an inch.  These loafers will not last long, unless you only wear them on carpet.  At the current price of eighty-five bucks, they are crazy expensive for that “cheap shoes Made in China” look",
+        "sentiment": "negative",
+        "signals": []
+      },
+      {
+        "rating": 4.0,
+        "text": "Beautiful loafers but run small. (Reviewed by my wife): These are beautiful loafers.  They are good looking and stylish.  They are well made and excellent quality.  Unfortunately the sizing is a bit off.  I ordered my usual size (8) and they were too short and snug.  I would recommend going up a half size",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small"
+        ]
+      },
+      {
+        "rating": 2.0,
+        "text": "ad says it should be good for 3 to 4 eyelets. ad says it should be good for 3 to 4 eyelets....very inadequate for 4 eyelets (men's size 8 oxford).  Barely enough room to bow tie them",
+        "sentiment": "negative",
+        "signals": []
+      },
+      {
+        "rating": 4.0,
+        "text": "Classic Style. These loafers have a classic style. They fit, but just. If you are at the top end of the size chart or have longer feet you may want to go up. They are comfortable and the mahogany is a nice rich brown. Although they don't look or feel expensive they look cute and feel good",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "PERFECT FIT & LOOK GREAT. [[VIDEOID:66bc64b206c8efd5f0602cbdf874b9de]] I have always liked penny loafers. They are so easy to just slip on and go. They are comfortable on. They have a very nice insole. The bottoms are rubber. These are such a classic shoe, I had penny loafers as a kid. They are made good  and have really nice stitching",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "AK Anne Klein Women's Cemina P O  Loafer, Black. I just love these loafers, apart from looking good they are also very comfortable.<br />Would highly recommend them to anyone who is looking for a smart comfortable shoe.<br />AK Anne Klein Women's Cemina Loafer. Black",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Worth it !!. Very cute shoe ! Perfect loafer. I was on the fence about buying these from Belk. Mostly because they were $90 on a whim I searched Amazon for them and found the exact same shoe for $40 less. I am very happy with these",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 4.0,
+        "text": "not as comfortable. I own many cole haan shoes since early-mid 2000.  They don't make the kind i like anymore.  Theses slip on loafer was kind of like the style of the past but not quite.  The area at the top where the shoe lace are is hard, kind of unconformable, but is getting better.  Otherwise materials looks fine, just he hard area is bad.  It doesn't look as good as other cole haan I owned",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Very comfy shoes.. These are nice shoes. Very comfy. Easy to slip on, feels sublime on your feet, cushioning your tired doggies in a soft pillow of goodness.<br /><br />They look cool too. As someone else said on here, \"old man loafers\". These are just brilliant!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "This stuff really works. This stuff really works. Had a new pair of loafers that I hadn't worn for 4 years because they were too tight. Now they are very comfortable",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_017.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 32114,
+      "fashion_image_id": "10147",
+      "fashion_article_type": "Formal Shoes",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_018",
+    "title": "Reebok Women Instant White Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Women",
+    "base_colour": "White",
+    "usage": "Sports",
+    "price": 1999.0,
+    "currency": "TRY",
+    "rating": 4.67,
+    "review_count": 12,
+    "description": "Women Flyknit Sports Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "comfort_negative",
+      "narrow_fit",
+      "runs_large",
+      "runs_small",
+      "wide_feet_issue"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 3,
+      "runs_large_mentions": 1,
+      "wide_feet_mentions": 1,
+      "comfort_complaints": 2,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 3359,
+      "clicks": 364,
+      "cart_adds": 127,
+      "sales": 22,
+      "return_rate": 0.31
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.26,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Good shoe... good price!. A good walking shoe... strong and comfy",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Running shoes. They run smaller than normal, so I had to order a bigger size. I like the look and fit",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great Zero Drop Running Shoes. Minimalist running shoes are a great way to change up your running workouts. These shoes are so lightweight that it almost feels like you are running barefoot, but they offer very good protection for the soles of your feet. The shoes are made from a breathable mesh with a large toe box. The rubber from the sole extends up over the toe to provide protection from roots and stones.<br /><br />The shoe has an elastic lace with a pinch slider. The lace has a Velcro tab on one end so you can attach it to the shoe and keep it from getting caught on grass or twigs. The insert has a surprising amount of padding, and the tread is non-slip and good for wet or dry terrain.<br /><br />These are a great pair of shoes for trail workouts, or for slipping on after a marathon to give your feet a break. They're comfortable, dry quickly, and fit like a glove. If you are a person who is usually between half-sizes, I would recommend selecting the larger size here",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "A Little Snug, but Otherwise Nice. I have been gradually expanding my shoe options and the type of shoe I wear more than any other are sneakers. It’s always good to have a variety of sneakers handy for different needs and this is what convinced me to get these ZASEPY Men's Waterproof Hiking Shoes.<br /><br />These shoes have a reasonably stylish look to them and the soles help grip surfaces so you can feel safe as you walk. I do take occasional hikes but I have separate shoes for that purpose and I don’t know if I would use these for hiking, even though the manufacturer claims they can be used for that purpose. For me, these shoes are best for day-to-day walking and since they are black in color, they match better with certain components of my wardrobe.<br /><br />The laces on these shoes are a little shorter than expected, making it more challenging to double knot them, which is how I usually tie my shoes. I can always replace them with longer laces, so this is no biggie. I also noticed that these shoes are slightly more elevated than others I own. I could feel the difference when I put them on for the first time- I definitely felt slightly taller than usual.<br /><br />The greatest issue I have with these shoes is that they are a little tighter than expected. I notice that most everyone who has left a review has said the same thing. I wear a size 11, but 11.5 or 12 would have been better. To be fair, they did feel better after wearing them several times and breaking them in. The first time I wore them, I kept slipping them off due to the tight, uncomfortable fit. Now, they feel a little better, but I still wish I had selected a slightly larger size.<br /><br />I own more shoes now than at any time in my life and these shoes from ZASEPY are proving a good addition to my expanding shoe rack. Just be sure to order a larger size than usual and you should be fine",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Surprisingly comfortable!. The most comfortable sneakers I have ever worn. Great for light hiking and trail walking!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Just OK. These are OK. I used to love Asics because I have flat feet and plantar fasciitis. But I feel like they've changed too much about the Kayano. Its still one of the most comfortable sneakers I can find to walk long distances in but it has flaws. I feel the piece that comes up in the back is too high and aggravates the back of my ankle near the Achilles. The sizing also seems off. I always wear a 6.5, but the 6.5 is waaaaay to tight so I got the 7 which seems a little too loose and I know will get worse as they stretch out. I also feel my big toes touch the top of the sneaker a little too much  and if I wear them all day the tops of my toes are sore",
+        "sentiment": "neutral",
+        "signals": [
+          "runs_small",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Needs a better arch support. I really like this tennis shoe",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Great Sneaker!. I love this sneaker...they are comfortable and stylish!  The color goes with most anything..they are great for summer and spring!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Cute shoes. These sneakers were good. She could run in them without a problem.<br />These shoes are very nice. They were cute for my child. They thought they were comfortable. The fit was fine. They were able to use it for different situations. They were easy to put on and off. The quality seemed fine. They looked good on her. She liked them. The deal was fine. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Finally,  a sneaker that helps, not hurts!. So I have horrible feet.  Bunions, hammer toe, flat feet etc... I am on my feet constantly for my job and I would come home to slowly die my feet were hurting so bad.  I've tried all kinds of sneakers and thought the 'gravity defyer' ones were great at first for walking around... but not at the job.  Plus the toe box wasn't large enough.  On a last ditch effort I decided to try the sketchers max cusion... omg...I wear them every night at work and now my feet aren't my problem.  I did get a size 9 even though I'm normally an 8 and a half (because of the hammer toe). They are perfect.  Not too big at all. They're light weight and feel like little clouds.  I'm ordering another pair just to have and getting rid of a few of my others",
+        "sentiment": "positive",
+        "signals": [
+          "runs_large",
+          "comfort_positive",
+          "comfort_negative"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Yes!!!!!!!! Buy them!. I love these shoes. I have wide feet and finding sneakers to fit are hard to come by. I also have plantar fasciitis and these shoes are comfortable and easy to slip on and go. I will buy more",
+        "sentiment": "positive",
+        "signals": [
+          "wide_feet_issue",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Nice shoes. These sneakers were good. She could run in them.<br />These shoes are very nice. They were cute for my child. They thought they were comfortable. The fit was fine. They were able to use it for different situations. They were easy to put on and off. The quality seemed fine. They looked good on her. She liked them. The deal was fine. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_018.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 10436,
+      "fashion_image_id": "10110",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 2193,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_019",
+    "title": "Rockport Men Captoe Brown Casual Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Brown",
+    "usage": "Casual",
+    "price": 649.0,
+    "currency": "TRY",
+    "rating": 5.0,
+    "review_count": 7,
+    "description": "Rockport Men Captoe Brown Casual Shoes is a Brown casual shoes designed for casual use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "small",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "sporty"
+    ],
+    "known_issues": [
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 1,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 1850,
+      "clicks": 119,
+      "cart_adds": 21,
+      "sales": 8,
+      "return_rate": 0.13
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.31,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Cute. My daughter likes unicorns so she liked that they were all over the shoes. These sneakers were good. She could run in them without a problem.<br />These shoes are very nice. They were cute for my child. They thought they were comfortable. The fit was fine. They were able to use it for different situations. They were easy to put on and off. The quality seemed fine. They looked good on her. She liked them. The deal was fine. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Most comfortable tennis shoes ever. Right out of the box these fit perfect! I have plantar fasciitis in both feet & these are super comfortable. And the are absolutely adorable. I got the all white color.<br />Definitely one of my purchases off Amazon.<br />They are true to size I’m 8/12-9 but 9 in tennis shoes & the 9 fit perfect",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "You can get a lot of miles out of these sneakers!. [[VIDEOID:8c1f7f56bc057aaa39f5dd914566f68e]] Wow, these have held up surprisingly well after about 200 miles.  I wore these all summer, fall, and now into winter.  I walk everyday with my dog and can attest to this shoes durability and comfort.  This fit as expected comparing it’s size to my running sneakers.  Great for walking!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Look great and feel great!. These water shoes are great for the price. They look like athletic shoes and are not eyesores whatsoever! They are breathable and comfortable. The fit is true to size and have great traction too!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Super Lightweight. These sneakers feel like going barefoot but with better arch support. The mesh exterior is perforated to provide good air flow. The insoles have great arch support even for those with high arches. The sole is so flexible that you can fold the shoe in half. The sneakers are super lightweight. They're ideal for walking long distances or for other exercises. They also look good for just running errands. The sizes are just a little small. You can choose your normal size if you don't mind a snug fit. Size up if you prefer a little room in the toe box.<br /><br />Thanks so much for taking the time to read this review. I hope the information that I've provided makes your decision a little easier",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Super Comfortable!. Great fit! Super comfortable walking shoes but a little too heavy for running",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great pair of Sneakers. I bought for my boyfriend and he loves them. They fit perfectly and they look great on his feet. Had no regrets purchasing these pair of sneakers",
+        "sentiment": "positive",
+        "signals": []
+      }
+    ],
+    "image": "/images/products/shoe_019.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 6795,
+      "fashion_image_id": "10142",
+      "fashion_article_type": "Casual Shoes",
+      "myntra_row": 562399,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_020",
+    "title": "Rockport Men Drsp Wingtip Brown Casual Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Brown",
+    "usage": "Casual",
+    "price": 649.0,
+    "currency": "TRY",
+    "rating": 4.71,
+    "review_count": 7,
+    "description": "Rockport Men Drsp Wingtip Brown Casual Shoes is a Brown casual shoes designed for casual use.",
+    "features": [],
+    "tags": [
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "comfort",
+      "style"
+    ],
+    "fit_type": "regular",
+    "usage_type": [
+      "comfort",
+      "daily",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2954,
+      "clicks": 452,
+      "cart_adds": 118,
+      "sales": 15,
+      "return_rate": 0.11
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.38,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 3.0,
+        "text": "Not a run shoe!. This shoe does not have arch support, is not a running shoe. I had to add support to keep from returning the shoe",
+        "sentiment": "neutral",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "New Balance and Nice Style.. Very good sneakers. Always like wearing New Balance sneakers. Comfortable. I stand at work at least 8-9 hours or more and so far it's been good",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Cute and extremely comfortable! Wife loves!! ❤️. My wife loves these Skechers golf sneakers! They are extremely comfortable and fit true to size. She loves the black, grey, and sky blue color combination. They also come with a second pair of dark grey laces which is nice. Great traction and support. These shoes are great for golf and also everyday use! Very nice quality!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Perfect Shoes. I only wear saucony's for my tennis shoes and these are just what I was looking for!",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Decent walking shoe not for nursing school. I like the easy, slip on, ready to go feel of the sneaker shoes. I did not consider the cloth when purchasing but very sleek and comfy shoe. Happy with purchase!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Love the laces.  I get them long for my shoes.  I double knot them always...just do.. I have bought several colors.  They refresh sneakers!  My laces always wear out before the shoes.<br />You won't be disappointed",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Super comfortable. These are extremely comfortable and very lightweight. I'm very impressed with these shoes especially since you can also wear them in the water. They can double as a regular walking shoe in my opinion. They are that comfy",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_020.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 8806,
+      "fashion_image_id": "10144",
+      "fashion_article_type": "Casual Shoes",
+      "myntra_row": 562399,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_021",
+    "title": "Reebok Men Buckets VI Black Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Men",
+    "base_colour": "Black",
+    "usage": "Sports",
+    "price": 2799.0,
+    "currency": "TRY",
+    "rating": 4.89,
+    "review_count": 9,
+    "description": "Men Energen Lite Running Shoes",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "regular",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 1783,
+      "clicks": 131,
+      "cart_adds": 21,
+      "sales": 8,
+      "return_rate": 0.14
+    },
+    "visual_signals": {
+      "image_quality": "high",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.53,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 4.0,
+        "text": "Nice. I really like these sneakers.  They are a great price and look good.  Unfortunately not as comfortable as I hoped but I have only worn them a few times.  I will try again, maybe they need a little wear time to get more comfortable.  I think they are very cute on though",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "True Fit. These Keen work sneakers are true fit shoes. They have a nice and comfortable foot bed with adequate arch support. They offer excellent toe protection. The traction is excellent",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Very useful. Love them. Makes athletic shoes slip on. Had ankle/foot surgery and this allows me to loosen when there's swelling",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Light and Comfortable. These sneakers are extremely light and comfortable. That’s the biggest selling point for me. They’re well made - better than I’d expected for a “basics” product. They look good and feel good. Great buy and a great price",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Nice shoestrings. My dog chewed my husband's tennis shoestrings and these were nice replacements",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Thanks again Easy Spirit; most comfy for my hard to fit feet. Again, my messed up feet thank you Easy Spirit.  A great walking shoe.  Dog and me can walk much further.  Romy Sneaker; Roomy sneaker.  Good looking sneaker too; a bonus cuz my sore feet don't care what the shoe looks like LOL",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "great comfort. nice pair of walking shoes.  The extra wide shoes fit great<br />with plenty of room not squeezing my feet.  Really comfortable<br />and well made",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great sneakers!!. They are so comfortable and lightweight. You won’t be disappointed. I love them. Will absolutely buy another pair",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Extremely Comfortable. These are the most comfortable walking shoes I have ever owned.  They are really light weight and cushioned",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_021.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 11929,
+      "fashion_image_id": "10104",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 4326,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_022",
+    "title": "Rockport Men Jefford Brown Formal Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "formal_shoe",
+    "gender": "Men",
+    "base_colour": "Brown",
+    "usage": "Formal",
+    "price": 3499,
+    "currency": "TRY",
+    "rating": 4.67,
+    "review_count": 6,
+    "description": "Rockport Men Jefford Brown Formal Shoes is a Brown formal shoes designed for formal use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "large",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "known_issues": [
+      "runs_large"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 1,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2584,
+      "clicks": 129,
+      "cart_adds": 22,
+      "sales": 9,
+      "return_rate": 0.16
+    },
+    "visual_signals": {
+      "image_quality": "low",
+      "image_issue": "single_angle_or_low_detail",
+      "recommendation": "Add clear side-view, close-up material, and on-foot lifestyle images."
+    },
+    "market_signals": {
+      "avg_category_price": 3499,
+      "competitor_rating_avg": 4.3,
+      "competitor_common_strengths": [
+        "premium material details",
+        "occasion-based styling",
+        "fit guidance"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Great Shoe. I love my Bass Enfield Oxfords.They are very fashion oriented, and extremely comfortable.<br />Whenever I wear them, I always receive scores of compliments. I would definitely recommend this item",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Clarks Sheridan loafers. An excellennt fit and a very comfortable shoe. Perfect to wear with khakis and a blazer.<br /> No break in needed",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Very Comfortable. These are a very relaxed and comfortable pair of shoes. There's not a lot of support, but they are loafers, not runners",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "Women's Deziree. Although a little on the large size, these AK loafers are comfortable and wears well, and I am getting plenty of wear from them.  Definitely recommend without hesitation!",
+        "sentiment": "positive",
+        "signals": [
+          "runs_large",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 4.0,
+        "text": "\"Mushroom\" color is NOT Taupe Like the Picture Shows!  It is GREEN.. These shoes are very comfortable and are perfect for the office.  Only reason I gave 4 stars as opposed to 5 is because they were way more green than the taupe color the picture on the listing depicts.  I was disappointed about that.  Do not buy these thinking you are getting taupe colored loafers!  \"Mushroom\" is GREEN, not the taupe color the picture in the listing shows!  Too late to return now",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable-Attractive-Well Made. Light weight, lovely color, substantial soles for safety and attractive flat shoes. I have several pairs of this exact same loafer and I love them. Soft leather, good design, comfortable interior and a fair price. Will buy again",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_022.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 7150,
+      "fashion_image_id": "10129",
+      "fashion_article_type": "Formal Shoes",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_023",
+    "title": "Rockport Men Drsp Moc Front Black Formal Shoes",
+    "brand": "Rockport",
+    "category": "Shoes",
+    "shoe_type": "formal_shoe",
+    "gender": "Men",
+    "base_colour": "Black",
+    "usage": "Formal",
+    "price": 3499,
+    "currency": "TRY",
+    "rating": 4.44,
+    "review_count": 9,
+    "description": "Rockport Men Drsp Moc Front Black Formal Shoes is a Black formal shoes designed for formal use.",
+    "features": [],
+    "tags": [
+      "budget",
+      "comfort",
+      "daily",
+      "style"
+    ],
+    "target_personas": [
+      "budget",
+      "comfort",
+      "style"
+    ],
+    "fit_type": "small",
+    "usage_type": [
+      "budget",
+      "comfort",
+      "daily",
+      "style"
+    ],
+    "known_issues": [
+      "cheap_material",
+      "runs_small"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 1,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 1,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 2302,
+      "clicks": 423,
+      "cart_adds": 123,
+      "sales": 33,
+      "return_rate": 0.14
+    },
+    "visual_signals": {
+      "image_quality": "high",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 3499,
+      "competitor_rating_avg": 4.5,
+      "competitor_common_strengths": [
+        "premium material details",
+        "occasion-based styling",
+        "fit guidance"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Really nice color. . . Really nice feel. These are really nice loafers.  I have the “Cognac” and there are different hues of brown throughout the leather, which gives them a great look.  The footbed has very nice padding.  Makes standing more comfortable for longer periods of time.  The Bottom sole has nice traction and is anti-skid.  These shoes are Made in China.  The overall quality looks and feels fine.  The stitching is nice.  Overall they are great leather loafers",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Great for work. I wanted some shoes for work and these look great. These are nice tan loafers than can be worn with various color clothes. Professional look",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "Classic style - Hush Puppy comfort - Nice!. My wife absolutely loves these shoes. Anyone that's ever owned a pair of Hush Puppy shoes knows that they're known for their comfortable fit and quality construction. Thats exactly what these shoes are. With a rich black leather upper, and a classic loafer style, they're the ideal all around shoe. Highly recommended",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "Frozen Lilac Bag from Kate Spade is Junk. Disappointed in the Frozen Lilac hue of the Kate Spade Margaux crossbody as it does not match the stunning Frozen Lilac loafers I bought. The shoes are rich and supple and the color distinctive. The handbag, on the other hand, is pale and dull.  Not even close to the Frozen Lilac shoe! The toxic made-in-China chemical scent reeks from the purse. I question the authenticity of the bag due to the the off-color tone, the odor and lack of quality",
+        "sentiment": "neutral",
+        "signals": []
+      },
+      {
+        "rating": 5.0,
+        "text": "BUY THESE!. If they were my size, I'd buy my third pair. They're comfortable and the loafer style doesn't rub against your foot, but supports it. It feels much more comfortable than an attractive style like this normally would be. You'll be happy with these. I emailed Trotters to tell them to bring these back in stock - don't email me with stories or suggestions, just bring these back!!!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Terrific loafers, very comfy, runs a little big.... We got the size 13 for 4-8 yrs. For your reference, my little girl's feet are about 7\", and these fit a little loose. So we're future proof for awhile. They look great and very comfy. They run just a little bit big. But she loves them though, so we'll go 5-Stars!",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "great. have a wide variety of loafers including Mephisto  ; these are the best ...  great fit ,good quality leather and fine workmanship. Purchased  these  because my &#34;everyday&#34; shoe was wearing out after 15 years  they are the same make and style ! I recommend them without reservations",
+        "sentiment": "positive",
+        "signals": []
+      },
+      {
+        "rating": 4.0,
+        "text": "OFYA Oxford byARCHE. The shoe was lovely, just a little too small especially for my right foot.  I appreciate that they carry a 40.5 because that is unusual.  Usually there are only whole sizes.  I have read so many great reviews on Arche shoes but usually the price is prohibitive.  I tried the next size up and they  seem to be working",
+        "sentiment": "positive",
+        "signals": [
+          "runs_small"
+        ]
+      },
+      {
+        "rating": 3.0,
+        "text": "I love my J&M shoes, but the quality is not what it used to be.... I have owned Johnston & Murphy shoes in the past, so I was very comfortable with ordering over the internet.  These shoes are high quality and will last years.  My last pair lasted 5 years with 2 re-soles.  My Bostonian shoes are completely worn out after two years.  I am disappointed with the J&M Oxfords because the insole has started to lift out of the shoe.  Insoles should not lift after wearing the shoes 6 or 7 times, or even 600 times.  It is just poor quality workmanship during the glue process.  I decided not to send the shoes back, because I really like them a lot.  Shoe rating would be a 5 without the insole issue. I will take them to a local shoemaker to have the insoles glued in properly.  If there is additional info, I will update this post.<br /><br />Details of why I like these shoes:<br />- leather soles that have a decent life<br />- all leather shoes that wear very well<br />- the quality of the workmanship cut & sew is good<br />- the shoes are perfectly matched, unlike many of the shoes you find today<br />- solid shoe with enough flexibility for a lot of walking",
+        "sentiment": "neutral",
+        "signals": [
+          "comfort_positive",
+          "cheap_material"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_023.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 30477,
+      "fashion_image_id": "10146",
+      "fashion_article_type": "Formal Shoes",
+      "myntra_row": null,
+      "myntra_match_type": "fallback_no_safe_myntra_match",
+      "description_source": "fashion_generated_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  },
+  {
+    "id": "shoe_024",
+    "title": "Reebok Women Aviator Grey Sports Shoes",
+    "brand": "Reebok",
+    "category": "Shoes",
+    "shoe_type": "sneaker",
+    "gender": "Women",
+    "base_colour": "Grey",
+    "usage": "Sports",
+    "price": 1999.0,
+    "currency": "TRY",
+    "rating": 5.0,
+    "review_count": 7,
+    "description": "Women Flyknit Sports Shoes",
+    "features": [],
+    "tags": [
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "target_personas": [
+      "comfort",
+      "style"
+    ],
+    "fit_type": "narrow",
+    "usage_type": [
+      "comfort",
+      "sporty",
+      "style"
+    ],
+    "known_issues": [
+      "narrow_fit"
+    ],
+    "return_risk_signals": {
+      "runs_small_mentions": 0,
+      "runs_large_mentions": 0,
+      "wide_feet_mentions": 0,
+      "comfort_complaints": 0,
+      "quality_complaints": 0,
+      "durability_complaints": 0,
+      "slippery_sole_mentions": 0,
+      "color_mismatch_mentions": 0
+    },
+    "sales_signals": {
+      "views": 1796,
+      "clicks": 76,
+      "cart_adds": 18,
+      "sales": 3,
+      "return_rate": 0.11
+    },
+    "visual_signals": {
+      "image_quality": "medium",
+      "image_issue": "single_image_only",
+      "recommendation": "Add more product angles and lifestyle images to improve buyer confidence."
+    },
+    "market_signals": {
+      "avg_category_price": 2499,
+      "competitor_rating_avg": 4.49,
+      "competitor_common_strengths": [
+        "clear size guide",
+        "comfort-focused reviews",
+        "lifestyle photos"
+      ]
+    },
+    "reviews": [
+      {
+        "rating": 5.0,
+        "text": "Comfortable and stays in place…. [[VIDEOID:21e4a57274c674b56d5cf28123d15c6]] Nice cut so sneakers don’t rub.<br />Stay on foot without bunching up.<br />Great colors that are easy to match.<br /><br />Trust you found this review honest and helpful:-)",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Pretty. They liked the rainbow sneakers. These sneakers were good. She could run in them without a problem.<br />These shoes are very nice. They were cute for my child. They thought they were comfortable. The fit was fine. They were able to use it for different situations. They were easy to put on and off. The quality seemed fine. They looked good on her. She liked them. The deal was fine. I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Very nice. These sneakers were nice. They were comfortable to wear. The fit was fine. I thought they looked good. They were sufficiently cushioned. They were easy to put on and off. I thought they felt like decent quality. They felt durable.<br /><br />We have a lot of products from Under Armour. We have always been happy with them. They felt not too heavy and good to run in. The black is nice and fits in with most other things.<br /><br />I would recommend them",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Comfortable and light. I love this style of slip on knit sneakers. I wear them as house shoes actually. These have more arch support than the last two pairs I've had and that's definitely a good thing. The shoes are extremely light and easy to slip on or off",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Five Stars. Great quality and I will suggest it if you want to keep your sneakers looking great. Very comfortable too",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Well Crafted. Wow, these shoes are really beautiful. I never thought I would say that about a pair of sneakers, but there it is. I am so impressed by the level of quality and craftsmanship that went into these shoes. It's the small details, like the smoothness of the seams, how the pieces all fit together so nicely, and the obvious quality of the materials. The outer leather has a nice firmness to it for support, and the inner lining is gorgeous, soft leather that feels cushy and comfortable. I wore them to a workout, and they were very comfortable. My only issue is that they seem a bit narrow, but of course, I have large feet. I am a woman, and I can usually wear a men's size 9 quite comfortable. These pinched a bit in the width, but as these shoes are leather, I expect that they will stretch with use and eventually feel a bit more roomy. I am going to keep wearing them to my workouts, as I feel this is a minor issue",
+        "sentiment": "positive",
+        "signals": [
+          "narrow_fit",
+          "comfort_positive"
+        ]
+      },
+      {
+        "rating": 5.0,
+        "text": "Sneakers. I am very happy with the style and fit of my sneakers. They are very comfortable",
+        "sentiment": "positive",
+        "signals": [
+          "comfort_positive"
+        ]
+      }
+    ],
+    "image": "/images/products/shoe_024.jpg",
+    "gallery": [],
+    "source_trace": {
+      "fashion_images_row": 21199,
+      "fashion_image_id": "10082",
+      "fashion_article_type": "Sports Shoes",
+      "myntra_row": 388,
+      "myntra_match_type": "strict_safe_shoe_type_gender_keyword_match",
+      "description_source": "myntra_safe_description",
+      "brand_source": "myntra_brand_or_fashion_title_inference",
+      "amazon_review_strategy": "strict_shoe_type_filtered_review_pool_without_reuse_until_pool_empty"
+    }
+  }
+]

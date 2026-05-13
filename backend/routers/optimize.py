@@ -13,16 +13,27 @@ router = APIRouter(
 )
 
 
+def get_display_title(product) -> str:
+    title = product.title.strip()
+    brand = product.brand.strip()
+
+    if not brand or title.lower().startswith(brand.lower()):
+        return title
+
+    return f"{brand} {title}"
+
+
 def build_fallback_optimization(product, scores: dict) -> dict:
     fit_note = ""
 
     if "runs_small" in product.known_issues or product.fit_type in ["small", "narrow"]:
         fit_note = " Some customers mention a tighter fit, so checking the size guide is recommended."
 
-    optimized_title = f"{product.brand} {product.title} - Daily Sneaker"
+    display_title = get_display_title(product)
+    optimized_title = f"{display_title} - Daily Sneaker"
 
     optimized_description = (
-        f"{product.title} is a sneaker designed for everyday use, casual styling and practical comfort."
+        f"{display_title} is a sneaker designed for everyday use, casual styling and practical comfort."
         f"{fit_note} It is supported by customer review signals and is best suited for buyers who want "
         f"a clear balance between style, comfort and daily wear."
     )

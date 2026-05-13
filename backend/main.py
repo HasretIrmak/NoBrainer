@@ -10,7 +10,7 @@ from routers.optimize import router as optimize_router
 
 app = FastAPI(
     title="Adaptive Commerce Intelligence API",
-    description="AI-powered backend for adaptive sneaker commerce experience.",
+    description="AI-powered backend for adaptive footwear commerce experience.",
     version="1.0.0",
 )
 
