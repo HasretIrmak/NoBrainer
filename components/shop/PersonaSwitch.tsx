@@ -1,30 +1,46 @@
 "use client";
-import { motion } from 'framer-motion';
 
-export default function PersonaSwitch({ current, setPersona }: { current: string, setPersona: any }) {
-  const tabs = [
-    { id: 'style', label: 'Stil Odaklı', icon: '✨' },
-    { id: 'comfort', label: 'Konfor Odaklı', icon: '☁️' },
-    { id: 'budget', label: 'Bütçe Dostu', icon: '💰' }
-  ];
+import { motion } from "framer-motion";
+import type { Persona } from "../../lib/types";
 
+type PersonaTab = {
+  id: Persona;
+  label: string;
+  short: string;
+};
+
+const tabs: PersonaTab[] = [
+  { id: "style", label: "Stil Odakli", short: "Style" },
+  { id: "comfort", label: "Konfor Odakli", short: "Comfort" },
+  { id: "budget", label: "Butce Dostu", short: "Budget" },
+];
+
+export default function PersonaSwitch({
+  current,
+  setPersona,
+}: {
+  current: Persona;
+  setPersona: (persona: Persona) => void;
+}) {
   return (
-    <div className="flex gap-2 bg-gray-100 p-1.5 rounded-2xl w-fit mb-8">
+    <div className="mb-8 flex w-full max-w-xl gap-2 rounded-2xl bg-gray-100 p-1.5">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => setPersona(tab.id)}
-          className="relative px-6 py-2.5 rounded-xl text-sm font-bold transition-colors"
+          className="relative min-h-11 flex-1 rounded-xl px-4 py-2 text-sm font-bold transition-colors"
+          type="button"
+          title={tab.label}
         >
           {current === tab.id && (
             <motion.div
-              layoutId="activeTab"
-              className="absolute inset-0 bg-white rounded-xl shadow-sm"
-              transition={{ type: "spring", duration: 0.5 }}
+              layoutId="active-persona-tab"
+              className="absolute inset-0 rounded-xl bg-white shadow-sm"
+              transition={{ type: "spring", duration: 0.45 }}
             />
           )}
-          <span className={`relative z-10 ${current === tab.id ? 'text-blue-600' : 'text-gray-500'}`}>
-            {tab.icon} {tab.label}
+          <span className={`relative z-10 ${current === tab.id ? "text-blue-600" : "text-gray-500"}`}>
+            {tab.short}
           </span>
         </button>
       ))}

@@ -1,71 +1,137 @@
 "use client";
-import { useState, useEffect } from 'react';
+
+import { useParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import PersonaSwitch from "../../../components/shop/PersonaSwitch";
 import ReturnWarning from "../../../components/shop/ReturnWarning";
 import SmartReviews from "../../../components/shop/SmartReviews";
 import TrustLayer from "../../../components/shop/TrustLayer";
+import { fetchPersonaContent, fetchProductById, fetchReturnRisk } from "../../../lib/api";
+import type { Persona, PersonaResult, Product, ReturnRiskResult } from "../../../lib/types";
 
-// Not: Yarın backend bağlandığında 'fetchProductById' fonksiyonunu buradan çağıracağız.
+function formatPrice(product: Product) {
+  return new Intl.NumberFormat("tr-TR", {
+    style: "currency",
+    currency: product.currency || "TRY",
+    maximumFractionDigits: 0,
+  }).format(product.price);
+}
 
 export default function ProductDetailPage() {
-  const [persona, setPersona] = useState('style');
-  
-  // Hasret'in JSON formatına %100 uyumlu hale getirilmiş başlangıç verisi
-  const [product, setProduct] = useState({
-    title: "Kids Ivy Running Sports Shoes", 
-    price: 1299.0,
-    currency: "TRY",
-    description: "Kids Ivy Running Sports Shoes",
-    return_risk_signals: { 
-      runs_small_mentions: 4 // Hasret'ten gelen 'dar kalıp' uyarısı sayısı
-    },
-    tags: ["comfort", "daily", "sporty", "style"]
-  });
+  const params = useParams<{ id: string }>();
+  const productId = Array.isArray(params.id) ? params.id[0] : params.id;
+
+  const [persona, setPersona] = useState<Persona>("style");
+  const [product, setProduct] = useState<Product | null>(null);
+  const [risk, setRisk] = useState<ReturnRiskResult | null>(null);
+  const [personaResult, setPersonaResult] = useState<PersonaResult | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [personaLoading, setPersonaLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!productId) {
+      return;
+    }
+
+    setLoading(true);
+    Promise.all([fetchProductById(productId), fetchReturnRisk(productId)])
+      .then(([productResponse, riskResponse]) => {
+        setProduct(productResponse);
+        setRisk(riskResponse);
+      })
+      .catch((err) => setError(err instanceof Error ? err.message : "Urun detayi alinamadi."))
+      .finally(() => setLoading(false));
+  }, [productId]);
+
+  useEffect(() => {
+    if (!productId) {
+      return;
+    }
+
+    setPersonaLoading(true);
+    fetchPersonaContent(productId, persona)
+      .then(setPersonaResult)
+      .catch(() => setPersonaResult(null))
+      .finally(() => setPersonaLoading(false));
+  }, [productId, persona]);
+
+  const content = useMemo(() => {
+    if (personaResult?.content) {
+      return personaResult.content;
+    }
+
+    return {
+      hero_title: product?.title || "Urun yukleniyor",
+      hero_description: product?.description || "Backend verisi bekleniyor.",
+      features: product?.tags?.slice(0, 3) || [],
+      cta: "Sepete ekle",
+    };
+  }, [personaResult, product]);
+
+  if (loading) {
+    return <div className="min-h-screen bg-white p-8 font-bold text-gray-500">Urun detayi yukleniyor...</div>;
+  }
+
+  if (error || !product) {
+    return (
+      <div className="min-h-screen bg-white p-8">
+        <div className="rounded-2xl border border-red-100 bg-red-50 p-6 text-sm font-bold text-red-700">
+          Backend baglantisi kurulamadi: {error || "Urun bulunamadi."}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white p-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
-          {/* Sol: Ürün Görseli */}
-          <div className="aspect-square bg-gray-50 rounded-[3rem] flex items-center justify-center text-9xl sticky top-8 border border-gray-100">
-            👟
+      <div className="mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div className="sticky top-8 flex aspect-square items-center justify-center overflow-hidden rounded-[2rem] border border-gray-100 bg-gray-50">
+            {product.image ? (
+              <img src={product.image} alt={product.title} className="h-full w-full object-contain p-10" />
+            ) : (
+              <span className="font-bold text-gray-400">Image missing</span>
+            )}
           </div>
 
-          {/* Sağ: İçerik */}
           <div>
             <PersonaSwitch current={persona} setPersona={setPersona} />
-            
-            {/* Ürün Başlığı */}
-            <h1 className="text-5xl font-black mb-4 text-gray-900">{product.title}</h1>
-            
-            {/* Fiyat Bilgisi */}
-            <p className="text-2xl text-blue-600 font-bold mb-8">
-              {product.price} {product.currency}
+            <div className="mb-4 flex flex-wrap items-center gap-3">
+              <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-500">
+                {product.brand}
+              </span>
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-600">
+                {personaResult?.source || "fallback"}
+              </span>
+            </div>
+
+            <h1 className="mb-4 text-5xl font-black tracking-tight text-gray-900">{content.hero_title}</h1>
+            <p className="mb-6 text-2xl font-black text-blue-600">{formatPrice(product)}</p>
+
+            <ReturnWarning risk={risk} />
+
+            <p className="mb-6 text-lg leading-relaxed text-gray-600">
+              {personaLoading ? "Persona icerigi yenileniyor..." : content.hero_description}
             </p>
 
-            {/* İADE RİSKİ MANTIĞI: 
-                Hasret'in JSON'ındaki runs_small_mentions 2'den büyükse uyarıyı tetikler */}
-            <ReturnWarning 
-              riskLevel={product.return_risk_signals.runs_small_mentions > 2 ? 'HIGH' : 'LOW'} 
-            />
+            {!!content.features.length && (
+              <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                {content.features.map((feature) => (
+                  <div key={feature} className="rounded-2xl border border-gray-100 bg-gray-50 p-4 text-sm font-bold text-gray-700">
+                    {feature}
+                  </div>
+                ))}
+              </div>
+            )}
 
-            {/* Persona Bazlı Dinamik Açıklama */}
-            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
-              {persona === 'style' && "Sokak modasının zirvesi. Her kombinle mükemmel uyum sağlayan ikonik tasarım."}
-              {persona === 'comfort' && "Özel taban teknolojisi ile bulutların üzerinde yürüyormuşsunuz gibi hissettirir."}
-              {persona === 'budget' && "Yüksek kalite, erişilebilir fiyat. En dayanıklı modelimizle uzun yıllar beraberiz."}
-            </p>
-
-            <button className="w-full bg-black text-white py-6 rounded-3xl font-bold text-xl hover:scale-[1.01] transition-transform shadow-xl active:scale-95">
-              Sepete Ekle
+            <button className="w-full rounded-3xl bg-black py-6 text-xl font-bold text-white shadow-xl transition-transform hover:scale-[1.01] active:scale-95">
+              {content.cta}
             </button>
 
-            {/* Güven ve Yorum Bileşenleri */}
-            <TrustLayer />
-            <SmartReviews persona={persona} />
+            <TrustLayer product={product} risk={risk} />
+            <SmartReviews persona={persona} reviews={product.reviews} />
           </div>
-
         </div>
       </div>
     </div>

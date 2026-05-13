@@ -1,16 +1,25 @@
-export default function ReturnWarning({ riskLevel }: { riskLevel: 'HIGH' | 'MEDIUM' | 'LOW' }) {
-  if (riskLevel === 'LOW') return null; // Düşük riskte göstermiyoruz
+import type { ReturnRiskResult, RiskLevel } from "../../lib/types";
+
+const levelStyles: Record<RiskLevel, string> = {
+  high: "border-red-500 bg-red-50 text-red-800",
+  medium: "border-amber-500 bg-amber-50 text-amber-800",
+  low: "border-green-500 bg-green-50 text-green-800",
+};
+
+export default function ReturnWarning({ risk }: { risk: ReturnRiskResult | null }) {
+  if (!risk || risk.risk_level === "low") {
+    return null;
+  }
 
   return (
-    <div className={`p-4 rounded-xl mb-6 border-l-4 ${riskLevel === 'HIGH' ? 'bg-red-50 border-red-500 text-red-700' : 'bg-amber-50 border-amber-500 text-amber-700'}`}>
-      <div className="flex items-center gap-2 font-bold mb-1">
-        <span>⚠️ {riskLevel === 'HIGH' ? 'Kritik Uyarı' : 'Bilgilendirme'}</span>
+    <div className={`mb-6 rounded-xl border-l-4 p-4 ${levelStyles[risk.risk_level]}`}>
+      <div className="mb-1 flex items-center justify-between gap-4">
+        <span className="font-black uppercase tracking-wide">
+          {risk.risk_level === "high" ? "Kritik iade uyarisi" : "Iade riski bildirimi"}
+        </span>
+        <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black">Skor {risk.risk_score}</span>
       </div>
-      <p className="text-sm">
-        {riskLevel === 'HIGH' 
-          ? "Bu ürünün kalıp yapısı dardır. %85 kullanıcı 1 numara büyük tercih ediyor." 
-          : "Numara konusunda kararsızsanız ürün yorumlarını incelemenizi öneririz."}
-      </p>
+      <p className="text-sm leading-relaxed">{risk.user_warning}</p>
     </div>
   );
 }
