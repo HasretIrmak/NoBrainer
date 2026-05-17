@@ -4,10 +4,19 @@ import { useEffect, useState } from "react";
 import ProductCard from "../../components/shop/ProductCard";
 import { fetchProducts } from "../../lib/api";
 import { useAuthStore } from "../../lib/authStore";
-import { sortProductsForProfile } from "../../lib/personalization";
+// 🎯 Sihirli translateTag fonksiyonunu buraya da dahil ediyoruz
+import { sortProductsForProfile, translateTag } from "../../lib/personalization";
 import { getProductStoreId, useSellerProducts } from "../../lib/sellerStore";
 import type { Product } from "../../lib/types";
 import { useCommerceStore } from "../../lib/userStore";
+
+function formatPrice(product: Product) {
+  return new Intl.NumberFormat("tr-TR", {
+    style: "currency",
+    currency: product.currency || "TRY",
+    maximumFractionDigits: 0,
+  }).format(product.price);
+}
 
 export default function ShopPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -52,62 +61,67 @@ export default function ShopPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-50 p-8 dark:bg-gray-950 md:p-12">
+    <main className="min-h-screen bg-gray-50 p-8 dark:bg-gray-950 md:p-12 transition-colors">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <h1 className="text-5xl font-black uppercase tracking-tighter text-gray-900 dark:text-white">Akıllı Mağaza</h1>
-            <p className="mt-3 max-w-2xl text-gray-500 dark:text-gray-400">
-              {profile.name} için {profile.persona} personasına, cinsiyet seçimine, kupon hassasiyetine ve filtrelerine göre sıralanmış vitrin.
+            <p className="mt-3 max-w-2xl text-gray-500 dark:text-gray-400 font-medium">
+              {profile.name} için <span className="text-blue-600 dark:text-blue-400 font-bold">{profile.persona === "style" ? "Stil" : profile.persona === "comfort" ? "Konfor" : "Bütçe"}</span> personasına, cinsiyet seçimine, kupon hassasiyetine ve filtrelerine göre sıralanmış vitrin.
             </p>
           </div>
-          <div className="rounded-2xl bg-white px-5 py-3 text-sm font-bold text-gray-600 shadow-sm dark:bg-gray-900 dark:text-gray-300">
-            {filteredProducts.length} ürün
+          <div className="rounded-2xl bg-white px-5 py-3 text-sm font-black text-gray-600 shadow-xs dark:bg-gray-900 dark:text-gray-300 border border-gray-100 dark:border-gray-800">
+            {filteredProducts.length} ürün listeleniyor
           </div>
         </div>
 
-        <div className="mb-8 grid grid-cols-1 gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-gray-900 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mb-8 grid grid-cols-1 gap-4 rounded-2xl bg-white p-5 shadow-xs dark:bg-gray-900 md:grid-cols-3 lg:grid-cols-6 border border-gray-100 dark:border-gray-800">
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Ürün, marka veya yorum sinyali ara"
-            className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold outline-none dark:border-gray-700 dark:bg-gray-950 md:col-span-3 lg:col-span-2"
+            className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold outline-none dark:border-gray-700 dark:bg-gray-950 md:col-span-3 lg:col-span-2 focus:border-blue-500 transition-colors"
           />
-          <select value={gender} onChange={(event) => setGender(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950">
-            <option value="all">Kadın / erkek / çocuk</option>
+          <select value={gender} onChange={(event) => setGender(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950 outline-none">
+            <option value="all">Tüm Cinsiyetler</option>
             <option value="Women">Kadın</option>
             <option value="Men">Erkek</option>
             <option value="Kids">Çocuk</option>
             <option value="Unisex">Unisex</option>
           </select>
-          <select value={sellerStore} onChange={(event) => setSellerStore(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950">
-            <option value="all">Tüm satıcı mağazaları</option>
+          <select value={sellerStore} onChange={(event) => setSellerStore(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950 outline-none">
+            <option value="all">Tüm Mağazalar</option>
             {stores.map((store) => (
               <option key={store.id} value={store.id}>{store.name}</option>
             ))}
           </select>
-          <select value={brand} onChange={(event) => setBrand(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950">
-            <option value="all">Tüm markalar</option>
+          <select value={brand} onChange={(event) => setBrand(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950 outline-none">
+            <option value="all">Tüm Markalar</option>
             {brands.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
-          <select value={style} onChange={(event) => setStyle(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950">
-            <option value="all">Tüm tarzlar</option>
+
+          {/* 🎯 İNGİLİZCE FİLTRE ETİKETLERİNİ TÜRKÇELEŞTİREN AKILLI SEÇİM KUTUSU */}
+          <select value={style} onChange={(event) => setStyle(event.target.value)} className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-bold dark:border-gray-700 dark:bg-gray-950 outline-none">
+            <option value="all">Tüm Tarzlar / Sinyaller</option>
             {styles.map((item) => (
-              <option key={item} value={item}>{item}</option>
+              <option key={item} value={item}>
+                {translateTag(item)}
+              </option>
             ))}
           </select>
-          <label className="rounded-xl border border-gray-200 px-4 py-3 text-xs font-black text-gray-500 dark:border-gray-700 dark:text-gray-300">
-            Maks. fiyat: {effectiveMaxPrice} TL
-            <input type="range" min="500" max={maxAvailablePrice} step="250" value={effectiveMaxPrice} onChange={(event) => setMaxPrice(Number(event.target.value))} className="mt-2 w-full" />
+
+          <label className="rounded-xl border border-gray-200 px-4 py-2 text-xs font-black text-gray-500 dark:border-gray-700 dark:text-gray-300 flex flex-col justify-between">
+            <span>Maks. fiyat: {effectiveMaxPrice} TL</span>
+            <input type="range" min="500" max={maxAvailablePrice} step="250" value={effectiveMaxPrice} onChange={(event) => setMaxPrice(Number(event.target.value))} className="mt-1 w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
           </label>
         </div>
 
-        {loading && <div className="rounded-2xl bg-white p-8 font-bold text-gray-500 dark:bg-gray-900">Ürünler yükleniyor...</div>}
+        {loading && <div className="rounded-2xl bg-white p-8 font-bold text-gray-500 dark:bg-gray-900 border border-gray-100 dark:border-gray-800">Ürünler yükleniyor...</div>}
 
         {error && (
-          <div className="rounded-2xl border border-red-100 bg-red-50 p-6 text-sm font-bold text-red-700">
+          <div className="rounded-2xl border border-red-100 bg-red-50 p-6 text-sm font-bold text-red-700 dark:bg-red-950/20 dark:border-red-900/30 dark:text-red-400">
             Backend bağlantısı kurulamadı: {error}
           </div>
         )}

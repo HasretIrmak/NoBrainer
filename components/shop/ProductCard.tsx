@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import { getCoupon, getMatchReason, scoreProductForProfile } from "../../lib/personalization";
+import { useState } from "react";
+// 🎯 Sihirli translateTitle motorunu buraya import ediyoruz
+import { getCoupon, getMatchReason, scoreProductForProfile, translateTitle } from "../../lib/personalization";
 import type { Product, UserProfile } from "../../lib/types";
 
 function formatPrice(product: Product) {
@@ -27,6 +31,29 @@ export default function ProductCard({
 }) {
   const coupon = getCoupon(product, profile);
   const matchScore = scoreProductForProfile(product, profile || null);
+  
+  // Çift tıklamayı engellemek için yerel kilit state'i
+  const [isAdding, setIsAdding] = useState(false);
+
+  // Güvenli sepet ekleme fonksiyonu
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Eğer zaten ekleme işlemi yapılıyorsa ikinci isteği engelle
+    if (isAdding) return;
+
+    // Kilidi devreye sok
+    setIsAdding(true);
+    
+    // Asıl ekleme fonksiyonunu tetikle
+    onAddToCart?.(product.id);
+
+    // 400 milisaniye sonra kilidi kaldır (arka arkaya çift tetiklenmeyi tamamen keser)
+    setTimeout(() => {
+      setIsAdding(false);
+    }, 400);
+  };
 
   return (
     <div className="group rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900">
@@ -45,44 +72,61 @@ export default function ProductCard({
           )}
         </div>
         <div className="mb-2 flex items-center justify-between gap-3">
-          <span className="rounded-full bg-gray-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-gray-500 dark:bg-gray-800 dark:text-gray-300">
+          <span className="rounded-full bg-gray-100 px-3 py-1 text-[11px] font-black uppercase tracking-wide text-gray-500 dark:bg-gray-800 dark:text-gray-300">
             {product.brand}
           </span>
-          <span className="text-sm font-bold text-amber-600">{product.rating.toFixed(1)}</span>
+          <span className="text-sm font-bold text-amber-600">⭐ {product.rating.toFixed(1)}</span>
         </div>
-        <h3 className="line-clamp-2 min-h-12 font-bold leading-snug text-gray-900 dark:text-white">{product.title}</h3>
-        <p className="mt-2 line-clamp-2 min-h-10 text-xs font-medium leading-relaxed text-gray-500 dark:text-gray-400">
+
+        {/* 🎯 BAŞLIĞI KELİME BAZLI TÜRKÇEYE ÇEVİREN SİHİRLİ DOKUNUŞ */}
+        <h3 className="line-clamp-2 min-h-12 font-black leading-snug text-gray-900 dark:text-white hover:text-blue-600 transition-colors">
+          {translateTitle(product.title)}
+        </h3>
+
+        <p className="mt-2 line-clamp-2 min-h-10 text-xs font-semibold leading-relaxed text-gray-500 dark:text-gray-400">
           {getMatchReason(product, profile || null)}
         </p>
         <div className="mt-4 flex items-center justify-between">
           <div>
-            <span className="font-black text-blue-600">{formatPrice(product)}</span>
+            <span className="font-black text-blue-600 dark:text-blue-400">{formatPrice(product)}</span>
             {coupon.eligible && (
-              <p className="text-xs font-black text-green-600">{coupon.label} ile {coupon.finalPrice} TL</p>
+              <p className="text-xs font-black text-green-600 dark:text-green-400">🎯 {coupon.label} ile {coupon.finalPrice} TL</p>
             )}
           </div>
-          <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-black text-blue-700">
-            %{matchScore}
+          <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-black text-blue-700 dark:bg-blue-950/50 dark:text-blue-300">
+            %{matchScore} Uyum
           </span>
         </div>
       </Link>
+      
       {showActions && (
         <div className="mt-4 grid grid-cols-2 gap-2">
           <button
             type="button"
-            onClick={() => onToggleFavorite?.(product.id)}
-            className={`rounded-xl border px-3 py-2 text-xs font-black ${
-              isFavorite ? "border-red-200 bg-red-50 text-red-700" : "border-gray-200 text-gray-600 dark:border-gray-700 dark:text-gray-300"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onToggleFavorite?.(product.id);
+            }}
+            className={`rounded-xl border px-3 py-2 text-xs font-black transition-colors ${
+              isFavorite 
+                ? "border-red-200 bg-red-50 text-red-700 hover:bg-red-100 dark:border-red-900/50 dark:bg-red-950/50 dark:text-red-400 dark:hover:bg-red-900/50" 
+                : "border-gray-200 text-gray-600 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
             }`}
           >
-            {isFavorite ? "Favoride" : "Favori"}
+            {isFavorite ? "❤ Kaldır" : "🖤 Favori"}
           </button>
           <button
             type="button"
-            onClick={() => onAddToCart?.(product.id)}
-            className="rounded-xl bg-blue-600 px-3 py-2 text-xs font-black text-white shadow-sm transition hover:bg-blue-700"
+            onClick={handleAddToCart}
+            disabled={isAdding}
+            className={`rounded-xl px-3 py-2 text-xs font-black text-white shadow-sm transition ${
+              isAdding 
+                ? "bg-blue-400 cursor-not-allowed dark:bg-blue-700" 
+                : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+            }`}
           >
-            Sepete ekle
+            {isAdding ? "Ekleniyor..." : "Sepete ekle"}
           </button>
         </div>
       )}

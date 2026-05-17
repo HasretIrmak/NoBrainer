@@ -104,18 +104,22 @@ export function useCommerceStore() {
     [commit]
   );
 
+  // 🎯 MAĞAZADAN GELEN ÇİFT TETİKLENMELERİ BLOKE EDEN MUTLAK ADET KORUYUCU
   const addToCart = useCallback(
     (productId: string) =>
       commit((current) => {
-        const existing = current.cart.find((item) => item.product_id === productId);
-        return {
-          ...current,
-          cart: existing
-            ? current.cart.map((item) =>
-                item.product_id === productId ? { ...item, quantity: item.quantity + 1 } : item
-              )
-            : [...current.cart, { product_id: productId, quantity: 1 }],
-        };
+        const cartCopy = [...current.cart];
+        const existingIndex = cartCopy.findIndex((item) => item.product_id === productId);
+        
+        // Ürün sepette zaten varsa: miktarını kesinlikle arttırma, state'i bozmadan aynen koru!
+        if (existingIndex > -1) {
+          console.log(`[Koruma Aktif] ${productId} zaten sepette var. Çift ekleme engellendi.`);
+          return current; 
+        }
+        
+        // Ürün sepette yoksa ilk kez 1 adet olacak şekilde listeye güvenle ekle
+        cartCopy.push({ product_id: productId, quantity: 1 });
+        return { ...current, cart: cartCopy };
       }),
     [commit]
   );
@@ -130,6 +134,16 @@ export function useCommerceStore() {
             : current.cart.map((item) =>
                 item.product_id === productId ? { ...item, quantity } : item
               ),
+      })),
+    [commit]
+  );
+
+  // Sepet sayfasındaki çöp kutusu ikonu için ürünü anında uçuran fonksiyon
+  const removeFromCart = useCallback(
+    (productId: string) =>
+      commit((current) => ({
+        ...current,
+        cart: current.cart.filter((item) => item.product_id !== productId),
       })),
     [commit]
   );
@@ -173,6 +187,7 @@ export function useCommerceStore() {
     toggleFavorite,
     addToCart,
     updateCartQuantity,
+    removeFromCart, 
     clearCart,
     createReturn,
   };

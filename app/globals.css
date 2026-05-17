@@ -2,15 +2,24 @@
 @config "../tailwind.config.cjs";
 @custom-variant dark (&:where(.dark, .dark *));
 
-html.dark {
+.dark, html.dark {
   color-scheme: dark;
+}
+
+/* Sitedeki tüm mod değişim geçişleri pürüzsüz olsun */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 body {
   background: #f9fafb;
+  color: #030712;
 }
 
-html.dark body {
+html.dark body,
+.dark body {
   background: #030712;
   color: #f9fafb;
 }

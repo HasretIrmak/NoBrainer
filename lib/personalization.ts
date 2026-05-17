@@ -12,6 +12,126 @@ export const DEFAULT_PROFILE: UserProfile = {
   budget_sensitive: false,
 };
 
+// 🎯 ETİKETLERİ VE GEMINI ANALİZ KUTUSUNDAKİ İNGİLİZCE KELİMELERİ ÇEVİREN SÖZLÜK
+export function translateTag(tag: string): string {
+  if (!tag) return "";
+  
+  const dictionary: Record<string, string> = {
+    "running": "Koşu",
+    "sneaker": "Spor Ayakkabı",
+    "comfort": "Maksimum Konfor",
+    "casual": "Günlük Kullanım",
+    "breathable": "Nefes Alabilir Kumaş",
+    "lightweight": "Ultra Hafif",
+    "durable": "Yüksek Dayanıklılık",
+    "unisex": "Uniseks",
+    "budget": "Fiyat/Performans",
+    "sporty": "Sportif Tarz",
+    "style": "Trend Tasarım",
+    "regular": "Standart Kalıp",
+    "narrow": "Dar Kalıp",
+    "small": "Küçük Kalıp",
+    "runs_small": "Dar Kalıp (1 Numara Büyük Alınız)",
+    "narrow_fit": "Dar Kalıp",
+    "wide_feet_issue": "Taraklı Ayaklar İçin Uygun Değil",
+    "comfort_negative": "Sert Taban Sinyali",
+    "cheap_material": "Ortalama Malzeme Kalitesi",
+    "low_durability": "Düşük Dayanıklılık Riski",
+    
+    // Renk ve kombin varyasyonları
+    "white color styling": "Beyaz Renk Kombini",
+    "brown color styling": "Kahverengi Renk Kombini",
+    "black color styling": "Siyah Renk Kombini",
+    "grey color styling": "Gri Renk Kombini",
+    "gray color styling": "Gri Renk Kombini",
+    "blue color styling": "Mavi Renk Kombini",
+    "red color styling": "Kırmızı Renk Kombini",
+    "casual outfit match": "Günlük Giyim Uyumu",
+    "sports outfit match": "Spor Giyim Uyumu",
+    "style-first product presentation": "Tarz Odaklı Ürün Sunumu"
+  };
+  
+  const cleanTag = tag.toLowerCase().trim().replace(/\s+/g, " ");
+  return dictionary[cleanTag] || tag;
+}
+
+// 🎯 SEKMELER ARASI GEÇİŞTE METİNLERİN DONMASINI ENGELLEYEN DİNAMİK ÇEVİRİ MOTORU
+export function translateTitle(title: string): string {
+  if (!title) return "";
+
+  // 1. Kısım: Tam Cümle Kalkanları (Sabit veya bilinen uyarılar için)
+  const sentenceMap: Record<string, string> = {
+    "this sneaker may feel tight. consider sizing up, especially if you have wide feet.": 
+      "Bu ayakkabının kalıbı biraz dar gelebilir. Özellikle taraklı ayak yapısına sahipseniz konforunuz için 1 numara büyük almanızı öneririz."
+  };
+
+  const cleanInput = title.toLowerCase().trim().replace(/\s+/g, " ");
+  if (sentenceMap[cleanInput]) {
+    return sentenceMap[cleanInput];
+  }
+
+  // 2. Kısım: Akıllı Dinamik Kelime/Token Çevirici
+  // Backend'den (Gemini'dan) ne gelirse gelsin kelime kelime eşleştirip dinamik yapıyı bozmadan Türkçeleştirir.
+  const wordDictionary: Record<string, string> = {
+    // Genel kelimeler
+    "men": "Erkek", "men's": "Erkek", "women": "Kadın", "women's": "Kadın",
+    "shoes": "Ayakkabısı", "shoe": "Ayakkabı", "running": "Koşu", "casual": "Günlük",
+    "brown": "Kahverengi", "black": "Siyah", "white": "Beyaz", "blue": "Mavi", "red": "Kırmızı",
+    "sportswear": "Spor", "sneakers": "Spor Ayakkabı", "sneaker": "Spor Ayakkabı",
+    "captoe": "Klasik Burun", "with": "ve", "a": "", "sharper": "Şık", "everyday": "Günlük", "look": "Görünüm",
+    
+    // Yapay zekanın ürettiği dinamik açıklama kelimeleri
+    "built": "tasarlanmış",
+    "for": "için",
+    "outfits": "kombinler",
+    "outfit": "kombin",
+    "where": "ki burada",
+    "the": "",
+    "needs": "gerekiyor",
+    "to": "",
+    "carry": "taşımak",
+    "best": "en iyisi",
+    "shoppers": "alışveriş yapanlar",
+    "who": "olanlar",
+    "care": "önem veren",
+    "about": "hakkında",
+    "styling": "stil",
+    "silhouette": "silüet",
+    "and": "ve",
+    "first": "ilk",
+    "impression": "izlenim",
+    "preference": "tercih",
+    "prioritizes": "önceliklendiren",
+    "all-day": "gün boyu",
+    "wear": "kullanım",
+    "cushioning": "yastıklama",
+    "support": "destek",
+    "value": "fiyat/performans",
+    "conscious": "bilinçli",
+    "smart": "akıllı",
+    "buyers": "alıcılar"
+  };
+
+  const words = title.split(/(\s+)/); // Boşlukları koruyarak kelimelere ayırıyoruz
+  const translatedWords = words.map(word => {
+    // Kelimeyi temizle
+    const cleanWord = word.toLowerCase().replace(/[^a-z0-9']/g, "");
+    if (!cleanWord) return word; // Boşluk veya noktalama işaretlerini aynen koru
+    
+    const match = wordDictionary[cleanWord];
+    if (match !== undefined) {
+      // Eğer kelime sözlükte varsa, orijinal kelimenin sonundaki noktayı/virgülü koruyarak ekle
+      const suffix = word.slice(cleanWord.length);
+      return match + suffix;
+    }
+    
+    // Sözlükte yoksa marka adıdır veya özel terimdir, ilk harfini büyük bırak
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+
+  return translatedWords.join("").trim().replace(/\s+/g, " ");
+}
+
 export function inferPersona(input: {
   style_sensitive: boolean;
   comfort_sensitive: boolean;
