@@ -10,9 +10,9 @@ type PersonaTab = {
 };
 
 const tabs: PersonaTab[] = [
-  { id: "style", label: "Stil Odakli", short: "Style" },
-  { id: "comfort", label: "Konfor Odakli", short: "Comfort" },
-  { id: "budget", label: "Butce Dostu", short: "Budget" },
+  { id: "style", label: "Stil Odaklı", short: "Stil" },
+  { id: "comfort", label: "Konfor Odaklı", short: "Konfor" },
+  { id: "budget", label: "Bütçe Dostu", short: "Bütçe" },
 ];
 
 export default function PersonaSwitch({
@@ -23,7 +23,7 @@ export default function PersonaSwitch({
   setPersona: (persona: Persona) => void;
 }) {
   return (
-    <div className="mb-8 flex w-full max-w-xl gap-2 rounded-2xl bg-gray-100 p-1.5">
+    <div className="mb-8 flex w-full max-w-xl gap-2 rounded-2xl bg-gray-100 p-1.5 dark:bg-gray-800">
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -35,11 +35,11 @@ export default function PersonaSwitch({
           {current === tab.id && (
             <motion.div
               layoutId="active-persona-tab"
-              className="absolute inset-0 rounded-xl bg-white shadow-sm"
+              className="absolute inset-0 rounded-xl bg-white shadow-sm dark:bg-gray-950"
               transition={{ type: "spring", duration: 0.45 }}
             />
           )}
-          <span className={`relative z-10 ${current === tab.id ? "text-blue-600" : "text-gray-500"}`}>
+          <span className={`relative z-10 ${current === tab.id ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
             {tab.short}
           </span>
         </button>

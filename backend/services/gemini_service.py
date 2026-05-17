@@ -79,22 +79,22 @@ def get_model():
 
 def ask_gemini(prompt: str) -> str:
     """
-    Gemini modeline prompt gonderir ve duz text cevap dondurur.
+    Gemini modeline prompt gönderir ve düz metin cevap döndürür.
     """
 
     active_model = get_model()
 
     if active_model is None:
-        return "Gemini kullanilamiyor: GEMINI_API_KEY bulunamadi."
+        return "Gemini kullanılamıyor: GEMINI_API_KEY bulunamadı."
 
     if is_circuit_open():
-        return f"Gemini gecici olarak devre disi: quota/cooldown aktif, {get_retry_after_seconds()} saniye sonra tekrar denenebilir."
+        return f"Gemini geçici olarak devre dışı: kota bekleme süresi aktif, {get_retry_after_seconds()} saniye sonra tekrar denenebilir."
 
     try:
         response = active_model.generate_content(prompt)
 
         if not response.text:
-            return "Gemini bos cevap dondurdu."
+            return "Gemini boş cevap döndürdü."
 
         return response.text
 
@@ -107,8 +107,8 @@ def ask_gemini(prompt: str) -> str:
 
 def clean_json_text(text: str) -> str:
     """
-    Gemini bazen cevabi ```json ... ``` icinde dondurur.
-    Bu fonksiyon JSON parse oncesi temizler.
+    Gemini bazen cevabı ```json ... ``` içinde döndürür.
+    Bu fonksiyon JSON parse öncesi temizler.
     """
 
     cleaned = text.strip()
@@ -127,8 +127,8 @@ def clean_json_text(text: str) -> str:
 
 def generate_json_result(prompt: str, fallback: dict) -> tuple[dict, str]:
     """
-    Gemini'den JSON cevap uretir.
-    Cevap parse edilemezse veya Gemini hata verirse fallback doner.
+    Gemini'den JSON cevap üretir.
+    Cevap parse edilemezse veya Gemini hata verirse fallback döner.
     """
 
     active_model = get_model()

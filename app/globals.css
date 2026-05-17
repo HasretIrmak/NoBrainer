@@ -1,2 +1,16 @@
 @import "tailwindcss";
 @config "../tailwind.config.cjs";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: #f9fafb;
+}
+
+html.dark body {
+  background: #030712;
+  color: #f9fafb;
+}

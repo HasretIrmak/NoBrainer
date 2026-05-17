@@ -107,7 +107,14 @@ def generate_persona_page(request: PersonaRequest):
         }
 
     fallback = fallback_persona_content(product, request.persona)
-    prompt = build_persona_prompt(product, request.persona)
+    prompt = build_persona_prompt(
+        product=product,
+        persona_type=request.persona,
+        gender=request.gender,
+        age_group=request.age_group,
+        coupon_sensitive=request.coupon_sensitive,
+        fit_sensitive=request.fit_sensitive,
+    )
 
     ai_result, source = generate_json_result(
         prompt=prompt,

@@ -101,6 +101,10 @@ class ProductRequest(BaseModel):
 class PersonaRequest(BaseModel):
     product_id: str
     persona: Literal["style", "comfort", "budget"]
+    gender: str | None = None
+    age_group: str | None = None
+    coupon_sensitive: bool = False
+    fit_sensitive: bool = False
 
 
 class InsightItem(BaseModel):
@@ -194,3 +198,12 @@ class OptimizeOut(BaseModel):
     optimized_description: str
     faq: list[FAQItem]
     trust_messages: list[str]
+
+
+class ReviewSummaryOut(BaseModel):
+    product_id: str
+    source: Literal["gemini", "fallback"]
+    short_summary: str
+    positive_points: list[str]
+    negative_points: list[str]
+    return_risk_reasons: list[str]

@@ -25,6 +25,7 @@ export interface Product {
   reviews: Review[];
   image: string;
   gallery: string[];
+  source_trace?: Record<string, unknown>;
 }
 
 export interface Review {
@@ -153,9 +154,76 @@ export interface OptimizeResult {
   trust_messages: string[];
 }
 
+export interface ReviewSummaryResult {
+  product_id: string;
+  source: "gemini" | "fallback";
+  short_summary: string;
+  positive_points: string[];
+  negative_points: string[];
+  return_risk_reasons: string[];
+}
+
 export interface FAQItem {
   question: string;
   answer: string;
+}
+
+export interface UserProfile {
+  name: string;
+  gender: "Women" | "Men" | "Unisex" | "Kids";
+  age_group: "teen" | "young_adult" | "adult" | "senior";
+  persona: Persona;
+  coupon_sensitive: boolean;
+  fit_sensitive: boolean;
+  style_sensitive: boolean;
+  comfort_sensitive: boolean;
+  budget_sensitive: boolean;
+}
+
+export type AuthRole = "user" | "seller";
+
+export interface UserAccount {
+  id: string;
+  username: string;
+  password: string;
+  role: "user";
+  profile: UserProfile;
+}
+
+export interface SellerStore {
+  id: string;
+  seller_id: string;
+  name: string;
+  category: string;
+  shipping_fee: number;
+  marketplace_fee_rate: number;
+  fixed_expense: number;
+}
+
+export interface SellerAccount {
+  id: string;
+  username: string;
+  password: string;
+  role: "seller";
+  display_name: string;
+  stores: SellerStore[];
+}
+
+export type AuthAccount = UserAccount | SellerAccount;
+
+export interface CartItem {
+  product_id: string;
+  quantity: number;
+}
+
+export interface ReturnRecord {
+  id: string;
+  product_id: string;
+  reason: string;
+  note: string;
+  created_at: string;
+  code: string;
+  risk_level: RiskLevel | "unknown";
 }
 
 export type Persona = "style" | "comfort" | "budget";

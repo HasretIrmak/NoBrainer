@@ -12,14 +12,14 @@ router = APIRouter(
 @router.get("/test")
 def test_gemini():
     """
-    Gemini baglantisini test eder.
+    Gemini bağlantısını test eder.
     """
 
-    response = ask_gemini("Merhaba Gemini. Kisaca calistigini soyle.")
+    response = ask_gemini("Merhaba Gemini. Kısaca çalıştığını söyle.")
     status = get_gemini_status()
 
     return {
-        "success": not response.startswith("Gemini hata verdi") and "kullanilamiyor" not in response,
+        "success": not response.startswith("Gemini hata verdi") and "kullanılamıyor" not in response,
         "status": status,
         "response": response,
     }

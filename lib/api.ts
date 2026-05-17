@@ -4,7 +4,9 @@ import type {
   Persona,
   PersonaResult,
   Product,
+  ReviewSummaryResult,
   ReturnRiskResult,
+  UserProfile,
 } from "./types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -52,15 +54,29 @@ export function fetchReturnRisk(productId: string) {
   });
 }
 
-export function fetchPersonaContent(productId: string, persona: Persona) {
+export function fetchPersonaContent(productId: string, persona: Persona, profile?: UserProfile | null) {
   return apiFetch<PersonaResult>("/persona/", {
     method: "POST",
-    body: JSON.stringify({ product_id: productId, persona }),
+    body: JSON.stringify({
+      product_id: productId,
+      persona,
+      gender: profile?.gender,
+      age_group: profile?.age_group,
+      coupon_sensitive: profile?.coupon_sensitive,
+      fit_sensitive: profile?.fit_sensitive,
+    }),
   });
 }
 
 export function fetchOptimization(productId: string) {
   return apiFetch<OptimizeResult>("/optimize/", {
+    method: "POST",
+    body: productBody(productId),
+  });
+}
+
+export function fetchReviewSummary(productId: string) {
+  return apiFetch<ReviewSummaryResult>("/reviews-summary/", {
     method: "POST",
     body: productBody(productId),
   });

@@ -7,6 +7,7 @@ from routers.analyze import router as analyze_router
 from routers.return_risk import router as return_risk_router
 from routers.persona import router as persona_router
 from routers.optimize import router as optimize_router
+from routers.reviews_summary import router as reviews_summary_router
 
 app = FastAPI(
     title="Adaptive Commerce Intelligence API",
@@ -46,3 +47,5 @@ app.include_router(return_risk_router)
 app.include_router(persona_router)
 
 app.include_router(optimize_router)
+
+app.include_router(reviews_summary_router)
