@@ -17,79 +17,84 @@ def build_persona_prompt(
     known_issues = ", ".join(product.known_issues)
 
     base_info = f"""
-Product Title: {title}
-Brand: {brand}
-Price: {price} {product.currency}
-Tags: {tags}
-Known Issues: {known_issues}
-User Gender Preference: {gender or "unknown"}
-User Age Group: {age_group or "unknown"}
-Coupon Sensitive: {coupon_sensitive}
-Fit Sensitive: {fit_sensitive}
+Ürün başlığı: {title}
+Marka: {brand}
+Fiyat: {price} {product.currency}
+Etiketler: {tags}
+Bilinen sorunlar: {known_issues}
+Kullanıcı cinsiyet tercihi: {gender or "bilinmiyor"}
+Kullanıcı yaş grubu: {age_group or "bilinmiyor"}
+Kupon hassasiyeti: {coupon_sensitive}
+Kalıp hassasiyeti: {fit_sensitive}
 
-Description:
+Açıklama:
 {description}
 """
 
     if persona_type == "style":
         focus = """
-Focus on:
-- aesthetics
-- streetwear compatibility
-- outfit matching
-- premium look
-- style confidence
+Odaklan:
+- estetik görünüm
+- günlük stil ve kombin uyumu
+- sokak stili uyumu
+- güçlü ilk izlenim
+- stil güveni
 """
 
     elif persona_type == "comfort":
         focus = """
-Focus on:
-- comfort
-- cushioning
-- daily wear
-- walking experience
-- foot support
+Odaklan:
+- konfor
+- yastıklama
+- günlük kullanım
+- yürüyüş deneyimi
+- ayak desteği
 """
 
     elif persona_type == "budget":
         focus = """
-Focus on:
-- value for money
-- practical benefits
-- durability expectations
-- affordable quality
-- smart purchase decision
+Odaklan:
+- fiyat/performans
+- pratik faydalar
+- dayanıklılık beklentisi
+- ulaşılabilir kalite
+- mantıklı satın alma kararı
 """
 
     else:
-        focus = "Focus on general ecommerce conversion."
+        focus = "Genel e-ticaret dönüşümüne odaklan."
 
     return f"""
-You are an ecommerce product copywriter.
+Sen bir e-ticaret ürün metni yazarısın.
 
-Create persona-specific content for this sneaker product.
+Bu sneaker ürünü için personaya özel içerik oluştur.
 
 Persona: {persona_type}
-Also adapt the wording to the user's gender preference, age group, coupon sensitivity and fit sensitivity when relevant.
-Do not invent medical claims or hide return risk. If fit risk exists, state it clearly.
+Kullanıcının cinsiyet tercihi, yaş grubu, kupon hassasiyeti ve kalıp hassasiyetini uygun olduğunda metne yansıt.
+Tıbbi iddia uydurma ve iade riskini gizleme. Kalıp riski varsa açıkça belirt.
+
+Dil kuralları:
+- Tüm JSON değerlerini Türkçe yaz.
+- Marka/model adlarını koru, ancak başlık, açıklama, özellikler ve CTA Türkçe olsun.
+- İngilizce cümle kullanma.
 
 {focus}
 
 {base_info}
 
-Return ONLY valid JSON.
-Do not use markdown.
-Do not wrap the response in code fences.
+YALNIZCA geçerli JSON döndür.
+Markdown kullanma.
+Cevabı kod bloğuna alma.
 
 JSON schema:
 {{
-  "hero_title": "short persona-specific headline",
-  "hero_description": "2 sentence product description for this persona",
+  "hero_title": "personaya özel kısa Türkçe başlık",
+  "hero_description": "bu persona için 2 cümlelik Türkçe ürün açıklaması",
   "features": [
-    "feature 1",
-    "feature 2",
-    "feature 3"
+    "Türkçe özellik 1",
+    "Türkçe özellik 2",
+    "Türkçe özellik 3"
   ],
-  "cta": "short CTA text"
+  "cta": "kısa Türkçe aksiyon metni"
 }}
 """

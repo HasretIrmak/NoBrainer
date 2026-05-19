@@ -10,8 +10,8 @@ export default function LandingPage() {
           <span className="mb-5 inline-flex rounded-full bg-blue-50 px-4 py-2 text-sm font-black text-blue-700 dark:bg-blue-950 dark:text-blue-200">
             Kişiselleştirilmiş alışveriş ve satıcı zekası
           </span>
-          <h1 className="text-5xl font-black uppercase leading-none tracking-tight md:text-7xl">
-            Adaptive Commerce AI
+          <h1 className="text-5xl font-black leading-none tracking-tight md:text-7xl">
+            NoBrainer
           </h1>
           <p className="mt-7 max-w-3xl text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
             Kullanıcı profiline göre ürünleri sıralayan, yorumlardan iade riskini açıklayan ve satıcılara mağaza bazlı satış, kâr ve ürün düzenleme önerileri sunan akıllı ticaret platformu.
@@ -21,7 +21,7 @@ export default function LandingPage() {
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
           <Feature title="Kullanıcı deneyimi" text="Profil, persona, favori, sepet, kupon ve iade kodu tek akışta çalışır." />
           <Feature title="Satıcı paneli" text="Mağaza seçimi, ürün yükleme, ciro, gider, kargo ve kâr marjı görünür." />
-          <Feature title="AI içgörüleri" text="Yorum özeti, olumlu/olumsuz noktalar ve iade riski nedenleri açıklanır." />
+          <Feature title="NoBrainer içgörüleri" text="Yorum özeti, olumlu/olumsuz noktalar ve iade riski nedenleri açıklanır." />
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">

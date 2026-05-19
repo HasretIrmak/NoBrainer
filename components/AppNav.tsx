@@ -38,8 +38,8 @@ export default function AppNav() {
   return (
     <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/90 backdrop-blur dark:border-gray-800 dark:bg-gray-950/90">
       <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-        <Link href="/" className="text-lg font-black uppercase tracking-tight text-gray-900 dark:text-white">
-          Adaptive Commerce AI
+        <Link href="/" className="text-lg font-black tracking-tight text-gray-900 dark:text-white">
+          NoBrainer
         </Link>
 
         <div className="flex flex-wrap items-center gap-2 text-sm font-bold">

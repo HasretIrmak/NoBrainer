@@ -12,6 +12,64 @@ export const DEFAULT_PROFILE: UserProfile = {
   budget_sensitive: false,
 };
 
+export const PERSONA_PROFILES: Record<
+  Persona,
+  {
+    title: string;
+    summary: string;
+    signals: string[];
+    preferences: Pick<
+      UserProfile,
+      "coupon_sensitive" | "fit_sensitive" | "style_sensitive" | "comfort_sensitive" | "budget_sensitive"
+    >;
+  }
+> = {
+  style: {
+    title: "Style Hunter",
+    summary: "Trend görünüm, kombin uyumu ve güçlü ilk izlenim arar.",
+    signals: ["Trend tasarım", "Sportif silüet", "Kombin uyumu"],
+    preferences: {
+      coupon_sensitive: false,
+      fit_sensitive: false,
+      style_sensitive: true,
+      comfort_sensitive: false,
+      budget_sensitive: false,
+    },
+  },
+  comfort: {
+    title: "Comfort Keeper",
+    summary: "Gün boyu rahatlık, doğru kalıp ve düşük iade riski ister.",
+    signals: ["Standart kalıp", "Konfor yorumları", "Düşük risk"],
+    preferences: {
+      coupon_sensitive: false,
+      fit_sensitive: true,
+      style_sensitive: false,
+      comfort_sensitive: true,
+      budget_sensitive: false,
+    },
+  },
+  budget: {
+    title: "Value Sniper",
+    summary: "Fiyat/performans, kupon ve kategori ortalamasına göre iyi fırsat arar.",
+    signals: ["Kupon avantajı", "Fiyat/değer", "Güvenli indirim"],
+    preferences: {
+      coupon_sensitive: true,
+      fit_sensitive: false,
+      style_sensitive: false,
+      comfort_sensitive: false,
+      budget_sensitive: true,
+    },
+  },
+};
+
+export function applyPersonaPreset(profile: UserProfile, persona: Persona): UserProfile {
+  return {
+    ...profile,
+    ...PERSONA_PROFILES[persona].preferences,
+    persona,
+  };
+}
+
 // 🎯 ETİKETLERİ VE GEMINI ANALİZ KUTUSUNDAKİ İNGİLİZCE KELİMELERİ ÇEVİREN SÖZLÜK
 export function translateTag(tag: string): string {
   if (!tag) return "";
@@ -80,7 +138,7 @@ export function translateTitle(title: string): string {
     "sportswear": "Spor", "sneakers": "Spor Ayakkabı", "sneaker": "Spor Ayakkabı",
     "captoe": "Klasik Burun", "with": "ve", "a": "", "sharper": "Şık", "everyday": "Günlük", "look": "Görünüm",
     
-    // Yapay zekanın ürettiği dinamik açıklama kelimeleri
+    // NoBrainer motorunun urettigi dinamik aciklama kelimeleri
     "built": "tasarlanmış",
     "for": "için",
     "outfits": "kombinler",
@@ -194,27 +252,51 @@ export function scoreProductForProfile(product: Product, profile: UserProfile | 
     return 50;
   }
 
-  let score = 45;
+  const tags = new Set(product.tags);
+  const issues = new Set(product.known_issues);
+  const avgPrice = product.market_signals.avg_category_price || product.price || 1;
+  const priceRatio = product.price / avgPrice;
+  const returnRate = product.sales_signals.return_rate || 0;
+  let score = 36;
   const persona = profile.persona;
 
   if (product.target_personas.includes(persona)) {
-    score += 22;
+    score += 14;
   }
 
-  if (persona === "style" && (product.tags.includes("style") || product.tags.includes("sporty"))) {
-    score += 16;
+  if (persona === "style") {
+    if (tags.has("style")) score += 28;
+    if (tags.has("sporty")) score += 16;
+    if (tags.has("casual") || tags.has("daily")) score += 8;
+    if (product.visual_signals.image_quality === "high") score += 8;
+    if (issues.has("cheap_material") || issues.has("low_durability")) score -= 8;
+    score -= returnRate * 18;
   }
 
-  if (persona === "comfort" && (product.tags.includes("comfort") || product.fit_type === "regular")) {
-    score += 18;
+  if (persona === "comfort") {
+    if (tags.has("comfort")) score += 26;
+    if (tags.has("breathable")) score += 8;
+    if (tags.has("lightweight")) score += 8;
+    if (tags.has("durable")) score += 8;
+    if (product.fit_type === "regular") score += 22;
+    if (["small", "narrow"].includes(product.fit_type)) score -= 18;
+    if (issues.has("runs_small")) score -= 14;
+    if (issues.has("narrow_fit") || issues.has("wide_feet_issue")) score -= 18;
+    if (issues.has("comfort_negative") || issues.has("poor_cushioning")) score -= 20;
+    score -= returnRate * 48;
   }
 
   if (persona === "budget") {
     const coupon = getCoupon(product, profile);
-    score += coupon.discount;
-    if (product.tags.includes("budget")) {
-      score += 12;
-    }
+    if (tags.has("budget")) score += 26;
+    if (priceRatio <= 0.75) score += 22;
+    else if (priceRatio <= 0.9) score += 16;
+    else if (priceRatio <= 1) score += 8;
+    else if (priceRatio > 1.2) score -= 16;
+    score += coupon.discount * 0.8;
+    if (product.rating >= 4.2) score += 8;
+    if (returnRate >= 0.25) score -= 14;
+    if (issues.has("cheap_material") || issues.has("low_durability")) score -= 10;
   }
 
   if (profile.gender !== "Unisex") {
@@ -238,11 +320,10 @@ export function scoreProductForProfile(product: Product, profile: UserProfile | 
   }
 
   if (profile.fit_sensitive && ["small", "narrow"].includes(product.fit_type)) {
-    score -= 12;
+    score -= 14;
   }
 
   score += Math.max(0, product.rating - 3.5) * 6;
-  score -= product.sales_signals.return_rate * 30;
 
   return Math.max(0, Math.min(100, Math.round(score)));
 }
@@ -254,18 +335,21 @@ export function getMatchReason(product: Product, profile: UserProfile | null) {
 
   if (profile.persona === "budget") {
     const coupon = getCoupon(product, profile);
+    const avgPrice = product.market_signals.avg_category_price || product.price || 1;
+    const priceRatio = product.price / avgPrice;
     return coupon.eligible
-      ? `Bütçe personası için ${coupon.label} ve fiyat/değer dengesi öne çıkıyor.`
-      : "Bütçe personası için fiyat, puan ve iade sinyalleri birlikte değerlendirildi.";
+      ? `Value Sniper için ${coupon.label}, ${priceRatio <= 1 ? "kategoriye göre iyi fiyat" : "kontrollü fiyat"} ve iade riski birlikte değerlendirildi.`
+      : "Value Sniper için fiyat, puan ve iade sinyalleri birlikte kontrol edildi.";
   }
 
   if (profile.persona === "comfort") {
-    return product.fit_type === "regular"
-      ? "Konfor personası için düzenli kalıp ve yorum sinyalleri daha uygun görünüyor."
-      : "Konfor personası için kalıp ve iade sinyallerini dikkatli kontrol etmek gerekiyor.";
+    const hasFitRisk = ["small", "narrow"].includes(product.fit_type) || product.known_issues.some((issue) => ["runs_small", "narrow_fit", "wide_feet_issue", "comfort_negative"].includes(issue));
+    return !hasFitRisk
+      ? "Comfort Keeper için kalıp, konfor yorumu ve düşük iade riski öne çıkıyor."
+      : "Comfort Keeper için kalıp ve konfor sinyalleri dikkatli kontrol edildi.";
   }
 
-  return "Stil personası için görünüm, kullanım ve stil etiketleri öne çıkarıldı.";
+  return "Style Hunter için görünüm, kullanım tarzı ve kombin sinyalleri öne çıkarıldı.";
 }
 
 export function sortProductsForProfile(products: Product[], profile: UserProfile | null) {

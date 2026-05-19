@@ -14,7 +14,7 @@ export default function ReturnWarning({ risk }: { risk: ReturnRiskResult | null 
         <span className="text-xl mt-0.5">⚠️</span>
         <div>
           <h4 className="text-sm font-black text-amber-900 dark:text-amber-300 tracking-tight">
-            Yapay Zeka İade Riski Uyarısı
+            NoBrainer İade Riski Uyarısı
           </h4>
           {/* 🎯 SİHİRLİ ÇEVİRİ MOTORUNA BAĞLANAN ALAN */}
           <p className="mt-1 text-xs font-bold leading-relaxed text-amber-800 dark:text-amber-400">

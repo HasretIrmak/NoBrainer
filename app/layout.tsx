@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import AppNav from "../components/AppNav";
 
 export const metadata: Metadata = {
-  title: "Adaptive Commerce AI",
-  description: "Yapay Zeka Destekli Satış Paneli",
+  title: "NoBrainer",
+  description: "Persona, iade riski ve urun optimizasyonu paneli.",
 };
 
 export default function RootLayout({

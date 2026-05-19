@@ -10,8 +10,8 @@ from routers.optimize import router as optimize_router
 from routers.reviews_summary import router as reviews_summary_router
 
 app = FastAPI(
-    title="Adaptive Commerce Intelligence API",
-    description="AI-powered backend for adaptive footwear commerce experience.",
+    title="NoBrainer API",
+    description="Decision layer backend for personalized commerce, return risk, and product optimization.",
     version="1.0.0",
 )
 
@@ -32,7 +32,7 @@ app.add_middleware(
 def health_check():
     return {
         "status": "ok",
-        "service": "adaptive-commerce-ai-backend",
+        "service": "nobrainer-backend",
     }
 
 

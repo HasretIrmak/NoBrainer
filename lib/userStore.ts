@@ -1,11 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { CartItem, Persona, ReturnRecord, UserProfile } from "./types";
-import { DEFAULT_PROFILE, inferPersona } from "./personalization";
+import { applyPersonaPreset, DEFAULT_PROFILE, inferPersona } from "./personalization";
 
-const STORAGE_KEY = "adaptive-commerce-user-state-v1";
-const STATE_EVENT = "adaptive-commerce-user-state-changed";
+const STORAGE_KEY = "nobrainer-user-state-v1";
+const STATE_EVENT = "nobrainer-user-state-changed";
 
 type CommerceState = {
   profile: UserProfile | null;
@@ -57,12 +57,19 @@ export function buildProfile(input: Omit<UserProfile, "persona"> & { persona?: P
 export function useCommerceStore() {
   const [state, setState] = useState<CommerceState>(initialState);
   const [ready, setReady] = useState(false);
+  const stateRef = useRef<CommerceState>(initialState);
 
   useEffect(() => {
-    setState(readState());
+    const storedState = readState();
+    stateRef.current = storedState;
+    setState(storedState);
     setReady(true);
 
-    const sync = () => setState(readState());
+    const sync = () => {
+      const nextState = readState();
+      stateRef.current = nextState;
+      setState(nextState);
+    };
     window.addEventListener("storage", sync);
     window.addEventListener(STATE_EVENT, sync);
     return () => {
@@ -72,11 +79,10 @@ export function useCommerceStore() {
   }, []);
 
   const commit = useCallback((updater: (current: CommerceState) => CommerceState) => {
-    setState((current) => {
-      const next = updater(current);
-      writeState(next);
-      return next;
-    });
+    const next = updater(stateRef.current);
+    stateRef.current = next;
+    writeState(next);
+    setState(next);
   }, []);
 
   const saveProfile = useCallback(
@@ -88,7 +94,7 @@ export function useCommerceStore() {
     (persona: Persona) =>
       commit((current) => ({
         ...current,
-        profile: { ...(current.profile || DEFAULT_PROFILE), persona },
+        profile: applyPersonaPreset(current.profile || DEFAULT_PROFILE, persona),
       })),
     [commit]
   );
@@ -104,20 +110,20 @@ export function useCommerceStore() {
     [commit]
   );
 
-  // 🎯 MAĞAZADAN GELEN ÇİFT TETİKLENMELERİ BLOKE EDEN MUTLAK ADET KORUYUCU
   const addToCart = useCallback(
     (productId: string) =>
       commit((current) => {
         const cartCopy = [...current.cart];
         const existingIndex = cartCopy.findIndex((item) => item.product_id === productId);
-        
-        // Ürün sepette zaten varsa: miktarını kesinlikle arttırma, state'i bozmadan aynen koru!
+
         if (existingIndex > -1) {
-          console.log(`[Koruma Aktif] ${productId} zaten sepette var. Çift ekleme engellendi.`);
-          return current; 
+          cartCopy[existingIndex] = {
+            ...cartCopy[existingIndex],
+            quantity: cartCopy[existingIndex].quantity + 1,
+          };
+          return { ...current, cart: cartCopy };
         }
-        
-        // Ürün sepette yoksa ilk kez 1 adet olacak şekilde listeye güvenle ekle
+
         cartCopy.push({ product_id: productId, quantity: 1 });
         return { ...current, cart: cartCopy };
       }),
@@ -138,7 +144,6 @@ export function useCommerceStore() {
     [commit]
   );
 
-  // Sepet sayfasındaki çöp kutusu ikonu için ürünü anında uçuran fonksiyon
   const removeFromCart = useCallback(
     (productId: string) =>
       commit((current) => ({

@@ -1,10 +1,10 @@
-# Adaptive Commerce AI
+# NoBrainer
 
 FastAPI backend ve Next.js frontend ile calisan adaptif e-ticaret demo uygulamasi.
 
 Proje iki deneyimi birlestirir:
 
-- Satici paneli: urun sayfasi skorlarini, satis hunisini, iade riskini ve AI optimizasyon onerilerini gosterir.
+- Satici paneli: urun sayfasi skorlarini, satis hunisini, iade riskini ve NoBrainer optimizasyon onerilerini gosterir.
 - Musteri vitrini: backenddeki urunleri listeler, urun detayinda persona bazli icerik ve iade uyarisi uretir.
 
 ## Mevcut Entegrasyon Durumu
@@ -113,7 +113,7 @@ Persona istegi:
 3. Kullanici urune girdiginde `/products/{id}`, `/return-risk/` ve `/persona/` endpointleri calisir.
 4. Persona degistiginde frontend yeni `/persona/` istegi atar ve hero icerigini gunceller.
 5. Satici paneli secilen urun icin `/analyze/` ve `/return-risk/` endpointlerini birlikte cagirir.
-6. `Optimize et` butonu `/optimize/` endpointinden AI destekli sayfa metinlerini alir.
+6. `Optimize et` butonu `/optimize/` endpointinden NoBrainer destekli sayfa metinlerini alir.
 7. Gemini API key yoksa backend fallback cevaplar dondurur; bu sayede demo tamamen durmaz.
 
 ## Ozellikler

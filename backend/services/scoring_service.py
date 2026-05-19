@@ -308,18 +308,18 @@ def build_conversion_diagnosis(funnel: dict) -> str:
     dropoff = funnel["main_dropoff"]
 
     if dropoff == "discovery":
-        return "Product is getting impressions but not enough clicks. The first impression, card image, title, or price positioning likely needs work."
+        return "Ürün görüntüleniyor ancak yeterli tıklama almıyor. İlk izlenim, kart görseli, başlık veya fiyat konumlandırması güçlendirilmeli."
 
     if dropoff == "product_page":
-        return "Users click into the product but do not add it to cart often enough. The product detail page may not answer fit, quality, or value concerns clearly."
+        return "Kullanıcılar ürüne giriyor ancak yeterince sepete eklemiyor. Ürün detay sayfası kalıp, kalite veya değer sorularını yeterince net yanıtlamıyor olabilir."
 
     if dropoff == "checkout":
-        return "Users add the product to cart but do not complete purchase. Price confidence, trust, shipping, or return-risk messaging may be blocking the final decision."
+        return "Kullanıcılar ürünü sepete ekliyor ancak satın almayı tamamlamıyor. Fiyat güveni, kargo, güven mesajı veya iade riski son kararı engelliyor olabilir."
 
     if dropoff == "retention":
-        return "The product sells, but return rate is high. Fit, comfort, quality, or expectation mismatch should be addressed before scaling traffic."
+        return "Ürün satıyor ancak iade oranı yüksek. Trafiği artırmadan önce kalıp, konfor, kalite veya beklenti uyumsuzluğu ele alınmalı."
 
-    return "The sales funnel looks relatively healthy. Optimization should focus on strengthening weaker content and risk signals."
+    return "Satış hunisi genel olarak sağlıklı görünüyor. Optimizasyon daha zayıf içerik ve risk sinyallerini güçlendirmeye odaklanmalı."
 
 
 def build_conversion_insights(
@@ -335,48 +335,48 @@ def build_conversion_insights(
     if funnel["main_dropoff"] == "discovery":
         insights.append({
             "type": "warning",
-            "title": "Weak first-click performance",
-            "message": "Views are not turning into enough product clicks. Improve card image, title clarity, and price framing.",
+            "title": "İlk tıklama performansı zayıf",
+            "message": "Görüntülenmeler yeterince ürün tıklamasına dönüşmüyor. Kart görseli, başlık netliği ve fiyat sunumu iyileştirilmeli.",
             "severity": "high" if funnel["click_rate"] < 0.04 else "medium",
         })
 
     if funnel["main_dropoff"] == "product_page":
         insights.append({
             "type": "warning",
-            "title": "Product page is not convincing enough",
-            "message": "Users click the product but do not add it to cart at a healthy rate. Fit, material, sizing, and review signals should be clearer.",
+            "title": "Ürün sayfası yeterince ikna edici değil",
+            "message": "Kullanıcılar ürüne tıklıyor ancak sağlıklı oranda sepete eklemiyor. Kalıp, malzeme, beden ve yorum sinyalleri daha net olmalı.",
             "severity": "medium",
         })
 
     if funnel["main_dropoff"] == "checkout":
         insights.append({
             "type": "warning",
-            "title": "Cart interest is not converting to sales",
-            "message": "The product gets cart adds but loses users before purchase. Add trust messages, return guidance, and stronger value justification.",
+            "title": "Sepet ilgisi satışa dönüşmüyor",
+            "message": "Ürün sepete ekleniyor ancak satın alma öncesinde kullanıcı kaybediyor. Güven mesajı, iade yönlendirmesi ve değer kanıtı eklenmeli.",
             "severity": "high",
         })
 
     if funnel["main_dropoff"] == "retention":
         insights.append({
             "type": "warning",
-            "title": "High return rate after purchase",
-            "message": "The product sells, but the return rate is high. Buyer expectations around size, comfort, or quality may be mismatched.",
+            "title": "Satış sonrası iade oranı yüksek",
+            "message": "Ürün satıyor ancak iade oranı yüksek. Beden, konfor veya kalite beklentisi kullanıcıyla uyuşmuyor olabilir.",
             "severity": "high",
         })
 
     if sales_health_score < 50:
         insights.append({
             "type": "warning",
-            "title": "Low sales health score",
-            "message": "The funnel has a measurable conversion problem across clicks, cart adds, completed sales, or returns.",
+            "title": "Satış sağlığı skoru düşük",
+            "message": "Tıklama, sepete ekleme, satış veya iade aşamalarında ölçülebilir bir dönüşüm problemi var.",
             "severity": "high",
         })
 
     if visual_score < 55:
-        recommendation = product.visual_signals.recommendation or "Add more product angles, close-up material photos, and on-foot lifestyle images."
+        recommendation = "Daha fazla açı, yakın plan malzeme fotoğrafı ve ayakta kullanım görseli ekleyin."
         insights.append({
             "type": "suggestion",
-            "title": "Visual presentation needs improvement",
+            "title": "Görsel sunum iyileştirilmeli",
             "message": recommendation,
             "severity": "medium",
         })
@@ -384,40 +384,40 @@ def build_conversion_insights(
     if price_competitiveness_score < 55:
         insights.append({
             "type": "warning",
-            "title": "Price position needs justification",
-            "message": "The product price is not strongly supported by rating, return rate, or category comparison. Add value proof or consider campaign messaging.",
+            "title": "Fiyat konumu daha iyi gerekçelendirilmeli",
+            "message": "Ürün fiyatı puan, iade oranı veya kategori karşılaştırmasıyla yeterince desteklenmiyor. Değer kanıtı veya kampanya mesajı ekleyin.",
             "severity": "medium",
         })
 
     if "runs_small" in product.known_issues:
         insights.append({
             "type": "warning",
-            "title": "Sizing issue detected",
-            "message": "Reviews suggest that this sneaker may run small.",
+            "title": "Beden sorunu tespit edildi",
+            "message": "Yorumlar bu sneaker modelinin küçük kalıplı olabileceğini gösteriyor.",
             "severity": "medium",
         })
 
     if "wide_feet_issue" in product.known_issues or "narrow_fit" in product.known_issues:
         insights.append({
             "type": "warning",
-            "title": "Wide feet risk",
-            "message": "Some users mention narrow fit or discomfort for wide feet.",
+            "title": "Taraklı ayak riski",
+            "message": "Bazı kullanıcılar dar kalıp veya taraklı ayak için rahatsızlık sinyali veriyor.",
             "severity": "high" if risk_score >= 70 else "medium",
         })
 
     if "cheap_material" in product.known_issues:
         insights.append({
             "type": "warning",
-            "title": "Material trust issue",
-            "message": "Some reviews mention cheap or poor quality material.",
+            "title": "Malzeme güveni sorunu",
+            "message": "Bazı yorumlarda malzemenin düşük kaliteli algılandığı belirtiliyor.",
             "severity": "medium",
         })
 
     if not insights:
         insights.append({
             "type": "positive",
-            "title": "Healthy product signals",
-            "message": "No major fit or quality issue is strongly detected from reviews.",
+            "title": "Ürün sinyalleri sağlıklı",
+            "message": "Yorumlarda güçlü bir kalıp veya kalite problemi tespit edilmedi.",
             "severity": "low",
         })
 
@@ -431,9 +431,9 @@ def build_recommendations(product: Product, scores: dict, funnel: dict) -> list[
         recommendations.append({
             "category": "description",
             "priority": "high" if scores["description_score"] < 45 else "medium",
-            "action": "Expand the description with sizing, material, use case, and care details.",
-            "reason": f"description_score is {scores['description_score']}, so the page does not explain the product clearly enough.",
-            "expected_impact": "Improve product-page confidence and increase add-to-cart rate.",
+            "action": "Açıklamayı beden, malzeme, kullanım alanı ve bakım bilgileriyle genişletin.",
+            "reason": f"Açıklama skoru {scores['description_score']}; ürün sayfası ürünü yeterince net anlatmıyor.",
+            "expected_impact": "Ürün sayfası güvenini ve sepete ekleme oranını artırır.",
         })
 
     if scores["visual_score"] < 60:
@@ -441,27 +441,27 @@ def build_recommendations(product: Product, scores: dict, funnel: dict) -> list[
         recommendations.append({
             "category": "visual",
             "priority": "high" if scores["visual_score"] < 40 else "medium",
-            "action": "Add side-view, close-up material, and on-foot lifestyle images.",
-            "reason": f"visual_score is {scores['visual_score']} and image_issue is '{image_issue}'.",
-            "expected_impact": "Improve first-click performance and buyer trust before purchase.",
+            "action": "Yan açı, yakın plan malzeme ve ayakta kullanım görselleri ekleyin.",
+            "reason": f"Görsel skoru {scores['visual_score']} ve görsel sorunu '{image_issue}'.",
+            "expected_impact": "İlk tıklama performansını ve satın alma öncesi güveni artırır.",
         })
 
     if scores["return_risk_score"] >= 60:
         recommendations.append({
             "category": "return_risk",
             "priority": "high" if scores["return_risk_score"] >= 70 else "medium",
-            "action": "Move fit and sizing warnings near the top of the product page.",
-            "reason": f"return_risk_score is {scores['return_risk_score']} with detected issues: {', '.join(product.known_issues) or 'none'}.",
-            "expected_impact": "Reduce expectation mismatch and lower avoidable returns.",
+            "action": "Kalıp ve beden uyarılarını ürün sayfasının üst bölümüne taşıyın.",
+            "reason": f"İade riski skoru {scores['return_risk_score']}; tespit edilen sorunlar: {', '.join(product.known_issues) or 'yok'}.",
+            "expected_impact": "Beklenti uyumsuzluğunu ve önlenebilir iadeleri azaltır.",
         })
 
     if scores["sales_health_score"] < 55:
         recommendations.append({
             "category": "sales_funnel",
             "priority": "high" if scores["sales_health_score"] < 45 else "medium",
-            "action": "Address the main funnel drop-off with clearer trust, value, and purchase confidence messages.",
-            "reason": f"sales_health_score is {scores['sales_health_score']} and main_dropoff is '{funnel['main_dropoff']}'.",
-            "expected_impact": "Move more users from the weak funnel stage toward completed purchase.",
+            "action": "Ana huni kırılımını daha net güven, değer ve satın alma mesajlarıyla ele alın.",
+            "reason": f"Satış sağlığı skoru {scores['sales_health_score']} ve ana kırılım '{funnel['main_dropoff']}'.",
+            "expected_impact": "Zayıf huni aşamasındaki kullanıcıları tamamlanan satın almaya yaklaştırır.",
         })
 
     if scores["price_competitiveness_score"] < 60:
@@ -469,27 +469,27 @@ def build_recommendations(product: Product, scores: dict, funnel: dict) -> list[
         recommendations.append({
             "category": "pricing",
             "priority": "medium",
-            "action": "Justify the price with quality proof, warranty, comparison, or a promotion.",
-            "reason": f"price_competitiveness_score is {scores['price_competitiveness_score']} with product price {product.price} and category average {avg_price}.",
-            "expected_impact": "Reduce price hesitation and improve checkout confidence.",
+            "action": "Fiyatı kalite kanıtı, garanti, karşılaştırma veya kampanya mesajıyla destekleyin.",
+            "reason": f"Fiyat rekabet skoru {scores['price_competitiveness_score']}; ürün fiyatı {product.price}, kategori ortalaması {avg_price}.",
+            "expected_impact": "Fiyat tereddüdünü azaltır ve ödeme güvenini artırır.",
         })
 
     if "wide_feet_issue" in product.known_issues or "narrow_fit" in product.known_issues:
         recommendations.append({
             "category": "fit",
             "priority": "medium",
-            "action": "Add a clear note for wide-feet users and recommend checking the size guide.",
-            "reason": "Review and issue signals mention narrow fit or wide-feet discomfort.",
-            "expected_impact": "Help the right buyers choose the right size and reduce fit-related returns.",
+            "action": "Taraklı ayak kullanıcıları için net bir not ekleyin ve beden tablosunu kontrol etmeyi önerin.",
+            "reason": "Yorum ve sorun sinyalleri dar kalıp veya taraklı ayak rahatsızlığına işaret ediyor.",
+            "expected_impact": "Doğru alıcının doğru bedeni seçmesine yardımcı olur ve kalıp kaynaklı iadeleri azaltır.",
         })
 
     if not recommendations:
         recommendations.append({
             "category": "optimization",
             "priority": "low",
-            "action": "Keep the current page structure and test small improvements in visuals and review highlights.",
-            "reason": "No major funnel, pricing, visual, or return-risk issue is strongly detected.",
-            "expected_impact": "Incrementally improve conversion without making disruptive changes.",
+            "action": "Mevcut sayfa yapısını koruyun; görseller ve yorum vurgularında küçük iyileştirmeler test edin.",
+            "reason": "Huni, fiyat, görsel veya iade riski tarafında güçlü bir sorun tespit edilmedi.",
+            "expected_impact": "Büyük değişiklik yapmadan dönüşümü kademeli olarak iyileştirir.",
         })
 
     priority_order = {"high": 0, "medium": 1, "low": 2}

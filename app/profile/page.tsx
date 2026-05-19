@@ -3,13 +3,13 @@
 import { FormEvent, useEffect, useState } from "react";
 import type { UserProfile } from "../../lib/types";
 import { useAuthStore } from "../../lib/authStore";
-import { DEFAULT_PROFILE, inferPersona } from "../../lib/personalization";
+import { applyPersonaPreset, DEFAULT_PROFILE, inferPersona, personaLabel, PERSONA_PROFILES } from "../../lib/personalization";
 import { buildProfile, useCommerceStore } from "../../lib/userStore";
 
 type ProfileForm = Omit<UserProfile, "persona"> & { persona: UserProfile["persona"] | "auto" };
 
 export default function ProfilePage() {
-  const { profile, saveProfile, setPersona, counts } = useCommerceStore();
+  const { profile, saveProfile, counts } = useCommerceStore();
   const { activeAccount, isUser, updateActiveUserProfile } = useAuthStore();
   const [form, setForm] = useState<ProfileForm>({ ...DEFAULT_PROFILE, persona: "auto" });
   const inferred = inferPersona(form);
@@ -20,6 +20,19 @@ export default function ProfilePage() {
 
   function update<K extends keyof ProfileForm>(key: K, value: ProfileForm[K]) {
     setForm((current) => ({ ...current, [key]: value }));
+  }
+
+  function choosePersona(persona: UserProfile["persona"]) {
+    setForm((current) => applyPersonaPreset({ ...current, persona }, persona));
+  }
+
+  function activatePersona(persona: UserProfile["persona"]) {
+    const nextProfile = applyPersonaPreset(profile, persona);
+    saveProfile(nextProfile);
+    setForm(nextProfile);
+    if (isUser) {
+      updateActiveUserProfile(nextProfile);
+    }
   }
 
   function handleSubmit(event: FormEvent) {
@@ -89,15 +102,46 @@ export default function ProfilePage() {
               <span className="text-xs font-black uppercase tracking-wide text-gray-400">Persona seçimi</span>
               <select
                 value={form.persona}
-                onChange={(event) => update("persona", event.target.value as ProfileForm["persona"])}
+                onChange={(event) => {
+                  const value = event.target.value as ProfileForm["persona"];
+                  if (value === "auto") {
+                    update("persona", value);
+                  } else {
+                    choosePersona(value);
+                  }
+                }}
                 className="mt-2 w-full rounded-xl border border-gray-200 px-4 py-3 font-bold outline-none"
               >
                 <option value="auto">Sorulara göre otomatik: {inferred}</option>
-                <option value="style">Style</option>
-                <option value="comfort">Comfort</option>
-                <option value="budget">Budget</option>
+                <option value="style">{PERSONA_PROFILES.style.title}</option>
+                <option value="comfort">{PERSONA_PROFILES.comfort.title}</option>
+                <option value="budget">{PERSONA_PROFILES.budget.title}</option>
               </select>
             </label>
+
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+              {(["style", "comfort", "budget"] as const).map((persona) => {
+                const preset = PERSONA_PROFILES[persona];
+                const selected = form.persona === persona;
+                return (
+                  <button
+                    key={persona}
+                    type="button"
+                    onClick={() => choosePersona(persona)}
+                    className={`rounded-2xl border p-4 text-left transition ${
+                      selected ? "border-blue-300 bg-blue-50 text-blue-950" : "border-gray-100 bg-gray-50 text-gray-700 hover:border-gray-200"
+                    }`}
+                  >
+                    <span className="text-xs font-black uppercase tracking-wide text-gray-400">{personaLabel(persona)}</span>
+                    <h3 className="mt-2 font-black">{preset.title}</h3>
+                    <p className="mt-2 text-xs font-bold leading-relaxed text-gray-500">{preset.summary}</p>
+                    <p className="mt-3 text-[11px] font-black uppercase tracking-wide text-blue-600">
+                      {preset.signals.join(" / ")}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
 
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
               {[
@@ -138,13 +182,13 @@ export default function ProfilePage() {
               {(["style", "comfort", "budget"] as const).map((persona) => (
                 <button
                   key={persona}
-                  onClick={() => setPersona(persona)}
+                  onClick={() => activatePersona(persona)}
                   className={`rounded-xl px-3 py-2 text-xs font-black ${
                     profile.persona === persona ? "bg-black text-white" : "bg-gray-100 text-gray-600"
                   }`}
                   type="button"
                 >
-                  {persona}
+                  {personaLabel(persona)}
                 </button>
               ))}
             </div>

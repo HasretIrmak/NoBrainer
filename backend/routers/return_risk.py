@@ -68,63 +68,63 @@ def build_return_risk_evidence(product, detected_issues: list[str]) -> list[dict
 
 def build_fallback_reasons(known_issues: list[str]) -> list[str]:
     reason_map = {
-        "runs_small": "Reviews indicate that the sneaker may run small.",
-        "runs_large": "Some reviews suggest sizing may run large.",
-        "narrow_fit": "Narrow fit is mentioned as a possible issue.",
-        "wide_feet_issue": "Users with wide feet may experience discomfort.",
-        "comfort_negative": "Some users report comfort problems.",
-        "cheap_material": "Some reviews mention material quality concerns.",
-        "low_durability": "Some users report durability issues.",
-        "slippery_sole": "Some reviews mention grip or slippery sole issues.",
-        "color_mismatch": "Some reviews mention color mismatch.",
+        "runs_small": "Yorumlar ayakkabının küçük kalıplı olabileceğini gösteriyor.",
+        "runs_large": "Bazı yorumlar bedenin büyük gelebileceğini söylüyor.",
+        "narrow_fit": "Dar kalıp olası bir sorun olarak öne çıkıyor.",
+        "wide_feet_issue": "Taraklı ayak yapısına sahip kullanıcılar rahatsızlık yaşayabilir.",
+        "comfort_negative": "Bazı kullanıcılar konfor problemi bildiriyor.",
+        "cheap_material": "Bazı yorumlarda malzeme kalitesiyle ilgili endişeler var.",
+        "low_durability": "Bazı kullanıcılar dayanıklılık sorunu bildiriyor.",
+        "slippery_sole": "Bazı yorumlarda taban tutuşu veya kayganlık sorunu geçiyor.",
+        "color_mismatch": "Bazı yorumlarda renk uyumsuzluğu belirtiliyor.",
     }
 
     reasons = [reason_map[issue] for issue in known_issues if issue in reason_map]
 
     if not reasons:
-        reasons.append("No major return risk signal is strongly detected.")
+        reasons.append("Güçlü bir iade riski sinyali tespit edilmedi.")
 
     return reasons
 
 
 def build_fallback_user_warning(risk_level: str, known_issues: list[str]) -> str:
     if "runs_small" in known_issues or "narrow_fit" in known_issues:
-        return "This sneaker may feel tight. Consider sizing up, especially if you have wide feet."
+        return "Bu ayakkabı dar gelebilir. Özellikle taraklı ayak yapınız varsa bir numara büyük düşünün."
 
     if "runs_large" in known_issues:
-        return "This sneaker may run large. Check the size guide before buying."
+        return "Bu ayakkabı büyük kalıplı olabilir. Satın almadan önce beden tablosunu kontrol edin."
 
     if risk_level == "high":
-        return "This product has a high return risk. Check sizing, comfort and quality details carefully."
+        return "Bu üründe iade riski yüksek. Beden, konfor ve kalite detaylarını dikkatli kontrol edin."
 
     if risk_level == "medium":
-        return "This product has a moderate return risk. Review sizing and comfort feedback before buying."
+        return "Bu üründe orta seviye iade riski var. Satın almadan önce beden ve konfor yorumlarını inceleyin."
 
-    return "Return risk looks low based on available reviews."
+    return "Mevcut yorumlara göre iade riski düşük görünüyor."
 
 
 def build_fallback_seller_advice(risk_level: str, known_issues: list[str]) -> str:
     advice = []
 
     if "runs_small" in known_issues or "narrow_fit" in known_issues:
-        advice.append("Add a clear size-up recommendation and mention narrow fit in the product description.")
+        advice.append("Ürün açıklamasına net bir beden büyütme önerisi ve dar kalıp notu ekleyin.")
 
     if "wide_feet_issue" in known_issues:
-        advice.append("Add a note for wide-feet users and include fit guidance.")
+        advice.append("Taraklı ayak yapısına sahip kullanıcılar için kalıp yönlendirmesi ekleyin.")
 
     if "cheap_material" in known_issues:
-        advice.append("Improve material description and add close-up material photos.")
+        advice.append("Malzeme açıklamasını güçlendirin ve yakın plan malzeme görselleri ekleyin.")
 
     if "low_durability" in known_issues:
-        advice.append("Address durability concerns with clearer usage expectations or warranty messaging.")
+        advice.append("Dayanıklılık beklentisini kullanım önerileri veya garanti mesajlarıyla netleştirin.")
 
     if advice:
         return " ".join(advice)
 
     if risk_level == "low":
-        return "No urgent action needed. Keep highlighting comfort, quality and positive reviews."
+        return "Acil aksiyon gerekmiyor. Konfor, kalite ve olumlu yorumları görünür tutun."
 
-    return "Improve product description with clearer sizing, comfort and quality information."
+    return "Ürün açıklamasını daha net beden, konfor ve kalite bilgisiyle iyileştirin."
 
 
 @router.post("/", response_model=ReturnRiskOut)

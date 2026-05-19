@@ -4,8 +4,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { AuthAccount, AuthRole, SellerAccount, SellerStore, UserAccount, UserProfile } from "./types";
 import { DEFAULT_PROFILE } from "./personalization";
 
-const AUTH_KEY = "adaptive-commerce-auth-v1";
-const AUTH_EVENT = "adaptive-commerce-auth-changed";
+const AUTH_KEY = "nobrainer-auth-v1";
+const AUTH_EVENT = "nobrainer-auth-changed";
 
 type AuthState = {
   accounts: AuthAccount[];

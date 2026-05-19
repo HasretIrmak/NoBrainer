@@ -18,7 +18,7 @@ export default function ShopPage() {
             Sneaker Store
           </h1>
           <p className="text-gray-500 font-medium tracking-wide">
-            Yapay Zeka Destekli Kişiselleştirilmiş Alışveriş Deneyimi
+            NoBrainer ile kişiselleştirilmiş alışveriş deneyimi
           </p>
         </div>
 

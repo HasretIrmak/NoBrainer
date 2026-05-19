@@ -27,15 +27,15 @@ def build_fallback_optimization(product, scores: dict) -> dict:
     fit_note = ""
 
     if "runs_small" in product.known_issues or product.fit_type in ["small", "narrow"]:
-        fit_note = " Some customers mention a tighter fit, so checking the size guide is recommended."
+        fit_note = " Bazı kullanıcılar dar kalıp sinyali verdiği için beden tablosunun kontrol edilmesi önerilir."
 
     display_title = get_display_title(product)
-    optimized_title = f"{display_title} - Daily Sneaker"
+    optimized_title = f"{display_title} - Günlük Kullanıma Uygun Sneaker"
 
     optimized_description = (
-        f"{display_title} is a sneaker designed for everyday use, casual styling and practical comfort."
-        f"{fit_note} It is supported by customer review signals and is best suited for buyers who want "
-        f"a clear balance between style, comfort and daily wear."
+        f"{display_title}, günlük kullanım, rahat kombinler ve pratik konfor beklentisi için konumlandırılabilir."
+        f"{fit_note} Yorum sinyalleriyle desteklenen bu ürün; stil, konfor ve günlük kullanım arasında "
+        f"dengeli bir seçim arayan kullanıcılar için daha net anlatılmalıdır."
     )
 
     return {
@@ -43,22 +43,22 @@ def build_fallback_optimization(product, scores: dict) -> dict:
         "optimized_description": optimized_description,
         "faq": [
             {
-                "question": "Does this sneaker run true to size?",
-                "answer": "Some review signals suggest checking the size guide before buying, especially if you have wide feet."
+                "question": "Bu sneaker kalıbı standart mı?",
+                "answer": "Bazı yorum sinyalleri satın almadan önce beden tablosunun kontrol edilmesini öneriyor; özellikle taraklı ayak yapısı olan kullanıcılar dikkat etmeli."
             },
             {
-                "question": "Is it good for daily use?",
-                "answer": "Yes, it can be positioned as an everyday sneaker, but comfort expectations should be clearly explained."
+                "question": "Günlük kullanım için uygun mu?",
+                "answer": "Evet, günlük kullanım için konumlandırılabilir; ancak konfor ve kalıp beklentisi ürün sayfasında açıkça anlatılmalı."
             },
             {
-                "question": "What should sellers clarify on the product page?",
-                "answer": "Sizing guidance, comfort expectations and material details should be clearly visible."
+                "question": "Satıcı ürün sayfasında neyi netleştirmeli?",
+                "answer": "Beden yönlendirmesi, konfor beklentisi ve malzeme detayları görünür şekilde eklenmeli."
             }
         ],
         "trust_messages": [
-            "Sizing guidance added to reduce return risk.",
-            "Review-based fit warnings included for buyer confidence.",
-            "Product description improved with clearer usage expectations."
+            "İade riskini azaltmak için beden yönlendirmesi eklendi.",
+            "Alıcı güveni için yorumlara dayalı kalıp uyarıları görünür hale getirildi.",
+            "Ürün açıklaması daha net kullanım beklentileriyle güçlendirildi."
         ]
     }
 

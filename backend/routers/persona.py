@@ -30,59 +30,58 @@ def fallback_persona_content(product: Product, persona: str) -> dict:
 
     if persona == "style":
         return {
-            "hero_title": f"{brand_title} with a sharper everyday look",
+            "hero_title": f"{brand_title} ile daha güçlü günlük stil",
             "hero_description": (
-                f"A {product.base_colour.lower() or 'versatile'} {product.shoe_type.replace('_', ' ')} "
-                "built for outfits where the shoe needs to carry the look. Best for shoppers who care "
-                "about styling, silhouette, and first impression."
+                "Görünümü öne çıkaran, günlük kombinlerde ayakkabının stili taşımasını isteyen kullanıcılar "
+                "için hazırlanmış bir ürün görünümü. Silüet, renk uyumu ve ilk izlenim bu persona için öne çıkar."
             ),
             "features": [
-                f"{product.base_colour or 'Versatile'} color styling",
-                f"{product.usage} outfit match",
-                "Style-first product presentation",
+                "Renk ve kombin uyumu",
+                "Günlük stil odaklı kullanım",
+                "İlk izlenimi güçlendiren ürün sunumu",
             ],
-            "cta": "Style this pair",
+            "cta": "Stiline ekle",
         }
 
     if persona == "comfort":
         fit_note = "regular fit"
 
         if product.fit_type in ["small", "narrow"]:
-            fit_note = "tighter fit, check sizing before buying"
+            fit_note = "daha dar kalıp, satın almadan önce beden bilgisini kontrol edin"
         elif product.fit_type == "large":
-            fit_note = "roomier fit, compare with your usual size"
+            fit_note = "daha geniş kalıp, her zamanki bedeninizle karşılaştırın"
 
         return {
-            "hero_title": f"{brand_title} for daily comfort",
+            "hero_title": f"{brand_title} ile günlük konfor",
             "hero_description": (
-                "A comfort-focused view of this product with sizing and wearability details up front. "
-                f"Current fit signal: {fit_note}."
+                "Bu görünüm, ürünün konfor, kalıp ve günlük kullanım sinyallerini öne çıkarır. "
+                f"Güncel kalıp sinyali: {fit_note}."
             ),
             "features": [
-                "Fit guidance before purchase",
-                "Comfort and walking signals highlighted",
-                "Review-based sizing context",
+                "Satın almadan önce kalıp yönlendirmesi",
+                "Konfor ve yürüyüş sinyalleri",
+                "Yorumlara dayalı beden bağlamı",
             ],
-            "cta": "Check the fit",
+            "cta": "Kalıbı kontrol et",
         }
 
-    value_note = "priced below the category average"
+    value_note = "kategori ortalamasının altında fiyatlanıyor"
 
     if product.market_signals.avg_category_price and product.price > product.market_signals.avg_category_price:
-        value_note = "priced above the category average, so value should be justified"
+        value_note = "kategori ortalamasının üstünde fiyatlanıyor; bu yüzden değer önerisi net anlatılmalı"
 
     return {
-        "hero_title": f"{brand_title} as a smart value pick",
+        "hero_title": f"{brand_title} için akıllı fiyat/değer seçimi",
         "hero_description": (
-            "A budget-aware view focused on price, rating, and practical daily use. "
-            f"This product is {value_note}."
+            "Bu görünüm fiyat, puan ve pratik günlük kullanım dengesine odaklanır. "
+            f"Bu ürün {value_note}."
         ),
         "features": [
-            f"{product.rating:.1f} rating context",
-            "Price-to-value comparison",
-            "Practical purchase guidance",
+            f"{product.rating:.1f} puan bağlamı",
+            "Fiyat/değer karşılaştırması",
+            "Pratik satın alma yönlendirmesi",
         ],
-        "cta": "Compare value",
+        "cta": "Değeri karşılaştır",
     }
 
 

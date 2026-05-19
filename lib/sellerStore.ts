@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Product, SellerStore } from "./types";
 
-const SELLER_PRODUCTS_KEY = "adaptive-commerce-seller-products-v1";
+const SELLER_PRODUCTS_KEY = "nobrainer-seller-products-v1";
 
 function makeId(prefix: string) {
   return `${prefix}_${Math.random().toString(36).slice(2, 10)}`;

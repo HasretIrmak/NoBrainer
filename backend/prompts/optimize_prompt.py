@@ -31,42 +31,47 @@ def build_optimize_prompt(product: Product, scores: dict) -> str:
     }
 
     return f"""
-You are an expert ecommerce product page optimizer.
+Sen uzman bir e-ticaret ürün sayfası optimizasyon danışmanısın.
 
-Rewrite and improve this sneaker product page for better conversion.
+Bu sneaker ürün sayfasını daha iyi dönüşüm için yeniden yaz ve iyileştir.
 
-Use the product data, reviews, known issues and scores.
+Dil kuralları:
+- Tüm JSON değerlerini Türkçe yaz.
+- Marka ve model adlarını koru, ama açıklama, soru, cevap ve güven mesajlarını Türkçe üret.
+- İngilizce başlık veya İngilizce pazarlama cümlesi yazma.
 
-Important:
-- Do not hide real risks.
-- If there is a sizing or comfort issue, address it clearly.
-- Improve buyer trust.
-- Make the title more specific.
-- Make the description more useful.
-- Add FAQ items that reduce purchase hesitation.
-- Add trust messages for the seller page.
+Ürün verilerini, yorumları, bilinen sorunları ve skorları kullan.
+
+Önemli:
+- Gerçek riskleri saklama.
+- Beden veya konfor sorunu varsa açıkça belirt.
+- Alıcı güvenini artır.
+- Başlığı daha net ve Türkçe hale getir.
+- Açıklamayı daha faydalı yap.
+- Satın alma tereddüdünü azaltacak SSS maddeleri ekle.
+- Satıcı sayfası için güven mesajları ekle.
 
 Product context:
 {json.dumps(product_context, ensure_ascii=False, indent=2)}
 
-Return ONLY valid JSON.
-Do not use markdown.
-Do not wrap the response in code fences.
+YALNIZCA geçerli JSON döndür.
+Markdown kullanma.
+Cevabı kod bloğuna alma.
 
 JSON schema:
 {{
-  "optimized_title": "optimized product title",
-  "optimized_description": "optimized product description",
+  "optimized_title": "Türkçe optimize ürün başlığı",
+  "optimized_description": "Türkçe optimize ürün açıklaması",
   "faq": [
     {{
-      "question": "question",
-      "answer": "answer"
+      "question": "Türkçe soru",
+      "answer": "Türkçe cevap"
     }}
   ],
   "trust_messages": [
-    "trust message 1",
-    "trust message 2",
-    "trust message 3"
+    "Türkçe güven mesajı 1",
+    "Türkçe güven mesajı 2",
+    "Türkçe güven mesajı 3"
   ]
 }}
 """

@@ -31,7 +31,7 @@ export default function SellerDashboard() {
               Satıcı Kontrol Paneli
             </h1>
             <p className="text-gray-500 font-medium mt-2">
-              Gemini AI • <span className="text-blue-600">Ürün Performans ve İade Analizi</span>
+              NoBrainer • <span className="text-blue-600">Ürün Performans ve İade Analizi</span>
             </p>
           </div>
           <button 
@@ -93,14 +93,14 @@ export default function SellerDashboard() {
                   </span>
                 </div>
                 <p className="text-gray-600 text-lg mt-4 leading-relaxed max-w-xl">
-                  <strong className="text-red-600">AI Tespiti:</strong> "Kalıp dar" geri bildirimi bu ay %40 arttı. 
+                  <strong className="text-red-600">NoBrainer Tespiti:</strong> "Kalıp dar" geri bildirimi bu ay %40 arttı.
                   Ürün açıklamasında "1 numara büyük alın" uyarısı eksik.
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-4 w-full lg:w-auto">
               <button className="bg-black text-white px-10 py-5 rounded-2xl font-bold hover:scale-[1.02] transition-all shadow-xl">
-                AI İle Açıklamayı Düzelt
+                NoBrainer ile Açıklamayı Düzelt
               </button>
             </div>
           </div>

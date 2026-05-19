@@ -28,33 +28,38 @@ def build_review_summary_prompt(product: Product, scores: dict) -> str:
     }
 
     return f"""
-You are an ecommerce review analyst.
+Sen bir e-ticaret yorum analistisin.
 
-Summarize customer reviews for a shoe product.
+Bir ayakkabı ürünü için müşteri yorumlarını özetle.
+
+Dil kuralları:
+- Tüm JSON değerlerini Türkçe yaz.
+- Marka/model adları dışında İngilizce cümle kullanma.
+- Müşteriye gösterilecek kısa, açık ve doğal Türkçe kullan.
 
 Product context:
 {json.dumps(context, ensure_ascii=False, indent=2)}
 
-Return ONLY valid JSON.
-Do not use markdown.
-Do not wrap the response in code fences.
+YALNIZCA geçerli JSON döndür.
+Markdown kullanma.
+Cevabı kod bloğuna alma.
 
 JSON schema:
 {{
-  "short_summary": "2 sentence customer-facing review summary",
+  "short_summary": "müşteriye dönük 2 cümlelik Türkçe yorum özeti",
   "positive_points": [
-    "positive point 1",
-    "positive point 2",
-    "positive point 3"
+    "Türkçe olumlu nokta 1",
+    "Türkçe olumlu nokta 2",
+    "Türkçe olumlu nokta 3"
   ],
   "negative_points": [
-    "negative point 1",
-    "negative point 2"
+    "Türkçe olumsuz nokta 1",
+    "Türkçe olumsuz nokta 2"
   ],
   "return_risk_reasons": [
-    "clear reason why return risk exists or why it is low"
+    "iade riskinin neden var olduğunu veya neden düşük olduğunu açıklayan Türkçe neden"
   ]
 }}
 
-Only use issues supported by the review sample and score context.
+Yalnızca yorum örnekleri ve skor bağlamıyla desteklenen sorunları kullan.
 """

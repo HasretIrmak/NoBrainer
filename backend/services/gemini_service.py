@@ -15,12 +15,22 @@ load_dotenv(dotenv_path=ENV_PATH)
 
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.0-flash")
+MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.5-flash-lite")
+FALLBACK_MODEL_NAMES = [
+    model.strip()
+    for model in os.getenv(
+        "GEMINI_FALLBACK_MODELS",
+        "gemini-2.5-flash,gemini-2.0-flash",
+    ).split(",")
+    if model.strip()
+]
+MODEL_NAMES = list(dict.fromkeys([MODEL_NAME, *FALLBACK_MODEL_NAMES]))
 
 _configured = False
-_model = None
+_models: dict[str, Any] = {}
 _cooldown_until = 0.0
 _last_error = ""
+_last_model = ""
 
 
 def is_gemini_configured() -> bool:
@@ -31,6 +41,8 @@ def get_gemini_status() -> dict[str, Any]:
     return {
         "configured": is_gemini_configured(),
         "model": MODEL_NAME,
+        "model_candidates": MODEL_NAMES,
+        "last_model": _last_model,
         "env_path": str(ENV_PATH),
         "circuit_open": is_circuit_open(),
         "retry_after_seconds": get_retry_after_seconds(),
@@ -54,63 +66,87 @@ def is_quota_error(error: Exception) -> bool:
     return "429" in error_text or "quota" in error_text or "rate" in error_text
 
 
-def open_circuit(error: Exception, cooldown_seconds: int = 60) -> None:
+def open_circuit(error: Exception, cooldown_seconds: int = 300) -> None:
     global _cooldown_until, _last_error
 
     _cooldown_until = time.time() + cooldown_seconds
     _last_error = str(error)[:500]
 
 
-def get_model():
-    global _configured, _model
+def configure_gemini() -> bool:
+    global _configured
 
     if not GEMINI_API_KEY:
-        return None
+        return False
 
     if not _configured:
         genai.configure(api_key=GEMINI_API_KEY)
         _configured = True
 
-    if _model is None:
-        _model = genai.GenerativeModel(MODEL_NAME)
+    return True
 
-    return _model
+
+def get_model(model_name: str):
+    if not configure_gemini():
+        return None
+
+    if model_name not in _models:
+        _models[model_name] = genai.GenerativeModel(model_name)
+
+    return _models[model_name]
+
+
+def generate_text_with_models(prompt: str) -> tuple[str | None, str | None, Exception | None]:
+    global _last_model
+
+    if not configure_gemini():
+        return None, None, None
+
+    last_error = None
+
+    for model_name in MODEL_NAMES:
+        try:
+            response = get_model(model_name).generate_content(prompt)
+
+            if response.text:
+                _last_model = model_name
+                return response.text, model_name, None
+
+            last_error = RuntimeError(f"{model_name} bos cevap dondurdu.")
+        except Exception as error:
+            last_error = error
+
+            if not is_quota_error(error):
+                break
+
+    return None, None, last_error
 
 
 def ask_gemini(prompt: str) -> str:
-    """
-    Gemini modeline prompt gönderir ve düz metin cevap döndürür.
-    """
-
-    active_model = get_model()
-
-    if active_model is None:
-        return "Gemini kullanılamıyor: GEMINI_API_KEY bulunamadı."
+    if not GEMINI_API_KEY:
+        return "Gemini kullanilamiyor: GEMINI_API_KEY bulunamadi."
 
     if is_circuit_open():
-        return f"Gemini geçici olarak devre dışı: kota bekleme süresi aktif, {get_retry_after_seconds()} saniye sonra tekrar denenebilir."
+        return (
+            "Gemini gecici olarak devre disi: kota bekleme suresi aktif, "
+            f"{get_retry_after_seconds()} saniye sonra tekrar denenebilir."
+        )
 
-    try:
-        response = active_model.generate_content(prompt)
+    text, _model_name, error = generate_text_with_models(prompt)
 
-        if not response.text:
-            return "Gemini boş cevap döndürdü."
+    if text:
+        return text
 
-        return response.text
+    if error and is_quota_error(error):
+        open_circuit(error)
 
-    except Exception as error:
-        if is_quota_error(error):
-            open_circuit(error)
-
+    if error:
         return f"Gemini hata verdi: {str(error)}"
+
+    return "Gemini kullanilamiyor: GEMINI_API_KEY bulunamadi."
 
 
 def clean_json_text(text: str) -> str:
-    """
-    Gemini bazen cevabı ```json ... ``` içinde döndürür.
-    Bu fonksiyon JSON parse öncesi temizler.
-    """
-
     cleaned = text.strip()
 
     if cleaned.startswith("```json"):
@@ -125,36 +161,44 @@ def clean_json_text(text: str) -> str:
     return cleaned
 
 
+def clean_generated_value(value):
+    if isinstance(value, str):
+        return (
+            value.replace("**", "")
+            .replace("__", "")
+            .replace("`", "")
+            .strip()
+        )
+
+    if isinstance(value, list):
+        return [clean_generated_value(item) for item in value]
+
+    if isinstance(value, dict):
+        return {key: clean_generated_value(item) for key, item in value.items()}
+
+    return value
+
+
 def generate_json_result(prompt: str, fallback: dict) -> tuple[dict, str]:
-    """
-    Gemini'den JSON cevap üretir.
-    Cevap parse edilemezse veya Gemini hata verirse fallback döner.
-    """
-
-    active_model = get_model()
-
-    if active_model is None:
+    if not GEMINI_API_KEY:
         return fallback, "fallback"
 
     if is_circuit_open():
         return fallback, "fallback"
 
-    try:
-        response = active_model.generate_content(prompt)
+    text, _model_name, error = generate_text_with_models(prompt)
 
-        if not response.text:
+    if text:
+        try:
+            cleaned_text = clean_json_text(text)
+            return clean_generated_value(json.loads(cleaned_text)), "gemini"
+        except Exception:
             return fallback, "fallback"
 
-        cleaned_text = clean_json_text(response.text)
+    if error and is_quota_error(error):
+        open_circuit(error)
 
-        return json.loads(cleaned_text), "gemini"
-
-    except Exception as error:
-        # Quota errors should stop repeated Gemini calls briefly so API endpoints stay fast.
-        if is_quota_error(error):
-            open_circuit(error)
-
-        return fallback, "fallback"
+    return fallback, "fallback"
 
 
 def generate_json(prompt: str, fallback: dict) -> dict:

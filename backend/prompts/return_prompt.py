@@ -28,33 +28,38 @@ def build_return_prompt(product: Product, scores: dict) -> str:
     }
 
     return f"""
-You are an e-commerce return risk analyst.
+Sen bir e-ticaret iade riski analistisin.
 
-Analyze this sneaker product and explain return risk clearly.
+Bu sneaker ürününü analiz et ve iade riskini net şekilde açıkla.
 
-Focus on:
-- size mismatch
-- narrow fit / wide feet issues
-- comfort complaints
-- material quality
-- durability
-- whether the buyer needs sizing guidance
+Dil kuralları:
+- Tüm JSON değerlerini Türkçe yaz.
+- Marka/model adları dışında İngilizce cümle kullanma.
+- Kullanıcı uyarısı kısa, anlaşılır ve doğal Türkçe olsun.
+
+Odaklan:
+- beden uyumsuzluğu
+- dar kalıp / taraklı ayak sorunları
+- konfor şikayetleri
+- malzeme kalitesi
+- dayanıklılık
+- alıcının beden yönlendirmesine ihtiyaç duyup duymadığı
 
 Product context:
 {json.dumps(product_context, ensure_ascii=False, indent=2)}
 
-Return ONLY valid JSON.
-Do not use markdown.
-Do not wrap response in code fences.
+YALNIZCA geçerli JSON döndür.
+Markdown kullanma.
+Cevabı kod bloğuna alma.
 
 JSON schema:
 {{
   "reasons": [
-    "reason 1",
-    "reason 2",
-    "reason 3"
+    "Türkçe neden 1",
+    "Türkçe neden 2",
+    "Türkçe neden 3"
   ],
-  "user_warning": "short warning shown on product page",
-  "seller_advice": "specific advice for seller to reduce returns"
+  "user_warning": "ürün sayfasında gösterilecek kısa Türkçe uyarı",
+  "seller_advice": "satıcının iadeyi azaltması için özel Türkçe öneri"
 }}
 """

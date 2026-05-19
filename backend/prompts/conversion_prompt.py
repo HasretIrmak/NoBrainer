@@ -35,47 +35,52 @@ def build_conversion_prompt(product: Product, scores: dict) -> str:
     }
 
     return f"""
-You are an expert e-commerce conversion analyst.
+Sen uzman bir e-ticaret dönüşüm analistisin.
 
-Analyze this sneaker product page for seller-side conversion weaknesses.
+Bu sneaker ürün sayfasını satıcı tarafındaki dönüşüm zayıflıkları açısından analiz et.
 
-Focus on:
-- title clarity
-- product description quality
-- sales funnel drop-off
-- price competitiveness
-- visual presentation issues
-- trust problems
-- sizing / fit risk
-- comfort complaints
-- material or durability concerns
-- missing information that may reduce purchase confidence
+Dil kuralları:
+- Tüm JSON değerlerini Türkçe yaz.
+- Marka, model, teknik etiket ve ürün adı dışında İngilizce cümle kullanma.
+- Kullanıcıya görünen metinler doğal, akıcı ve kısa Türkçe olmalı.
+
+Odaklan:
+- başlık netliği
+- ürün açıklaması kalitesi
+- satış hunisi kırılımı
+- fiyat rekabetçiliği
+- görsel sunum sorunları
+- güven problemleri
+- beden / kalıp riski
+- konfor şikayetleri
+- malzeme veya dayanıklılık endişeleri
+- satın alma güvenini azaltan eksik bilgiler
 
 Product context:
 {json.dumps(product_context, ensure_ascii=False, indent=2)}
 
-Return ONLY valid JSON.
-Do not use markdown.
-Do not wrap the response in code fences.
+YALNIZCA geçerli JSON döndür.
+Markdown kullanma.
+Cevabı kod bloğuna alma.
 
 JSON schema:
 {{
-  "conversion_diagnosis": "one concise seller-facing explanation of why this product is not selling or where it loses users",
+  "conversion_diagnosis": "ürünün nerede kullanıcı kaybettiğini açıklayan kısa Türkçe satıcı yorumu",
   "insights": [
     {{
       "type": "warning | positive | suggestion",
-      "title": "short insight title",
-      "message": "clear seller-facing explanation",
+      "title": "kısa Türkçe içgörü başlığı",
+      "message": "satıcıya dönük net Türkçe açıklama",
       "severity": "low | medium | high"
     }}
   ],
   "recommended_actions": [
-    "action 1",
-    "action 2",
-    "action 3",
-    "action 4"
+    "Türkçe aksiyon 1",
+    "Türkçe aksiyon 2",
+    "Türkçe aksiyon 3",
+    "Türkçe aksiyon 4"
   ]
 }}
 
-Keep recommendations aligned with the rule-based diagnosis and do not invent issues that are not supported by the product context.
+Önerileri kural tabanlı teşhisle uyumlu tut ve ürün bağlamında desteklenmeyen sorun uydurma.
 """

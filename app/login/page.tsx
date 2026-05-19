@@ -22,7 +22,7 @@ export default function LoginPage() {
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <AuthCard role="user" title="Kullanıcı hesabı" subtitle="Mağaza, favoriler, sepet, iade kodu ve persona önerileri için giriş yap." />
-          <AuthCard role="seller" title="Satıcı hesabı" subtitle="Mağaza seçimi, ürün yükleme, finans ve AI düzenleme önerileri için giriş yap." />
+          <AuthCard role="seller" title="Satıcı hesabı" subtitle="Mağaza seçimi, ürün yükleme, finans ve NoBrainer düzenleme önerileri için giriş yap." />
         </div>
       </div>
     </main>

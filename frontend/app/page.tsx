@@ -12,7 +12,7 @@ export default function LandingPage() {
         </h1>
         <p className="max-w-2xl mx-auto text-xl text-gray-500 font-medium leading-relaxed mb-10">
           "Aynı sneaker, 3 farklı insan, 3 farklı deneyim." <br /> 
-          Gemini AI ile kişiselleştirilmiş, iade riskini minimize eden yeni nesil e-ticaret analizi.
+          NoBrainer ile kişiselleştirilmiş, iade riskini azaltan yeni nesil e-ticaret analizi.
         </p>
         
         <div className="flex gap-4 justify-center">
@@ -35,7 +35,7 @@ export default function LandingPage() {
         <div className="p-8 bg-gray-50 rounded-3xl">
           <div className="text-3xl mb-4">📉</div>
           <h3 className="font-bold text-xl mb-2">İade Tahmini</h3>
-          <p className="text-gray-500 text-sm">Yapay zeka ile iade risklerini ürün bazında önceden görün.</p>
+          <p className="text-gray-500 text-sm">NoBrainer ile iade risklerini ürün bazında önceden görün.</p>
         </div>
         <div className="p-8 bg-gray-50 rounded-3xl">
           <div className="text-3xl mb-4">🚀</div>

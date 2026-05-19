@@ -342,7 +342,7 @@ export default function SellerDashboard() {
               ))}
             </select>
             <button onClick={handleOptimize} className="min-h-12 rounded-2xl bg-black px-6 font-bold text-white shadow-xl dark:bg-white dark:text-black" type="button">
-              AI önerisi üret
+              NoBrainer önerisi üret
             </button>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function ProductDetailPage() {
       });
       setReviewSummary({
         product_id: localProduct.id,
-        source: "Müşteri Paneli",
+        source: "fallback",
         short_summary: "Satıcı tarafından yeni yüklenen ürün için yorum verisi henüz analiz aşamasında.",
         positive_points: ["Ürün mağaza tarafından yeni eklendi."],
         negative_points: ["Yeterli yorum oluşana kadar beden tablosu incelenmeli."],
@@ -171,8 +171,8 @@ export default function ProductDetailPage() {
               <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-500 dark:bg-gray-800 dark:text-gray-300">
                 {product.brand}
               </span>
-              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
-                {personaResult?.source === "live" ? "✨ Canlı Yapay Zeka" : "🤖 Kişiselleştirilmiş Motor"}
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold tracking-wide text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                {personaResult?.source === "gemini" ? "NoBrainer Live" : "NoBrainer Motoru"}
               </span>
               <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-green-600 dark:bg-green-950/40 dark:text-green-400">
                 Profil uyumu %{matchScore}
@@ -227,15 +227,15 @@ export default function ProductDetailPage() {
 
             <TrustLayer product={product} risk={risk} />
 
-            {/* 🔥 SEKMEYE GÖRE %100 DEĞİŞEN DINAMIK YAPAY ZEKA ANALİZ KUTUSU */}
+            {/* Sekmeye gore degisen dinamik NoBrainer analiz kutusu */}
             <div className="mt-8 rounded-2xl border border-blue-100/70 bg-gradient-to-br from-blue-50/70 to-indigo-50/30 p-6 dark:border-blue-900/40 dark:from-blue-950/30 dark:to-slate-900/40 shadow-sm">
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="text-xl">✨</span>
-                  <h3 className="text-lg font-black text-blue-950 dark:text-blue-100 tracking-tight">Gemini Yapay Zeka Analizi</h3>
+                  <h3 className="text-lg font-black text-blue-950 dark:text-blue-100 tracking-tight">NoBrainer Analizi</h3>
                 </div>
                 <span className="rounded-full bg-white px-3 py-1 text-[11px] font-black text-blue-700 border border-blue-100 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-900/50 shadow-sm uppercase">
-                  {reviewSummary?.source === "live" ? "⚡ Canlı Analiz" : "📝 Özet Motoru"}
+                  {reviewSummary?.source === "gemini" ? "Canlı Analiz" : "Özet Motoru"}
                 </span>
               </div>
               
